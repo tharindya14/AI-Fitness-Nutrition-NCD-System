@@ -7,6 +7,11 @@ const {
   getMyDietHistory,
 } = require("../controllers/dietController");
 
+const { searchFoods, searchDrugs } = require("../controllers/searchController");
+
+router.get("/foods", searchFoods);
+router.get("/drugs", searchDrugs);
+
 router.post("/check-safety", authMiddleware, checkDietSafety);
 router.get("/history", authMiddleware, getMyDietHistory);
 

@@ -70,6 +70,7 @@ def get_drug_features(drug_name):
                 "Habit_Forming": row["Habit_Forming"] if "Habit_Forming" in drugs.columns else 0,
                 "Therapeutic_Class": row["Therapeutic_Class"] if "Therapeutic_Class" in drugs.columns else "Unknown",
                 "Action_Class": row["Action_Class"] if "Action_Class" in drugs.columns else "Unknown",
+                "drug_contains": row["Contains"] if "Contains" in drugs.columns else "",
                 "drug_found": True,
                 "drug_source": "drug_clean.csv exact name"
             }
@@ -87,6 +88,7 @@ def get_drug_features(drug_name):
                 "Habit_Forming": row["Habit_Forming"] if "Habit_Forming" in drugs.columns else 0,
                 "Therapeutic_Class": row["Therapeutic_Class"] if "Therapeutic_Class" in drugs.columns else "Unknown",
                 "Action_Class": row["Action_Class"] if "Action_Class" in drugs.columns else "Unknown",
+                "drug_contains": row["Contains"] if "Contains" in drugs.columns else "",
                 "drug_found": True,
                 "drug_source": "drug_clean.csv contains"
             }
@@ -103,6 +105,7 @@ def get_drug_features(drug_name):
             "Habit_Forming": row["Habit_Forming"],
             "Therapeutic_Class": row["Therapeutic_Class"],
             "Action_Class": row["Action_Class"],
+            "drug_contains": row["drug_contains"] if "drug_contains" in row else "",
             "drug_found": True,
             "drug_source": "food_drug_pairs_train.csv exact"
         }
@@ -118,6 +121,7 @@ def get_drug_features(drug_name):
             "Habit_Forming": row["Habit_Forming"],
             "Therapeutic_Class": row["Therapeutic_Class"],
             "Action_Class": row["Action_Class"],
+            "drug_contains": row["drug_contains"] if "drug_contains" in row else "",
             "drug_found": True,
             "drug_source": "food_drug_pairs_train.csv partial"
         }
@@ -127,6 +131,7 @@ def get_drug_features(drug_name):
         "Habit_Forming": 0,
         "Therapeutic_Class": "Unknown",
         "Action_Class": "Unknown",
+        "drug_contains": "",
         "drug_found": False,
         "drug_source": "not_found"
     }
@@ -280,11 +285,15 @@ def suggest_alternatives(original_energy, user_allergies=None, original_food_is_
 
     return df[available_cols].head(max_results).to_dict(orient="records")
 
-def apply_rule_based_safety(food, drug_name):
+def apply_rule_based_safety(food, drug_name, drug_contains=""):
     warnings = []
 
     food_name = normalize_text(food["Food"])
     drug_name_lower = normalize_text(drug_name)
+    drug_contains_lower = normalize_text(drug_contains)
+
+    # brand name + active ingredient දෙකම rule check එකට use කරනවා
+    drug_check_text = f"{drug_name_lower} {drug_contains_lower}"
 
     is_alcohol = int(food["is_alcohol"]) if "is_alcohol" in food else 0
     is_leafy_green = int(food["is_leafy_green"]) if "is_leafy_green" in food else 0
@@ -301,15 +310,19 @@ def apply_rule_based_safety(food, drug_name):
         })
 
     # Warfarin + vitamin K / leafy greens
-    if "warfarin" in drug_name_lower and (is_leafy_green == 1 or vitamin_k > 0):
+    # Example: Warf 5 Tablet contains Warfarin, so this must trigger.
+    if "warfarin" in drug_check_text and (is_leafy_green == 1 or vitamin_k > 0):
         warnings.append({
             "type": "vitamin_k_warfarin",
             "severity": "Moderate",
-            "message": "Vitamin K rich foods may affect warfarin effectiveness."
+            "message": "Vitamin K rich foods such as spinach may affect warfarin effectiveness."
         })
 
     # Statin + grapefruit
-    if ("atorvastatin" in drug_name_lower or "simvastatin" in drug_name_lower) and "grapefruit" in food_name:
+    if (
+        ("atorvastatin" in drug_check_text or "simvastatin" in drug_check_text)
+        and "grapefruit" in food_name
+    ):
         warnings.append({
             "type": "grapefruit_statin",
             "severity": "Dangerous",
@@ -317,7 +330,7 @@ def apply_rule_based_safety(food, drug_name):
         })
 
     # Metformin + high carb
-    if "metformin" in drug_name_lower and carbs > 60:
+    if "metformin" in drug_check_text and carbs > 60:
         warnings.append({
             "type": "high_carb_diabetes_drug",
             "severity": "Moderate",
@@ -325,7 +338,10 @@ def apply_rule_based_safety(food, drug_name):
         })
 
     # Thyroxine + calcium rich food
-    if ("thyroxine" in drug_name_lower or "levothyroxine" in drug_name_lower) and calcium > 100:
+    if (
+        ("thyroxine" in drug_check_text or "levothyroxine" in drug_check_text)
+        and calcium > 100
+    ):
         warnings.append({
             "type": "calcium_thyroid_absorption",
             "severity": "Moderate",
@@ -457,7 +473,11 @@ def predict_safety(request_data):
     probability = model.predict_proba(input_df[features])[0].tolist()
 
     allergy_risks = check_allergy(food["Food"], allergies)
-    rule_warnings = apply_rule_based_safety(food, drug_name)
+    rule_warnings = apply_rule_based_safety(
+    food,
+    drug_name,
+    drug_features.get("drug_contains", "")
+)
 
     risk_score, final_level = calculate_final_score(
         risk_prediction,
@@ -486,6 +506,7 @@ def predict_safety(request_data):
     return {
         "success": True,
         "drug_name": drug_name,
+        "drug_contains": drug_features.get("drug_contains", ""),
         "drug_found": drug_features["drug_found"],
         "drug_source": drug_features["drug_source"],
         "food_name": food["Food"],
