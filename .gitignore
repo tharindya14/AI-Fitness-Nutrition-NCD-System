@@ -1,0 +1,16 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+services/*/node_modules/
+
+# Environment files
+.env
+services/*/.env
+
+# ML models
+models/*.pkl
