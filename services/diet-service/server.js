@@ -1,7 +1,10 @@
 const express = require("express");
 const cors = require("cors");
+const dns = require("dns");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
 dotenv.config();
 
@@ -19,7 +22,10 @@ app.get("/", (req, res) => {
 });
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, {
+    serverSelectionTimeoutMS: 10000,
+    socketTimeoutMS: 45000,
+  })
   .then(() => {
     console.log("Diet Service MongoDB connected");
     app.listen(process.env.PORT, () => {

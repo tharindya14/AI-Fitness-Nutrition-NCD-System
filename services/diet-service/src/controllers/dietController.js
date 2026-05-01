@@ -1,4 +1,6 @@
 const { spawn } = require("child_process");
+const fs = require("fs");
+const os = require("os");
 const path = require("path");
 const DietSafetyLog = require("../models/DietSafetyLog");
 
@@ -20,7 +22,7 @@ exports.checkDietSafety = async (req, res) => {
       "main.py"
     );
 
-    const pythonPath = path.join(
+    const defaultVenvPath = path.join(
       __dirname,
       "..",
       "..",
@@ -30,6 +32,40 @@ exports.checkDietSafety = async (req, res) => {
       "Scripts",
       "python.exe"
     );
+
+    const homeVenvPath = path.join(os.homedir(), "venv", "Scripts", "python.exe");
+    const downloadsEmbedPath = path.join(
+      os.homedir(),
+      "Downloads",
+      "python-3.11.0-embed-amd64",
+      "python.exe"
+    );
+
+    const candidates = [
+      process.env.PYTHON_PATH,
+      defaultVenvPath,
+      homeVenvPath,
+      downloadsEmbedPath,
+      "python",
+      "python3",
+    ].filter(Boolean);
+
+    const pythonPath = candidates.find((candidate) => {
+      try {
+        return fs.existsSync(candidate) && fs.lstatSync(candidate).isFile();
+      } catch {
+        return false;
+      }
+    });
+
+    if (!pythonPath) {
+      return res.status(500).json({
+        success: false,
+        message:
+          "Python executable not found. Set PYTHON_PATH in .env or install Python on PATH.",
+        checkedPaths: candidates,
+      });
+    }
 
     console.log("Using Python:", pythonPath);
 
@@ -47,6 +83,14 @@ exports.checkDietSafety = async (req, res) => {
 
     pythonProcess.stderr.on("data", (data) => {
       error += data.toString();
+    });
+
+    pythonProcess.on("error", (spawnError) => {
+      return res.status(500).json({
+        success: false,
+        message: "Failed to start Python process",
+        error: spawnError.message,
+      });
     });
 
     pythonProcess.on("close", async (code) => {
