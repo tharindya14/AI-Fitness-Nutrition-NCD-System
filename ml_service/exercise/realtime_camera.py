@@ -11,6 +11,8 @@ from predict_squat_posture import SquatPosturePredictor
 from exercise_classifier_predictor import ExerciseClassifierPredictor
 from predict_pushup_posture import PushupPosturePredictor
 from predict_bicep_curl_posture import BicepCurlPosturePredictor
+from predict_lunge_posture import LungePosturePredictor
+from predict_plank_posture import PlankPosturePredictor
 
 
 
@@ -233,6 +235,8 @@ def main():
     squat_ml_predictor = None
     pushup_ml_predictor = None
     bicep_curl_ml_predictor = None
+    lunge_ml_predictor = None
+    plank_ml_predictor = None
     
     if current_exercise == "squat":
         squat_ml_predictor = SquatPosturePredictor()
@@ -242,6 +246,12 @@ def main():
     
     if current_exercise == "bicep_curl":
         bicep_curl_ml_predictor = BicepCurlPosturePredictor()
+
+    if current_exercise == "lunge":
+        lunge_ml_predictor = LungePosturePredictor()
+
+    if current_exercise == "plank":
+        plank_ml_predictor = PlankPosturePredictor()
 
     exercise_classifier = None
 
@@ -320,6 +330,12 @@ def main():
             
             if current_exercise == "bicep_curl" and bicep_curl_ml_predictor is not None:
                 ml_result = bicep_curl_ml_predictor.predict(pose_landmarks)
+
+            if current_exercise == "lunge" and lunge_ml_predictor is not None:
+                ml_result = lunge_ml_predictor.predict(pose_landmarks)
+            
+            if current_exercise == "plank" and plank_ml_predictor is not None:
+                ml_result = plank_ml_predictor.predict(pose_landmarks)
 
             status = analysis["status"]
             primary_angle = analysis["primary_angle"]
@@ -436,7 +452,7 @@ def main():
             if ml_result is not None:
                 if current_exercise == "squat":
                     ml_text = f"ML Class: {ml_result['ml_class']}"
-                elif current_exercise in ["pushup", "bicep_curl"]:
+                elif current_exercise in ["pushup", "bicep_curl", "lunge", "plank"]:
                     ml_text = f"ML Label: {ml_result['ml_label']}"
                 else:
                     ml_text = "ML Result: N/A"
