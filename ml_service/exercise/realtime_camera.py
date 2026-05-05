@@ -9,6 +9,7 @@ from rep_counter import create_counter
 from voice_feedback import VoiceFeedback
 from predict_squat_posture import SquatPosturePredictor
 from exercise_classifier_predictor import ExerciseClassifierPredictor
+from predict_pushup_posture import PushupPosturePredictor
 
 
 
@@ -229,8 +230,13 @@ def main():
     voice = VoiceFeedback(cooldown_seconds=5)
 
     squat_ml_predictor = None
+    pushup_ml_predictor = None
+    
     if current_exercise == "squat":
         squat_ml_predictor = SquatPosturePredictor()
+    
+    if current_exercise == "pushup":
+        pushup_ml_predictor = PushupPosturePredictor()
 
     exercise_classifier = None
 
@@ -300,8 +306,12 @@ def main():
                 auto_exercise_result = exercise_classifier.predict(pose_landmarks)
 
             ml_result = None
+
             if current_exercise == "squat" and squat_ml_predictor is not None:
                 ml_result = squat_ml_predictor.predict(pose_landmarks)
+            
+            if current_exercise == "pushup" and pushup_ml_predictor is not None:
+                ml_result = pushup_ml_predictor.predict(pose_landmarks)
 
             status = analysis["status"]
             primary_angle = analysis["primary_angle"]
@@ -416,16 +426,23 @@ def main():
             y_position += 45
 
             if ml_result is not None:
+                if current_exercise == "squat":
+                    ml_text = f"ML Class: {ml_result['ml_class']}"
+                elif current_exercise == "pushup":
+                    ml_text = f"ML Label: {ml_result['ml_label']}"
+                else:
+                    ml_text = "ML Result: N/A"
+            
                 put_text(
                     frame,
-                    f"ML Class: {ml_result['ml_class']}",
+                    ml_text,
                     20,
                     y_position,
                     (255, 255, 255),
                     0.5
                 )
                 y_position += 30
-
+            
                 put_text(
                     frame,
                     f"ML Confidence: {ml_result['ml_confidence']}",
@@ -434,8 +451,8 @@ def main():
                     (255, 255, 255),
                     0.5
                 )
-                y_position += 35
-
+                y_position += 30
+            
                 put_text(
                     frame,
                     f"Confidence Level: {ml_result['confidence_level']}",
@@ -444,7 +461,7 @@ def main():
                     (255, 255, 255),
                     0.5
                 )
-                y_position += 30
+                y_position += 35
 
             if auto_exercise_result is not None:
                   auto_conf = auto_exercise_result["confidence"]
