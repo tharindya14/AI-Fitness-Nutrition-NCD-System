@@ -138,7 +138,7 @@ def find_videos(folder_path):
     return videos
 
 
-def process_video(detector, video_path, label):
+def process_video(video_path, label):
     rows = []
 
     cap = cv2.VideoCapture(video_path)
@@ -146,6 +146,10 @@ def process_video(detector, video_path, label):
     if not cap.isOpened():
         print(f"Could not open video: {video_path}")
         return rows
+
+    # Create a new detector for each video.
+    # This prevents MediaPipe timestamp reset errors between videos.
+    detector = create_pose_detector()
 
     fps = cap.get(cv2.CAP_PROP_FPS)
     if fps == 0:
@@ -162,37 +166,42 @@ def process_video(detector, video_path, label):
         if not ret:
             break
 
-        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        try:
+            rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-        mp_image = mp.Image(
-            image_format=mp.ImageFormat.SRGB,
-            data=rgb_frame
-        )
+            mp_image = mp.Image(
+                image_format=mp.ImageFormat.SRGB,
+                data=rgb_frame
+            )
 
-        timestamp_ms = int((frame_index / fps) * 1000)
-        result = detector.detect_for_video(mp_image, timestamp_ms)
+            timestamp_ms = int((frame_index / fps) * 1000)
 
-        if result.pose_landmarks:
-            pose_landmarks = result.pose_landmarks[0]
-            features = extract_pushup_features(pose_landmarks)
+            result = detector.detect_for_video(mp_image, timestamp_ms)
 
-            row = {
-                "video_file": os.path.basename(video_path),
-                "frame": frame_index,
-                **features,
-                "label": label
-            }
+            if result.pose_landmarks:
+                pose_landmarks = result.pose_landmarks[0]
+                features = extract_pushup_features(pose_landmarks)
 
-            rows.append(row)
-            detected_frames += 1
+                row = {
+                    "video_file": os.path.basename(video_path),
+                    "frame": frame_index,
+                    **features,
+                    "label": label
+                }
+
+                rows.append(row)
+                detected_frames += 1
+
+        except Exception as e:
+            print(f"Frame skipped in {os.path.basename(video_path)} at frame {frame_index}: {e}")
 
         frame_index += 1
 
     cap.release()
+    detector.close()
 
     print(f"Detected frames: {detected_frames}")
     return rows
-
 
 def generate_dataset(dataset_dir, output_path):
     correct_dir = os.path.join(dataset_dir, "correct")
@@ -218,17 +227,13 @@ def generate_dataset(dataset_dir, output_path):
     if len(incorrect_videos) == 0:
         print("No incorrect videos found. Check folder:", incorrect_dir)
 
-    detector = create_pose_detector()
-
     all_rows = []
 
     for video_path in correct_videos:
-        all_rows.extend(process_video(detector, video_path, "correct"))
+        all_rows.extend(process_video(video_path, "correct"))
 
     for video_path in incorrect_videos:
-        all_rows.extend(process_video(detector, video_path, "incorrect"))
-
-    detector.close()
+        all_rows.extend(process_video(video_path, "incorrect"))
 
     if len(all_rows) == 0:
         print("No pose data generated. Dataset CSV was not created.")
