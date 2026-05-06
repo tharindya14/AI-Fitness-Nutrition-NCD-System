@@ -10,6 +10,7 @@ import {
 import { CameraView, useCameraPermissions } from "expo-camera";
 import * as Speech from "expo-speech";
 import { ML_API_BASE_URL } from "../../constants/api";
+import { router } from "expo-router";
 
 type ExerciseKey =
   | "squat"
@@ -272,15 +273,26 @@ export default function ExerciseCameraScreen() {
   }
 
   return (
-    <View style={styles.container}>
-      <CameraView
-        ref={cameraRef}
-        style={styles.camera}
-        facing="back"
-        mode="picture"
-      />
+  <View style={styles.container}>
+    <CameraView
+      ref={cameraRef}
+      style={styles.camera}
+      facing="back"
+      mode="picture"
+    />
 
-      <View style={styles.panel}>
+    <Pressable
+      style={styles.backButton}
+      onPress={() => {
+  stopLiveAnalysis();
+  Speech.stop();
+  router.replace("/(tabs)/home" as any);
+}}
+    >
+      <Text style={styles.backButtonText}>‹</Text>
+    </Pressable>
+
+    <View style={styles.panel}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Text style={styles.title}>Real-time Posture Analysis</Text>
 
@@ -577,4 +589,31 @@ const styles = StyleSheet.create({
     marginTop: 12,
     marginBottom: 2,
   },
+
+
+  backButton: {
+  position: "absolute",
+  top: 48,
+  left: 18,
+  width: 46,
+  height: 46,
+  borderRadius: 23,
+  backgroundColor: "rgba(5, 8, 22, 0.82)",
+  borderWidth: 1,
+  borderColor: "#FF7A00",
+  alignItems: "center",
+  justifyContent: "center",
+  zIndex: 20,
+  shadowColor: "#FF7A00",
+  shadowOpacity: 0.45,
+  shadowRadius: 10,
+  elevation: 8,
+},
+backButtonText: {
+  color: "#FF7A00",
+  fontSize: 42,
+  fontWeight: "900",
+  lineHeight: 42,
+  marginTop: -4,
+},
 });
