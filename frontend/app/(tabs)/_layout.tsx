@@ -20,6 +20,14 @@ export default function TabLayout() {
       <Tabs.Screen name="supplement" options={{ href: null }} />
       <Tabs.Screen name="posture" options={{ href: null }} />
       <Tabs.Screen name="habit" options={{ href: null }} />
+
+      <Tabs.Screen
+        name="exercise-camera"
+        options={{
+          title: "Exercise Camera",
+          href: null,
+        }}
+      />
     </Tabs>
   );
 }
