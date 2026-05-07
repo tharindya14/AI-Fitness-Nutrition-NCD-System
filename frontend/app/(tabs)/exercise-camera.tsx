@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { CameraView, useCameraPermissions } from "expo-camera";
 import * as Speech from "expo-speech";
-import { ML_API_BASE_URL } from "../../constants/api";
+import { ML_API_BASE_URL_EXERCISE } from "../../constants/api";
 import { router } from "expo-router";
 
 type ExerciseKey =
@@ -176,7 +176,7 @@ export default function ExerciseCameraScreen() {
         type: "image/jpeg",
       } as any);
 
-      const response = await fetch(`${ML_API_BASE_URL}/analyze-frame`, {
+      const response = await fetch(`${ML_API_BASE_URL_EXERCISE}/analyze-frame`, {
         method: "POST",
         body: formData,
         headers: {

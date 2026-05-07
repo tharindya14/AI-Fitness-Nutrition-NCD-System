@@ -606,8 +606,8 @@ const styles = StyleSheet.create({
     padding: 14,
   },
   habitIconBox: {
-    width: 58,
-    height: 58,
+    width: 30,
+    height: 30,
     borderRadius: 29,
     backgroundColor: "rgba(255,122,0,0.15)",
     borderWidth: 1,
@@ -618,7 +618,7 @@ const styles = StyleSheet.create({
   },
   habitIcon: {
     color: ORANGE,
-    fontSize: 32,
+    fontSize: 20,
     fontWeight: "900",
   },
   habitTextBox: {
