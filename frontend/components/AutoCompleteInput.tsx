@@ -1,6 +1,5 @@
 import React, { useMemo, useState } from "react";
 import {
-  FlatList,
   Pressable,
   StyleSheet,
   Text,
@@ -60,6 +59,7 @@ export default function AutoCompleteInput({
         if (!merged.some((x) => x.name === item.name)) {
           merged.push(item);
         }
+
         if (merged.length >= 5) break;
       }
     }
@@ -81,8 +81,12 @@ export default function AutoCompleteInput({
       <TextInput
         style={styles.input}
         value={value}
-        onChangeText={onChangeValue}
+        onChangeText={(text) => {
+          onChangeValue(text);
+          setFocused(true);
+        }}
         placeholder={placeholder}
+        placeholderTextColor="#777"
         autoCorrect={false}
         autoCapitalize="none"
         onFocus={() => setFocused(true)}
@@ -90,22 +94,24 @@ export default function AutoCompleteInput({
 
       {showDropdown && (
         <View style={styles.dropdown}>
-          <FlatList
-            keyboardShouldPersistTaps="handled"
-            data={results}
-            keyExtractor={(item, index) => `${item.name}-${index}`}
-            renderItem={({ item }) => (
-              <Pressable
-                style={styles.item}
-                onPress={() => selectItem(item)}
-              >
-                <Text style={styles.itemTitle}>{item.name}</Text>
-                {!!subText && (
-                  <Text style={styles.itemSub}>{subText(item)}</Text>
-                )}
-              </Pressable>
-            )}
-          />
+          {results.map((item, index) => (
+            <Pressable
+              key={`${item.name}-${index}`}
+              style={({ pressed }) => [
+                styles.item,
+                pressed && styles.itemPressed,
+              ]}
+              onPress={() => selectItem(item)}
+            >
+              <Text style={styles.itemTitle}>{item.name}</Text>
+
+              {!!subText && (
+                <Text style={styles.itemSub} numberOfLines={1}>
+                  {subText(item)}
+                </Text>
+              )}
+            </Pressable>
+          ))}
         </View>
       )}
     </View>
@@ -117,12 +123,14 @@ const styles = StyleSheet.create({
     marginBottom: 14,
     zIndex: 10,
   },
+
   label: {
     fontSize: 13,
     fontWeight: "800",
     color: "#344E41",
     marginBottom: 7,
   },
+
   input: {
     backgroundColor: "#F1F5F2",
     borderWidth: 1,
@@ -131,27 +139,35 @@ const styles = StyleSheet.create({
     padding: 15,
     fontSize: 16,
     color: "#111",
+    fontWeight: "700",
   },
+
   dropdown: {
     marginTop: 6,
     backgroundColor: "#FFFFFF",
     borderWidth: 1,
     borderColor: "#DCE8DF",
     borderRadius: 14,
-    maxHeight: 220,
     overflow: "hidden",
     elevation: 5,
   },
+
   item: {
     padding: 13,
     borderBottomWidth: 1,
     borderBottomColor: "#EEF2EF",
   },
+
+  itemPressed: {
+    backgroundColor: "#F1F5F2",
+  },
+
   itemTitle: {
     fontSize: 15,
     fontWeight: "800",
     color: "#1B4332",
   },
+
   itemSub: {
     fontSize: 12,
     color: "#66736B",

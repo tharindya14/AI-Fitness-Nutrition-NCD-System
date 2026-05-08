@@ -3,6 +3,7 @@ const cors = require("cors");
 const dns = require("dns");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const path = require("path");
 
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
@@ -13,7 +14,8 @@ const authRoutes = require("./src/routes/authRoutes");
 const app = express();
 
 app.use(cors());
-app.use(express.json());
+
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use("/api/auth", authRoutes);
 

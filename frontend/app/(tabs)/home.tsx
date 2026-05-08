@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import {
   Image,
   ImageBackground,
@@ -9,13 +9,15 @@ import {
   Text,
   View,
 } from "react-native";
-import { router } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
 import { getItem } from "@/utils/storage";
+import { API_BASE_URL } from "@/constants/api";
 
 const logo = require("../../assets/images/splash-icon.png");
 
 const heroImage = require("../../assets/images/dashboard/hero.png");
-const defaultUserImage = require("../../assets/images/dashboard/default-user.png");
+const defaultFemale = require("../../assets/images/dashboard/default-female.png");
+const defaultMale = require("../../assets/images/dashboard/default-male.png");
 
 const dietImage = require("../../assets/images/dashboard/diet.png");
 const historyImage = require("../../assets/images/dashboard/history.png");
@@ -34,28 +36,67 @@ type DashboardCardProps = {
 
 export default function HomeScreen() {
   const [userName, setUserName] = useState("FITSHIELD User");
-  const [userImage, setUserImage] = useState<string | null>(null);
+  const [profileImage, setProfileImage] = useState("");
+  const [defaultAvatar, setDefaultAvatar] = useState("");
 
-  useEffect(() => {
+  useFocusEffect(
+  useCallback(() => {
     loadUserData();
-  }, []);
+  }, [])
+);
 
-  const loadUserData = async () => {
-    try {
-      const savedName = await getItem("userName");
-      const savedImage = await getItem("userImage");
+const normalizeImageUrl = (url: string) => {
+  if (!url) return "";
 
-      if (savedName && savedName.trim().length > 0) {
-        setUserName(savedName);
-      }
+  return url
+    .replace("http://localhost:5001", API_BASE_URL)
+    .replace("http://127.0.0.1:5001", API_BASE_URL);
+};
 
-      if (savedImage && savedImage.trim().length > 0) {
-        setUserImage(savedImage);
-      }
-    } catch (error) {
-      console.log("Failed to load user data:", error);
+const getProfileImageSource = () => {
+  if (profileImage) {
+    return { uri: profileImage };
+  }
+
+  if (defaultAvatar === "male") {
+    return defaultMale;
+  }
+
+  if (defaultAvatar === "female") {
+    return defaultFemale;
+  }
+
+  return defaultFemale;
+};
+
+const loadUserData = async () => {
+  try {
+    const savedName = await getItem("userName");
+    const profileText = await getItem("userProfile");
+
+    if (savedName && savedName.trim().length > 0) {
+      setUserName(savedName);
     }
-  };
+
+    if (profileText) {
+      const profile = JSON.parse(profileText);
+
+      if (profile.fullName) {
+        setUserName(profile.fullName);
+      }
+
+      setDefaultAvatar(profile.defaultAvatar || "");
+
+      if (profile.profileImage) {
+        setProfileImage(normalizeImageUrl(profile.profileImage));
+      } else {
+        setProfileImage("");
+      }
+    }
+  } catch (error) {
+    console.log("Failed to load user data:", error);
+  }
+};
 
   const firstName = userName.split(" ")[0] || "User";
 
@@ -94,19 +135,29 @@ export default function HomeScreen() {
             </Text>
           </View>
 
-          <View style={styles.profileOuter}>
+          <Pressable
+            style={({ pressed }) => [
+              styles.profileOuter,
+              pressed && styles.profilePressed,
+            ]}
+            onPress={() => router.push("/profile" as any)}
+          >
             <View style={styles.profileRing}>
               <Image
-                source={userImage ? { uri: userImage } : defaultUserImage}
-                style={styles.profileImage}
-                resizeMode="cover"
-              />
+  source={getProfileImageSource()}
+  style={styles.profileImage}
+  resizeMode="cover"
+  onError={(error) => {
+    console.log("Home profile image load error:", error.nativeEvent);
+    console.log("Home profile image URL:", profileImage);
+  }}
+/>
             </View>
-
+          
             <View style={styles.profileBadge}>
               <Image source={logo} style={styles.profileBadgeLogo} />
             </View>
-          </View>
+          </Pressable>
         </View>
 
         <ImageBackground
@@ -150,45 +201,29 @@ export default function HomeScreen() {
 
         <View style={styles.cardGrid}>
           <DashboardCard
-            title="Diet"
-            subtitle="Plan meals. Fuel performance."
+            title="Interaction Checker"
+            subtitle="Checks food-drug & drug-drug interactions."
             image={dietImage}
-            onPress={() => router.push("/diet")}
+            onPress={() => router.push("/interaction")}
           />
-
-          <DashboardCard
-            title="History"
-            subtitle="Track workouts and activities."
-            image={historyImage}
-            onPress={() => router.push("/history")}
-          />
-
-          <DashboardCard
-            title="Result"
-            subtitle="See progress. Stay motivated."
-            image={resultImage}
-            onPress={() => router.push("/result")}
-          />
-
-          <DashboardCard
-            title="Explore"
-            subtitle="Discover workouts and challenges."
-            image={exploreImage}
-            onPress={() => router.push("/explore")}
-          />
-
           <DashboardCard
             title="Supplement"
             subtitle="Find the right supplements."
             image={supplementImage}
             onPress={() => router.push("/supplement")}
           />
-
           <DashboardCard
             title="Posture"
             subtitle="Improve posture. Prevent pain."
             image={postureImage}
             onPress={() => router.push("/posture")}
+          />
+
+          <DashboardCard
+            title="Habit"
+            subtitle="Build habits. Transform life."
+            image={habitImage}
+            onPress={() => router.push("/")}
           />
         </View>
 
@@ -676,4 +711,8 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     fontWeight: "600",
   },
+  profilePressed: {
+  transform: [{ scale: 0.96 }],
+  opacity: 0.85,
+},
 });
