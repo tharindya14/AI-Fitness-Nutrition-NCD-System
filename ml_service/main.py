@@ -350,9 +350,62 @@ def check_drug_drug_interactions(medicine_names):
 
 
 def alternative_has_allergy(food_name, user_allergies):
+    if not user_allergies:
+        return False
+
+    food_text = normalize_text(food_name)
+
+    allergy_keyword_map = {
+        "milk": [
+            "milk", "dairy", "cheese", "yogurt", "curd", "butter",
+            "cream", "whey", "casein", "lactose"
+        ],
+        "dairy": [
+            "milk", "dairy", "cheese", "yogurt", "curd", "butter",
+            "cream", "whey", "casein", "lactose"
+        ],
+        "wheat": [
+            "wheat", "flour", "bread", "bun", "roti", "pasta",
+            "noodle", "semolina"
+        ],
+        "gluten": [
+            "wheat", "flour", "bread", "bun", "roti", "pasta",
+            "noodle", "semolina", "barley", "rye"
+        ],
+        "egg": [
+            "egg", "mayonnaise"
+        ],
+        "peanut": [
+            "peanut", "groundnut"
+        ],
+        "nuts": [
+            "nut", "almond", "cashew", "walnut", "peanut", "groundnut"
+        ],
+        "soy": [
+            "soy", "soya", "tofu"
+        ],
+        "fish": [
+            "fish", "tuna", "salmon", "sardine"
+        ],
+        "shellfish": [
+            "prawn", "shrimp", "crab", "lobster", "shellfish"
+        ],
+    }
+
+    for allergy in user_allergies:
+        allergy_text = normalize_text(allergy)
+
+        if not allergy_text:
+            continue
+
+        keywords = allergy_keyword_map.get(allergy_text, [allergy_text])
+
+        for keyword in keywords:
+            if keyword in food_text:
+                return True
+
     risks = check_allergy(food_name, user_allergies)
     return len(risks) > 0
-
 
 def suggest_alternatives(
     original_energy,
@@ -382,8 +435,11 @@ def suggest_alternatives(
 
         drink_keywords = [
             "water", "juice", "tea", "coffee", "coconut", "smoothie",
-            "milk", "lassi", "beverage", "drink"
+            "beverage", "drink"
         ]
+
+        if not any(normalize_text(a) in ["milk", "dairy", "lactose"] for a in user_allergies):
+            drink_keywords.extend(["milk", "lassi"])
 
         keyword_df = df[
             df["Food"].astype(str).str.lower().apply(

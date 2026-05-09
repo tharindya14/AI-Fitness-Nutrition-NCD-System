@@ -79,7 +79,7 @@ export default function PostureScreen() {
             icon={postureIcons.guidance}
             title="History"
             subtitle="View previous food-drug safety checks and saved results."
-            onPress={() => {}}
+            onPress={() => router.push("/(tabs)/history" as any)}
           />
         </View>
       </ScrollView>

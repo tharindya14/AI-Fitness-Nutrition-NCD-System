@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
+  Image,
   KeyboardAvoidingView,
   Platform,
   Pressable,
@@ -22,11 +23,22 @@ import { DRUG_SUGGESTIONS, FOOD_SUGGESTIONS } from "@/constants/suggestions";
 
 const ORANGE = "#ff7a00";
 const DARK = "#050505";
-const INPUT = "#050505";
-const BORDER = "#2a2a2a";
+const INPUT = "#101010";
 const TEXT = "#ffffff";
 const MUTED = "#b8b8b8";
 const DANGER = "#ff453a";
+
+const heroDietImage = require("../../assets/images/dashboard/diet-safety-hero.png");
+
+const shieldIcon = require("../../assets/images/diet/shield.png");
+const userIcon = require("../../assets/images/diet/user.png");
+const editIcon = require("../../assets/images/diet/edit.png");
+const heightIcon = require("../../assets/images/diet/height.png");
+const weightIcon = require("../../assets/images/diet/weight.png");
+const capsuleIcon = require("../../assets/images/diet/capsule.png");
+const bowlIcon = require("../../assets/images/diet/bowl.png");
+const trashIcon = require("../../assets/images/diet/trash.png");
+const historyIcon = require("../../assets/images/diet/history.png");
 
 export default function DietPage() {
   const [loading, setLoading] = useState(false);
@@ -82,6 +94,10 @@ export default function DietPage() {
 
     setMedicineNames([...medicineNames, value]);
     setMedicineInput("");
+  };
+
+  const clearMedicines = () => {
+    setMedicineNames([]);
   };
 
   const removeMedicine = (name: string) => {
@@ -201,97 +217,150 @@ export default function DietPage() {
 
           <View style={styles.heroBox}>
             <View style={styles.heroTextBox}>
-              <Text style={styles.heroTitle}>Food-Drug</Text>
               <Text style={styles.heroTitle}>Interaction</Text>
-              <Text style={styles.heroTitle}>Checker</Text>
+              <Text style={styles.heroTitleOrange}>Checker</Text>
 
               <Text style={styles.heroSubtitle}>
-                Check food and medicine safety using your saved health profile.
+                Check food, medicine, and allergy safety before you eat.
               </Text>
+
+              <View style={styles.trustPill}>
+                <Image source={shieldIcon} style={styles.trustIconImage} resizeMode="contain" />
+                <Text style={styles.trustText}>Smart • Fast • Reliable</Text>
+              </View>
             </View>
 
-            <View style={styles.heroVisual}>
-              <View style={styles.heroGlowCircle}>
-                <Text style={styles.heroIcon}>✚</Text>
-              </View>
-              <Text style={styles.heroSmallIcon}>🥗</Text>
-              <Text style={styles.heroPill}>◐</Text>
+            <View style={styles.heroImageBox}>
+              <Image source={heroDietImage} style={styles.heroImage} resizeMode="contain" />
             </View>
           </View>
 
-          <View style={styles.card}>
-            <View style={styles.cardHeader}>
-              <View style={styles.gridIcon}>
-                <Text style={styles.gridIconText}>▦</Text>
+          <View style={styles.snapshotCard}>
+            <View style={styles.snapshotTop}>
+              
+
+              <View style={styles.snapshotTitleBox}>
+                <Text style={styles.snapshotTitle}>Health Snapshot</Text>
+                <Text style={styles.snapshotSubtitle}>Using your saved profile</Text>
               </View>
 
-              <View style={styles.cardHeaderTextBox}>
-                <Text style={styles.cardTitle}>Diet Safety Dashboard</Text>
-                <Text style={styles.cardSubtitle}>
-                  BMI, medicine, allergy and food safety analysis
+              <Pressable
+                style={styles.editProfileButton}
+                onPress={() => router.push("/profile" as any)}
+              >
+                <Image source={editIcon} style={styles.editIconImage} resizeMode="contain" />
+                <Text style={styles.editProfileText}>Edit Profile</Text>
+              </Pressable>
+            </View>
+
+            <View style={styles.snapshotStats}>
+              <View style={styles.snapshotStat}>
+                <View style={styles.statMiniIcon}>
+                  <Image source={heightIcon} style={styles.statIconImage} resizeMode="contain" />
+                </View>
+                <Text style={styles.statLabel}>Height</Text>
+                <Text style={styles.statValue}>
+                  {height || "--"} <Text style={styles.statUnit}>cm</Text>
+                </Text>
+              </View>
+
+              <View style={styles.statDivider} />
+
+              <View style={styles.snapshotStat}>
+                <View style={styles.statMiniIcon}>
+                  <Image source={weightIcon} style={styles.statIconImage} resizeMode="contain" />
+                </View>
+                <Text style={styles.statLabel}>Weight</Text>
+                <Text style={styles.statValue}>
+                  {weight || "--"} <Text style={styles.statUnit}>kg</Text>
+                </Text>
+              </View>
+
+              <View style={styles.statDivider} />
+
+              <View style={styles.snapshotStat}>
+                <View style={styles.statMiniIcon}>
+                  <Image source={capsuleIcon} style={styles.statIconImage} resizeMode="contain" />
+                </View>
+                <Text style={styles.statLabel}>Medicines</Text>
+                <Text style={styles.statValue}>
+                  {medicineNames.length} <Text style={styles.statUnit}>items</Text>
                 </Text>
               </View>
             </View>
+          </View>
 
-            <View style={styles.sectionBadge}>
-              <Text style={styles.sectionBadgeText}>Interaction Checker</Text>
+          <View style={styles.formCard}>
+            <View style={styles.formTitleRow}>
+              <View style={styles.sectionBadge}>
+                <Text style={styles.sectionBadgeText}>Checker Form</Text>
+              </View>
+              <View style={styles.dottedLine} />
             </View>
 
-            <View style={styles.formSection}>
-              <View style={styles.profileMiniCard}>
-                <Text style={styles.profileMiniTitle}>Using Health Profile</Text>
+            <View style={styles.stepBlock}>
+              <View style={styles.stepHeader}>
+                <View style={styles.stepNumber}>
+                  <Text style={styles.stepNumberText}>01</Text>
+                </View>
 
-                <Text style={styles.profileMiniText}>
-                  Height: {height || "--"} cm
-                </Text>
+                <View style={styles.stepTextBox}>
+                  <Text style={styles.stepTitle}>Add Medicines</Text>
+                  <Text style={styles.stepSubtitle}>
+                    Search and add the medicines you are taking.
+                  </Text>
+                </View>
+              </View>
 
-                <Text style={styles.profileMiniText}>
-                  Weight: {weight || "--"} kg
-                </Text>
-
-                <Text style={styles.profileMiniText}>
-                  Medicines: {medicineNames.length}
-                </Text>
+              <View style={styles.inputRow}>
+                <View style={styles.autoBox}>
+                  <AutoCompleteInput
+                    label=""
+                    placeholder="Search medicine name..."
+                    value={medicineInput}
+                    onChangeValue={setMedicineInput}
+                    data={DRUG_SUGGESTIONS}
+                    subText={(item: any) =>
+                      item.contains || "Tap to select medication"
+                    }
+                  />
+                </View>
 
                 <Pressable
-                  style={styles.profileEditButton}
-                  onPress={() => router.push("/profile" as any)}
+                  style={({ pressed }) => [
+                    styles.addButton,
+                    pressed && styles.buttonPressed,
+                  ]}
+                  onPress={addMedicine}
                 >
-                  <Text style={styles.profileEditText}>Edit Profile</Text>
+                  <Text style={styles.addButtonText}>+</Text>
                 </Pressable>
               </View>
 
-              <AutoCompleteInput
-                label="Add Medicine"
-                placeholder="Search medication name..."
-                value={medicineInput}
-                onChangeValue={setMedicineInput}
-                data={DRUG_SUGGESTIONS}
-                subText={(item: any) =>
-                  item.contains || "Tap to select medication"
-                }
-              />
+              <View style={styles.addedHeader}>
+                <Text style={styles.addedLabel}>Added Medicines</Text>
 
-              <Pressable
-                style={({ pressed }) => [
-                  styles.addMedicineButton,
-                  pressed && styles.buttonPressed,
-                ]}
-                onPress={addMedicine}
-              >
-                <Text style={styles.addMedicineText}>+ Add Medicine</Text>
-              </Pressable>
+                {medicineNames.length > 0 ? (
+                  <Pressable style={styles.clearButton} onPress={clearMedicines}>
+                    <Text style={styles.clearAllText}>Clear All</Text>
+                    <Image source={trashIcon} style={styles.clearTrashIcon} resizeMode="contain" />
+                  </Pressable>
+                ) : null}
+              </View>
 
               <View style={styles.medicineList}>
                 {medicineNames.length === 0 ? (
                   <Text style={styles.emptyMedicineText}>
-                    No medicines added. Add from profile or search here.
+                    No medicines added yet.
                   </Text>
                 ) : (
                   medicineNames.map((item) => (
                     <Pressable
                       key={item}
-                      style={styles.medicineChip}
+                      style={({ pressed }) => [
+                        styles.medicineChip,
+                        pressed && styles.buttonPressed,
+                      ]}
                       onPress={() => removeMedicine(item)}
                     >
                       <Text style={styles.medicineChipText}>{item}</Text>
@@ -300,43 +369,84 @@ export default function DietPage() {
                   ))
                 )}
               </View>
-
-              <Text style={styles.helperText}>
-                Tap a medicine chip to remove it.
-              </Text>
-
-              <AutoCompleteInput
-                label="Food"
-                placeholder="Search food name..."
-                value={foodName}
-                onChangeValue={setFoodName}
-                data={FOOD_SUGGESTIONS}
-                subText={() => "Tap to select food"}
-              />
-
-              <Text style={styles.label}>Allergies</Text>
-              <TextInput
-                style={styles.input}
-                value={allergies}
-                onChangeText={setAllergies}
-                placeholder="Example: milk,wheat"
-                placeholderTextColor="#777"
-                autoCorrect={false}
-                autoCapitalize="none"
-              />
-
-              <Text style={styles.helperText}>
-                Separate multiple allergies with commas.
-              </Text>
             </View>
+
+            <View style={styles.sectionDivider} />
+
+            <View style={styles.stepBlock}>
+              <View style={styles.stepHeader}>
+                <View style={styles.stepNumber}>
+                  <Text style={styles.stepNumberText}>02</Text>
+                </View>
+
+                <View style={styles.stepTextBox}>
+                  <Text style={styles.stepTitle}>Select Food</Text>
+                  <Text style={styles.stepSubtitle}>
+                    Search for the food or drink you want to check.
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.foodInputRow}>
+                <View style={styles.foodAutoBox}>
+                  <AutoCompleteInput
+                    label=""
+                    placeholder="Search food name..."
+                    value={foodName}
+                    onChangeValue={setFoodName}
+                    data={FOOD_SUGGESTIONS}
+                    subText={() => "Tap to select food"}
+                  />
+                </View>
+
+                <View style={styles.foodIconButton}>
+                  <Image source={bowlIcon} style={styles.foodIconImage} resizeMode="contain" />
+                </View>
+              </View>
+            </View>
+
+            <View style={styles.sectionDivider} />
+
+            <View style={styles.stepBlock}>
+              <View style={styles.stepHeader}>
+                <View style={styles.stepNumber}>
+                  <Text style={styles.stepNumberText}>03</Text>
+                </View>
+
+                <View style={styles.stepTextBox}>
+                  <Text style={styles.stepTitle}>Allergies</Text>
+                  <Text style={styles.stepSubtitle}>
+                    Add your allergies separated by commas.
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.allergyInputBox}>
+                <TextInput
+                  style={styles.allergyInput}
+                  value={allergies}
+                  onChangeText={setAllergies}
+                  placeholder="e.g. milk, wheat, peanuts"
+                  placeholderTextColor="#777"
+                  autoCorrect={false}
+                  autoCapitalize="none"
+                />
+
+                <View style={styles.allergyIconBox}>
+                  <Image source={shieldIcon} style={styles.allergyIconImage} resizeMode="contain" />
+                </View>
+              </View>
+            </View>
+
+            <View style={styles.sectionDivider} />
 
             {loading ? (
               <View style={styles.loadingBox}>
                 <ActivityIndicator size="large" color={ORANGE} />
-                <Text style={styles.loadingText}>Checking safety...</Text>
+                <Text style={styles.loadingText}>Checking Interactions...</Text>
               </View>
             ) : (
-              <View style={styles.actionSection}>
+              <>
                 <Pressable
                   style={({ pressed }) => [
                     styles.primaryButton,
@@ -344,30 +454,27 @@ export default function DietPage() {
                   ]}
                   onPress={checkSafety}
                 >
-                  <Text style={styles.primaryText}>Check Safety</Text>
-                  <Text style={styles.buttonArrow}>›</Text>
+                  
+                    <Image source={shieldIcon} style={styles.primaryIconImage} resizeMode="contain" />
+                  
+
+                  <Text style={styles.primaryText}>Check Interactions</Text>
+
+                  <Text style={styles.primaryArrow}>›</Text>
                 </Pressable>
 
                 <Pressable
                   style={({ pressed }) => [
-                    styles.secondaryButton,
+                    styles.historyButton,
                     pressed && styles.buttonPressed,
                   ]}
                   onPress={() => router.push("/history")}
                 >
-                  <Text style={styles.secondaryText}>View My History</Text>
+                  <Image source={historyIcon} style={styles.historyIconImage} resizeMode="contain" />
+                  <Text style={styles.historyText}>View My History</Text>
+                  <Text style={styles.historyArrow}>›</Text>
                 </Pressable>
-
-                <Pressable
-                  style={({ pressed }) => [
-                    styles.dangerButton,
-                    pressed && styles.buttonPressed,
-                  ]}
-                  onPress={logout}
-                >
-                  <Text style={styles.dangerText}>Logout</Text>
-                </Pressable>
-              </View>
+              </>
             )}
           </View>
         </ScrollView>
@@ -389,7 +496,7 @@ const styles = StyleSheet.create({
 
   scroll: {
     flexGrow: 1,
-    paddingHorizontal: 18,
+    paddingHorizontal: 20,
     paddingTop: 8,
     paddingBottom: 34,
   },
@@ -398,168 +505,252 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     alignSelf: "flex-start",
-    marginBottom: 16,
+    marginBottom: 18,
     paddingVertical: 6,
     paddingRight: 12,
   },
 
-  homeBackIcon: {
-    color: ORANGE,
-    fontSize: 34,
-    fontWeight: "900",
+  backIconImage: {
+    width: 28,
+    height: 28,
     marginRight: 4,
-    marginTop: -3,
   },
 
   homeBackText: {
     color: ORANGE,
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "900",
   },
 
   heroBox: {
-    minHeight: 260,
+    minHeight: 286,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
     marginBottom: 20,
   },
 
   heroTextBox: {
-    flex: 1.2,
-    zIndex: 2,
+    flex: 1,
+    zIndex: 3,
   },
 
   heroTitle: {
     color: TEXT,
-    fontSize: 42,
+    fontSize: 35,
     fontWeight: "900",
-    lineHeight: 51,
+    lineHeight: 34,
+    letterSpacing: -1,
+  },
+
+  heroTitleOrange: {
+    color: ORANGE,
+    fontSize: 35,
+    fontWeight: "900",
+    lineHeight: 34,
     letterSpacing: -1,
   },
 
   heroSubtitle: {
     color: "#d4d4d4",
-    fontSize: 17,
+    fontSize: 16,
     lineHeight: 25,
     marginTop: 18,
     fontWeight: "700",
   },
 
-  heroVisual: {
-    width: 190,
-    height: 190,
-    marginLeft: -40,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  heroGlowCircle: {
-    width: 152,
-    height: 152,
-    borderRadius: 76,
-    borderWidth: 2,
-    borderColor: "rgba(255,122,0,0.8)",
-    backgroundColor: "rgba(255,122,0,0.12)",
-    alignItems: "center",
-    justifyContent: "center",
-    shadowColor: ORANGE,
-    shadowOpacity: 0.65,
-    shadowRadius: 22,
-    shadowOffset: { width: 0, height: 0 },
-    elevation: 10,
-  },
-
-  heroIcon: {
-    color: "#ffd08a",
-    fontSize: 62,
-    fontWeight: "900",
-  },
-
-  heroSmallIcon: {
-    position: "absolute",
-    left: 18,
-    bottom: 32,
-    fontSize: 45,
-  },
-
-  heroPill: {
-    position: "absolute",
-    right: 26,
-    bottom: 20,
-    color: "#ffb25c",
-    fontSize: 43,
-    transform: [{ rotate: "-25deg" }],
-  },
-
-  card: {
-    backgroundColor: "rgba(17,17,17,0.96)",
-    borderRadius: 32,
-    borderWidth: 1,
-    borderColor: "rgba(255,122,0,0.42)",
-    padding: 18,
-    paddingTop: 22,
-    shadowColor: ORANGE,
-    shadowOpacity: 0.25,
-    shadowRadius: 18,
-    shadowOffset: { width: 0, height: 0 },
-    elevation: 8,
-  },
-
-  cardHeader: {
+  trustPill: {
+    marginTop: 17,
+    alignSelf: "flex-start",
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 20,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.14)",
+    backgroundColor: "rgba(22, 239, 83, 0.23)",
+    paddingVertical: 9,
+    paddingHorizontal: 13,
   },
 
-  gridIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: "rgba(255,122,0,0.6)",
-    backgroundColor: "rgba(255,122,0,0.12)",
+  trustIconImage: {
+    width: 21,
+    height: 21,
+    marginRight: 8,
+  },
+
+  trustText: {
+    color: "#d6d6d6",
+    fontSize: 13,
+    fontWeight: "800",
+  },
+
+  heroImageBox: {
+    width: 210,
+    height: 220,
+    marginLeft: -66,
     alignItems: "center",
     justifyContent: "center",
-    marginRight: 14,
   },
 
-  gridIconText: {
-    color: ORANGE,
-    fontSize: 30,
-    fontWeight: "900",
-    marginTop: -2,
+  heroImage: {
+    width: 270,
+    height: 300,
   },
 
-  cardHeaderTextBox: {
+  snapshotCard: {
+    backgroundColor: "rgba(17,17,17,0.96)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.13)",
+    borderRadius: 26,
+    padding: 16,
+    marginBottom: 18,
+    shadowColor: ORANGE,
+    shadowOpacity: 0.23,
+    shadowRadius: 16,
+    elevation: 7,
+  },
+
+  snapshotTop: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 18,
+  },
+
+  snapshotIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: 27,
+    backgroundColor: "rgba(255,122,0,0.18)",
+    borderWidth: 1,
+    borderColor: "rgba(255,122,0,0.55)",
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 13,
+    overflow: "hidden",
+  },
+
+  snapshotIconImage: {
+    width: 37,
+    height: 37,
+  },
+
+  snapshotTitleBox: {
     flex: 1,
   },
 
-  cardTitle: {
+  snapshotTitle: {
     color: TEXT,
-    fontSize: 27,
+    fontSize: 18,
     fontWeight: "900",
-    lineHeight: 33,
-    letterSpacing: -0.4,
   },
 
-  cardSubtitle: {
+  snapshotSubtitle: {
     color: MUTED,
     fontSize: 13,
-    lineHeight: 18,
+    fontWeight: "700",
     marginTop: 4,
-    fontWeight: "600",
+  },
+
+  editProfileButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: ORANGE,
+    backgroundColor: "rgba(255,122,0,0.10)",
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+  },
+
+  editIconImage: {
+    width: 20,
+    height: 20,
+    marginRight: 7,
+  },
+
+  editProfileText: {
+    color: ORANGE,
+    fontSize: 13,
+    fontWeight: "900",
+  },
+
+  snapshotStats: {
+    flexDirection: "row",
+    alignItems: "stretch",
+  },
+
+  snapshotStat: {
+    flex: 1,
+    alignItems: "flex-start",
+  },
+
+  statMiniIcon: {
+    width: 42,
+    height: 42,
+    borderRadius: 14,
+    backgroundColor: "rgba(255,255,255,0.04)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.08)",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 8,
+    overflow: "hidden",
+  },
+
+  statIconImage: {
+    width: 32,
+    height: 32,
+  },
+
+  statLabel: {
+    color: MUTED,
+    fontSize: 12,
+    fontWeight: "700",
+  },
+
+  statValue: {
+    color: TEXT,
+    fontSize: 23,
+    fontWeight: "900",
+    marginTop: 2,
+  },
+
+  statUnit: {
+    color: ORANGE,
+    fontSize: 13,
+    fontWeight: "900",
+  },
+
+  statDivider: {
+    width: 1,
+    backgroundColor: "rgba(255,255,255,0.10)",
+    marginHorizontal: 12,
+  },
+
+  formCard: {
+    backgroundColor: "rgba(17,17,17,0.96)",
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: "rgba(255,122,0,0.42)",
+    padding: 16,
+    shadowColor: ORANGE,
+    shadowOpacity: 0.28,
+    shadowRadius: 20,
+    elevation: 9,
+  },
+
+  formTitleRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 24,
   },
 
   sectionBadge: {
-    alignSelf: "flex-start",
     backgroundColor: "rgba(255,122,0,0.14)",
     borderWidth: 1,
     borderColor: "rgba(255,122,0,0.55)",
     borderRadius: 999,
-    paddingVertical: 8,
-    paddingHorizontal: 14,
-    marginBottom: 14,
+    paddingVertical: 9,
+    paddingHorizontal: 16,
   },
 
   sectionBadgeText: {
@@ -567,125 +758,146 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "900",
     textTransform: "uppercase",
-    letterSpacing: 0.5,
+    letterSpacing: 1,
   },
 
-  formSection: {
-    backgroundColor: "rgba(5,5,5,0.94)",
-    borderRadius: 24,
+  dottedLine: {
+    flex: 1,
+    height: 1,
+    borderStyle: "dotted",
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.10)",
-    padding: 16,
+    borderColor: "rgba(255,122,0,0.55)",
+    marginLeft: 10,
   },
 
-  profileMiniCard: {
-    backgroundColor: "rgba(255,122,0,0.10)",
-    borderWidth: 1,
-    borderColor: "rgba(255,122,0,0.45)",
-    borderRadius: 18,
-    padding: 14,
+  stepBlock: {
+    marginBottom: 4,
+  },
+
+  stepHeader: {
+    flexDirection: "row",
+    alignItems: "flex-start",
     marginBottom: 14,
   },
 
-  profileMiniTitle: {
-    color: ORANGE,
-    fontSize: 13,
-    fontWeight: "900",
-    marginBottom: 6,
-  },
-
-  profileMiniText: {
-    color: TEXT,
-    fontSize: 13,
-    fontWeight: "700",
-    lineHeight: 20,
-  },
-
-  profileEditButton: {
-    alignSelf: "flex-start",
-    marginTop: 10,
+  stepNumber: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: "rgba(255,122,0,0.10)",
     borderWidth: 1,
     borderColor: ORANGE,
-    borderRadius: 999,
-    paddingVertical: 7,
-    paddingHorizontal: 13,
-    backgroundColor: "rgba(255,122,0,0.12)",
-  },
-
-  profileEditText: {
-    color: ORANGE,
-    fontSize: 12,
-    fontWeight: "900",
-  },
-
-  label: {
-    color: "#e5e5e5",
-    fontSize: 13,
-    fontWeight: "800",
-    marginBottom: 7,
-    marginTop: 8,
-  },
-
-  input: {
-    minHeight: 52,
-    backgroundColor: INPUT,
-    borderWidth: 1,
-    borderColor: BORDER,
-    borderRadius: 15,
-    color: TEXT,
-    paddingHorizontal: 15,
-    fontSize: 15,
-    fontWeight: "700",
-  },
-
-  helperText: {
-    color: MUTED,
-    fontSize: 12,
-    lineHeight: 18,
-    marginTop: 8,
-    marginBottom: 8,
-    fontWeight: "600",
-  },
-
-  addMedicineButton: {
-    minHeight: 48,
-    borderRadius: 15,
-    borderWidth: 1,
-    borderColor: ORANGE,
-    backgroundColor: "rgba(255,122,0,0.12)",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 10,
-    marginBottom: 12,
+    marginRight: 14,
   },
 
-  addMedicineText: {
+  stepNumberText: {
     color: ORANGE,
-    fontSize: 14,
+    fontSize: 17,
     fontWeight: "900",
+  },
+
+  stepTextBox: {
+    flex: 1,
+  },
+
+  stepTitle: {
+    color: TEXT,
+    fontSize: 19,
+    fontWeight: "900",
+  },
+
+  stepSubtitle: {
+    color: MUTED,
+    fontSize: 14,
+    lineHeight: 20,
+    marginTop: 4,
+    fontWeight: "700",
+  },
+
+  inputRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 10,
+  },
+
+  autoBox: {
+    flex: 1,
+  },
+
+  addButton: {
+    marginTop: 20,
+    minHeight: 50,
+    minWidth: 50,
+    borderRadius: 17,
+    borderColor: ORANGE,
+    backgroundColor: "rgba(255,122,0,0.10)",
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: ORANGE,
+    shadowOpacity: 0.5,
+    shadowRadius: 16,
+    elevation: 8,
+  },
+
+  addButtonText: {
+    color: TEXT,
+    fontSize: 18,
+    fontWeight: "900",
+  },
+
+  addedHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 6,
+    marginBottom: 10,
+  },
+
+  addedLabel: {
+    color: "#d7d7d7",
+    fontSize: 14,
+    fontWeight: "800",
+  },
+
+  clearButton: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  clearAllText: {
+    color: ORANGE,
+    fontSize: 13,
+    fontWeight: "900",
+    marginRight: 6,
+  },
+
+  clearTrashIcon: {
+    width: 19,
+    height: 19,
   },
 
   medicineList: {
     flexDirection: "row",
     flexWrap: "wrap",
     gap: 8,
-    marginBottom: 6,
   },
 
   medicineChip: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "rgba(255,122,0,0.16)",
+    backgroundColor: "rgba(255,122,0,0.13)",
     borderWidth: 1,
-    borderColor: "rgba(255,122,0,0.55)",
-    borderRadius: 999,
+    borderColor: "rgba(255,122,0,0.48)",
+    borderRadius: 15,
     paddingVertical: 9,
-    paddingHorizontal: 12,
+    paddingHorizontal: 13,
   },
 
   medicineChipText: {
-    color: TEXT,
-    fontSize: 12,
+    color: ORANGE,
+    fontSize: 14,
     fontWeight: "900",
   },
 
@@ -693,13 +905,81 @@ const styles = StyleSheet.create({
     color: ORANGE,
     fontSize: 17,
     fontWeight: "900",
+    marginLeft: 8,
   },
 
   emptyMedicineText: {
     color: MUTED,
     fontSize: 13,
     fontWeight: "700",
-    marginBottom: 6,
+  },
+
+  sectionDivider: {
+    height: 1,
+    backgroundColor: "rgba(255,255,255,0.15)",
+    marginVertical: 21,
+  },
+
+  foodInputRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 12,
+  },
+
+  foodAutoBox: {
+    flex: 1,
+  },
+
+  foodIconButton: {
+    marginTop: 20,
+    width: 58,
+    height: 58,
+    borderRadius: 17,
+    borderWidth: 1,
+    borderColor: ORANGE,
+    backgroundColor: "rgba(255,122,0,0.10)",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+  },
+
+  foodIconImage: {
+    width: 43,
+    height: 43,
+  },
+
+  allergyInputBox: {
+    minHeight: 62,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.20)",
+    backgroundColor: INPUT,
+    flexDirection: "row",
+    alignItems: "center",
+    paddingLeft: 16,
+    paddingRight: 10,
+  },
+
+  allergyInput: {
+    flex: 1,
+    color: TEXT,
+    fontSize: 15,
+    fontWeight: "700",
+  },
+
+  allergyIconBox: {
+    width: 42,
+    height: 42,
+    borderRadius: 14,
+    backgroundColor: "rgba(255,122,0,0.10)",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+  },
+
+  allergyIconImage: {
+    width: 32,
+    height: 32,
   },
 
   loadingBox: {
@@ -711,71 +991,97 @@ const styles = StyleSheet.create({
   loadingText: {
     color: MUTED,
     marginTop: 10,
-    fontWeight: "800",
-  },
-
-  actionSection: {
-    marginTop: 16,
+    fontWeight: "900",
   },
 
   primaryButton: {
-    minHeight: 58,
+    minHeight: 72,
     borderRadius: 18,
     backgroundColor: ORANGE,
     paddingHorizontal: 18,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-between",
     flexDirection: "row",
     shadowColor: ORANGE,
-    shadowOpacity: 0.38,
-    shadowRadius: 16,
+    shadowOpacity: 0.55,
+    shadowRadius: 18,
     shadowOffset: { width: 0, height: 4 },
-    elevation: 8,
+    elevation: 10,
+  },
+
+  primaryIconBox: {
+    width: 45,
+    height: 45,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.16)",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+  },
+
+  primaryIconImage: {
+    width: 36,
+    height: 36,
   },
 
   primaryText: {
-    color: "#fff",
+    color: TEXT,
     fontWeight: "900",
-    fontSize: 16,
+    fontSize: 20,
   },
 
-  buttonArrow: {
-    color: "#fff",
+  primaryArrow: {
+    color: TEXT,
     fontWeight: "900",
-    fontSize: 32,
-    marginLeft: 10,
+    fontSize: 40,
     marginTop: -4,
   },
 
-  secondaryButton: {
-    minHeight: 54,
-    borderRadius: 17,
+  historyButton: {
+    minHeight: 62,
+    borderRadius: 18,
     borderWidth: 1,
     borderColor: ORANGE,
-    backgroundColor: "rgba(255,122,0,0.12)",
+    backgroundColor: "rgba(255,122,0,0.08)",
     alignItems: "center",
-    justifyContent: "center",
-    marginTop: 12,
+    justifyContent: "space-between",
+    flexDirection: "row",
+    marginTop: 14,
+    paddingHorizontal: 18,
   },
 
-  secondaryText: {
+  historyIconImage: {
+    width: 36,
+    height: 36,
+  },
+
+  historyText: {
     color: ORANGE,
+    fontSize: 18,
     fontWeight: "900",
-    fontSize: 15,
+    flex: 1,
+    marginLeft: 16,
   },
 
-  dangerButton: {
+  historyArrow: {
+    color: ORANGE,
+    fontSize: 34,
+    fontWeight: "900",
+    marginTop: -4,
+  },
+
+  logoutButton: {
     minHeight: 54,
     borderRadius: 17,
     borderWidth: 1,
     borderColor: DANGER,
-    backgroundColor: "rgba(255,69,58,0.12)",
+    backgroundColor: "rgba(255,69,58,0.10)",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 12,
+    marginTop: 14,
   },
 
-  dangerText: {
+  logoutText: {
     color: DANGER,
     fontWeight: "900",
     fontSize: 15,
@@ -784,5 +1090,12 @@ const styles = StyleSheet.create({
   buttonPressed: {
     transform: [{ scale: 0.985 }],
     opacity: 0.9,
+  },
+   homeBackIcon: {
+    color: ORANGE,
+    fontSize: 34,
+    fontWeight: "900",
+    marginRight: 4,
+    marginTop: -3,
   },
 });

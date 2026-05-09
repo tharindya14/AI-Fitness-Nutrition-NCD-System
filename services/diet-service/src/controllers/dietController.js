@@ -4,7 +4,7 @@ const os = require("os");
 const path = require("path");
 
 const DietSafetyLog = require("../models/DietSafetyLog");
-const User = require("../../../auth-service/src/models/User");
+const User = require("../models/AuthUser");
 
 function findPythonExecutable() {
   const projectRoot = path.join(__dirname, "..", "..", "..", "..");
@@ -93,11 +93,16 @@ async function updateUserProfileFromDietCheck(userId, inputData, parsedResult) {
     return null;
   }
 
-  return await User.findByIdAndUpdate(
+  const updatedUser = await User.findByIdAndUpdate(
     userId,
     { $set: updateData },
-    { new: true, runValidators: true }
+    {
+      new: true,
+      runValidators: false,
+    }
   ).select("-password");
+
+  return updatedUser;
 }
 
 exports.checkDietSafety = async (req, res) => {

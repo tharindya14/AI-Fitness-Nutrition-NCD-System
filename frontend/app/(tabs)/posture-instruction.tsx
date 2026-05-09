@@ -19,6 +19,45 @@ const exerciseHeroImages = {
   situp: require("../../assets/images/posture/situp_hero.png"),
   jumping_jack: require("../../assets/images/posture/jumping_jack_hero.png"),
 };
+
+const exerciseStepImages = {
+  squat: [
+    require("../../assets/images/posture/squat_step_1.png"),
+    require("../../assets/images/posture/squat_step_2.png"),
+    require("../../assets/images/posture/squat_step_3.png"),
+  ],
+  pushup: [
+    require("../../assets/images/posture/pushup_step_1.png"),
+    require("../../assets/images/posture/pushup_step_2.png"),
+    require("../../assets/images/posture/pushup_step_3.png"),
+  ],
+  bicep_curl: [
+    require("../../assets/images/posture/bicep_curl_step_1.png"),
+    require("../../assets/images/posture/bicep_curl_step_2.png"),
+    require("../../assets/images/posture/bicep_curl_step_3.png"),
+  ],
+  lunge: [
+    require("../../assets/images/posture/lunge_step_1.png"),
+    require("../../assets/images/posture/lunge_step_2.png"),
+    require("../../assets/images/posture/lunge_step_3.png"),
+  ],
+  plank: [
+    require("../../assets/images/posture/plank_step_1.png"),
+    require("../../assets/images/posture/plank_step_2.png"),
+    require("../../assets/images/posture/plank_step_3.png"),
+  ],
+  situp: [
+    require("../../assets/images/posture/situp_step_1.png"),
+    require("../../assets/images/posture/situp_step_2.png"),
+    require("../../assets/images/posture/situp_step_3.png"),
+  ],
+  jumping_jack: [
+    require("../../assets/images/posture/jumping_jack_step_1.png"),
+    require("../../assets/images/posture/jumping_jack_step_2.png"),
+    require("../../assets/images/posture/jumping_jack_step_3.png"),
+  ],
+};
+
 const iconCamera = require("../../assets/images/posture/icon_camera.png");
 const iconGuidance = require("../../assets/images/posture/icon_guidance.png");
 const iconExercises = require("../../assets/images/posture/icon_exercises.png");
@@ -32,20 +71,25 @@ type ExerciseKey =
   | "situp"
   | "jumping_jack";
 
-const exerciseData: Record<
-  ExerciseKey,
-  {
+type StepGuideItem = {
+  title: string;
+  description: string;
+  image: any;
+};
+
+type ExerciseInstructionData = {
   title: string;
   category: string;
   heroImage: any;
   cameraPosition: string;
   bodyVisibility: string;
-  howToPerform: string[];
+  stepGuide: StepGuideItem[];
   commonMistakes: string[];
   videoInstruction: string;
   bestFor: string;
-}
-> = {
+};
+
+const exerciseData: Record<ExerciseKey, ExerciseInstructionData> = {
   squat: {
     title: "Squat",
     category: "Lower Body",
@@ -54,12 +98,25 @@ const exerciseData: Record<
       "Place the phone in front or slightly side angle. Keep the camera stable.",
     bodyVisibility:
       "Head, shoulders, hips, knees, and feet should be fully visible.",
-    howToPerform: [
-      "Stand with feet shoulder-width apart.",
-      "Keep your chest up and back straight.",
-      "Lower your hips like sitting on a chair.",
-      "Keep knees aligned with toes.",
-      "Return to standing position slowly.",
+    stepGuide: [
+      {
+        title: "Start Position",
+        description:
+          "Stand with feet shoulder-width apart. Keep your chest up and back straight.",
+        image: exerciseStepImages.squat[0],
+      },
+      {
+        title: "Lower Your Body",
+        description:
+          "Lower your hips like sitting on a chair. Keep knees aligned with your toes.",
+        image: exerciseStepImages.squat[1],
+      },
+      {
+        title: "Return Up",
+        description:
+          "Push through your heels and return to standing position slowly.",
+        image: exerciseStepImages.squat[2],
+      },
     ],
     commonMistakes: [
       "Knees moving inward.",
@@ -80,12 +137,25 @@ const exerciseData: Record<
       "Place the phone from side view. Camera should capture full body horizontally.",
     bodyVisibility:
       "Shoulders, elbows, wrists, hips, knees, and ankles should be visible.",
-    howToPerform: [
-      "Start in a plank position.",
-      "Keep body straight from shoulders to ankles.",
-      "Lower your chest toward the floor.",
-      "Keep elbows controlled.",
-      "Push back up without dropping hips.",
+    stepGuide: [
+      {
+        title: "High Plank Position",
+        description:
+          "Place hands under shoulders. Keep your body straight from head to heels.",
+        image: exerciseStepImages.pushup[0],
+      },
+      {
+        title: "Lower Your Chest",
+        description:
+          "Bend elbows and lower your chest toward the floor without dropping hips.",
+        image: exerciseStepImages.pushup[1],
+      },
+      {
+        title: "Push Back Up",
+        description:
+          "Push your body upward while keeping your core tight and body aligned.",
+        image: exerciseStepImages.pushup[2],
+      },
     ],
     commonMistakes: [
       "Hips dropping too low.",
@@ -106,12 +176,25 @@ const exerciseData: Record<
       "Place the phone in front view. Upper body and both arms should be visible.",
     bodyVisibility:
       "Shoulders, elbows, wrists, hips, and torso should be clearly visible.",
-    howToPerform: [
-      "Stand straight with arms down.",
-      "Keep elbows close to the body.",
-      "Curl the weight upward slowly.",
-      "Avoid moving the upper arm too much.",
-      "Lower the arm with control.",
+    stepGuide: [
+      {
+        title: "Start Position",
+        description:
+          "Stand straight with arms down and elbows close to your body.",
+        image: exerciseStepImages.bicep_curl[0],
+      },
+      {
+        title: "Curl Up",
+        description:
+          "Curl the weight upward slowly while keeping your upper arm stable.",
+        image: exerciseStepImages.bicep_curl[1],
+      },
+      {
+        title: "Lower Slowly",
+        description:
+          "Lower the weight with control and avoid swinging your body.",
+        image: exerciseStepImages.bicep_curl[2],
+      },
     ],
     commonMistakes: [
       "Swinging the body.",
@@ -132,12 +215,25 @@ const exerciseData: Record<
       "Use side view. Place the phone far enough to capture both legs.",
     bodyVisibility:
       "Hips, knees, ankles, and feet should be visible during the full movement.",
-    howToPerform: [
-      "Stand straight with feet hip-width apart.",
-      "Step one leg forward.",
-      "Lower your back knee toward the floor.",
-      "Keep front knee aligned with ankle.",
-      "Push back to starting position.",
+    stepGuide: [
+      {
+        title: "Start Position",
+        description:
+          "Stand straight with feet hip-width apart and keep your upper body stable.",
+        image: exerciseStepImages.lunge[0],
+      },
+      {
+        title: "Step Forward",
+        description:
+          "Step one leg forward and lower your back knee toward the floor.",
+        image: exerciseStepImages.lunge[1],
+      },
+      {
+        title: "Return Back",
+        description:
+          "Push back to the starting position while keeping the front knee aligned.",
+        image: exerciseStepImages.lunge[2],
+      },
     ],
     commonMistakes: [
       "Front knee going too far forward.",
@@ -158,12 +254,25 @@ const exerciseData: Record<
       "Use side view. Keep phone stable at floor/body level if possible.",
     bodyVisibility:
       "Head, shoulders, hips, knees, and ankles should be visible in one frame.",
-    howToPerform: [
-      "Start on elbows or hands.",
-      "Keep shoulders above elbows/wrists.",
-      "Keep body in one straight line.",
-      "Engage your core.",
-      "Hold the position without dropping hips.",
+    stepGuide: [
+      {
+        title: "Set Your Position",
+        description:
+          "Place elbows or hands on the floor and keep shoulders aligned.",
+        image: exerciseStepImages.plank[0],
+      },
+      {
+        title: "Align Your Body",
+        description:
+          "Keep your body straight from head to ankles and engage your core.",
+        image: exerciseStepImages.plank[1],
+      },
+      {
+        title: "Hold Stable",
+        description:
+          "Hold the position without raising or dropping your hips.",
+        image: exerciseStepImages.plank[2],
+      },
     ],
     commonMistakes: [
       "Hips too high.",
@@ -184,12 +293,25 @@ const exerciseData: Record<
       "Place the phone from side view. Keep upper body and knees visible.",
     bodyVisibility:
       "Head, shoulders, hips, and knees should be visible throughout the movement.",
-    howToPerform: [
-      "Lie down with knees bent.",
-      "Keep feet stable.",
-      "Raise upper body toward knees.",
-      "Control the movement.",
-      "Lower back down slowly.",
+    stepGuide: [
+      {
+        title: "Lie Down",
+        description:
+          "Lie on your back with knees bent and feet placed firmly on the floor.",
+        image: exerciseStepImages.situp[0],
+      },
+      {
+        title: "Lift Upper Body",
+        description:
+          "Raise your upper body toward your knees using your core muscles.",
+        image: exerciseStepImages.situp[1],
+      },
+      {
+        title: "Lower Slowly",
+        description:
+          "Lower your body back down slowly with control.",
+        image: exerciseStepImages.situp[2],
+      },
     ],
     commonMistakes: [
       "Using neck too much.",
@@ -210,12 +332,25 @@ const exerciseData: Record<
       "Use front view. Place the phone far enough to capture arms and legs fully.",
     bodyVisibility:
       "Full body should be visible because arms and legs move outward.",
-    howToPerform: [
-      "Stand straight with arms by your sides.",
-      "Jump feet outward while raising arms.",
-      "Return feet together while lowering arms.",
-      "Keep rhythm controlled.",
-      "Continue movement smoothly.",
+    stepGuide: [
+      {
+        title: "Start Position",
+        description:
+          "Stand straight with feet together and arms by your sides.",
+        image: exerciseStepImages.jumping_jack[0],
+      },
+      {
+        title: "Jump Out",
+        description:
+          "Jump feet outward while raising your arms above your head.",
+        image: exerciseStepImages.jumping_jack[1],
+      },
+      {
+        title: "Return In",
+        description:
+          "Jump back to the starting position and lower your arms smoothly.",
+        image: exerciseStepImages.jumping_jack[2],
+      },
     ],
     commonMistakes: [
       "Arms not raising fully.",
@@ -282,10 +417,16 @@ export default function PostureInstructionScreen() {
         </View>
 
         <View style={styles.sectionCard}>
-          <Text style={styles.sectionTitle}>How to Perform</Text>
+          <Text style={styles.sectionTitle}>Step-by-Step Visual Guide</Text>
 
-          {data.howToPerform.map((step, index) => (
-            <StepRow key={step} number={index + 1} text={step} />
+          {data.stepGuide.map((step, index) => (
+            <VisualStepCard
+              key={`${step.title}-${index}`}
+              number={index + 1}
+              title={step.title}
+              description={step.description}
+              image={step.image}
+            />
           ))}
         </View>
 
@@ -335,14 +476,34 @@ function InstructionBlock({
   );
 }
 
-function StepRow({ number, text }: { number: number; text: string }) {
+function VisualStepCard({
+  number,
+  title,
+  description,
+  image,
+}: {
+  number: number;
+  title: string;
+  description: string;
+  image: any;
+}) {
   return (
-    <View style={styles.stepRow}>
-      <View style={styles.stepNumberBox}>
-        <Text style={styles.stepNumber}>{number}</Text>
+    <View style={styles.visualStepCard}>
+      <View style={styles.visualStepImageBox}>
+        <Image source={image} style={styles.visualStepImage} resizeMode="contain" />
       </View>
 
-      <Text style={styles.stepText}>{text}</Text>
+      <View style={styles.visualStepContent}>
+        <View style={styles.stepHeaderRow}>
+          <View style={styles.stepNumberBox}>
+            <Text style={styles.stepNumber}>{number}</Text>
+          </View>
+
+          <Text style={styles.visualStepTitle}>{title}</Text>
+        </View>
+
+        <Text style={styles.visualStepDescription}>{description}</Text>
+      </View>
     </View>
   );
 }
@@ -361,7 +522,6 @@ const DARK = "#050505";
 const CARD = "#111111";
 const BORDER = "#2a2a2a";
 const TEXT = "#ffffff";
-const MUTED = "#a9a9a9";
 
 const styles = StyleSheet.create({
   safe: {
@@ -487,34 +647,65 @@ const styles = StyleSheet.create({
     fontWeight: "900",
     marginBottom: 14,
   },
-  stepRow: {
+
+  visualStepCard: {
+  backgroundColor: "#050505",
+  borderWidth: 1,
+  borderColor: "rgba(255,255,255,0.1)",
+  borderRadius: 24,
+  overflow: "hidden",
+  marginBottom: 20,
+},
+visualStepImageBox: {
+  width: "100%",
+  height: 430,
+  backgroundColor: "#020202",
+  alignItems: "center",
+  justifyContent: "center",
+  borderBottomWidth: 1,
+  borderBottomColor: "rgba(255,122,0,0.22)",
+},
+ visualStepImage: {
+  width: "100%",
+  height: "100%",
+},
+  visualStepContent: {
+    padding: 18,
+  },
+  stepHeaderRow: {
     flexDirection: "row",
-    alignItems: "flex-start",
-    marginBottom: 11,
+    alignItems: "center",
+    marginBottom: 8,
   },
   stepNumberBox: {
-    width: 28,
-    height: 28,
-    borderRadius: 14,
+    width: 30,
+    height: 30,
+    borderRadius: 15,
     backgroundColor: "rgba(255,122,0,0.15)",
     borderWidth: 1,
     borderColor: ORANGE,
     alignItems: "center",
     justifyContent: "center",
-    marginRight: 11,
+    marginRight: 10,
   },
   stepNumber: {
     color: ORANGE,
     fontSize: 13,
     fontWeight: "900",
   },
-  stepText: {
+  visualStepTitle: {
+    color: TEXT,
+    fontSize: 20,
+    fontWeight: "900",
     flex: 1,
+  },
+  visualStepDescription: {
     color: "#d0d0d0",
-    fontSize: 14,
-    lineHeight: 21,
+    fontSize: 13,
+    lineHeight: 20,
     fontWeight: "600",
   },
+
   mistakeRow: {
     flexDirection: "row",
     alignItems: "flex-start",
@@ -579,4 +770,5 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     marginTop: -3,
   },
+  
 });

@@ -665,7 +665,7 @@ const styles = StyleSheet.create({
 
   heroTitle: {
     color: TEXT,
-    fontSize: 38,
+    fontSize: 30,
     fontWeight: "900",
     lineHeight: 46,
     letterSpacing: -1,
