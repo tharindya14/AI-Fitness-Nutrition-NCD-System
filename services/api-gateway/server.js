@@ -38,14 +38,16 @@ app.use(
   createProxyMiddleware({
     target: process.env.EXERCISE_SERVICE_URL,
     changeOrigin: true,
+
   })
 );
 
 app.use(
-  "/api/supplement",
+  "/api/supplements",
   createProxyMiddleware({
     target: process.env.SUPPLEMENT_SERVICE_URL,
     changeOrigin: true,
+    pathRewrite: (path) => `/api/supplements${path}`,
   })
 );
 

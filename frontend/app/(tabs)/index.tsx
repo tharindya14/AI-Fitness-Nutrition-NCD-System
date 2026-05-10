@@ -52,6 +52,16 @@ export default function AuthScreen() {
       });
 
       await saveItem("token", response.data.token);
+
+      const userName =
+        response.data?.user?.fullName ||
+        response.data?.user?.name ||
+        response.data?.fullName ||
+        response.data?.name ||
+        "FITSHIELD User";
+      
+      await saveItem("userName", userName);
+      
       goHome();
     } catch (error: any) {
       showError("Login Failed", error);
@@ -87,6 +97,8 @@ export default function AuthScreen() {
       });
 
       await saveItem("token", response.data.token);
+      await saveItem("userName", fullNameRef.current.trim());
+      
       goHome();
     } catch (error: any) {
       showError("Register Failed", error);
