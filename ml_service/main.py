@@ -6,9 +6,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+#path assign (models)
 MODEL_PATH = BASE_DIR / "models" / "food_drug_risk_model.pkl"
 ENCODER_PATH = BASE_DIR / "models" / "encoders.pkl"
 
+#path assign (datasets)
 FOOD_PATH = BASE_DIR / "datasets" / "food_subset.csv"
 DRUG_CLEAN_PATH = BASE_DIR / "datasets" / "drug_clean.csv"
 TRAIN_PATH = BASE_DIR / "datasets" / "food_drug_pairs_train.csv"
@@ -20,9 +22,11 @@ USER_PROFILE_PATH = BASE_DIR / "datasets" / "user_profiles.csv"
 USER_MEDICINES_PATH = BASE_DIR / "datasets" / "user_medicines.csv"
 BMI_GUIDANCE_PATH = BASE_DIR / "datasets" / "bmi_food_guidance.csv"
 
+#load models
 model = joblib.load(MODEL_PATH)
 encoders = joblib.load(ENCODER_PATH)
 
+#load datasets
 foods = pd.read_csv(FOOD_PATH)
 drugs = pd.read_csv(DRUG_CLEAN_PATH)
 train_pairs = pd.read_csv(TRAIN_PATH)
@@ -34,6 +38,7 @@ user_profiles_df = pd.read_csv(USER_PROFILE_PATH)
 user_medicines_df = pd.read_csv(USER_MEDICINES_PATH)
 bmi_guidance_df = pd.read_csv(BMI_GUIDANCE_PATH)
 
+#normalization
 features = [
     "Chemical_Class",
     "Habit_Forming",
