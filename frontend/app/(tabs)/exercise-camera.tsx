@@ -24,11 +24,12 @@ type ExerciseKey =
 type AnalysisResult = {
   exercise: string;
   pose_detected: boolean;
+  exercise_match?: boolean;
   status: string;
-  primary_angle_name?: string;
-  primary_angle?: number;
-  secondary_angle_name?: string;
-  secondary_angle?: number;
+  primary_angle_name?: string | null;
+  primary_angle?: number | null;
+  secondary_angle_name?: string | null;
+  secondary_angle?: number | null;
   feedback?: string[];
   ml_enabled?: boolean;
   ml_prediction?: {
@@ -39,6 +40,13 @@ type AnalysisResult = {
     probabilities?: Record<string, number>;
   } | null;
   message?: string;
+};
+
+type RepState = {
+  rep_count: number;
+  stage: "up" | "down" | "hold";
+  hold_seconds: number;
+  last_rep_completed: boolean;
 };
 
 const EXERCISES: { label: string; value: ExerciseKey }[] = [
@@ -99,6 +107,114 @@ function buildVoiceMessage(data: AnalysisResult) {
   return "Analyzing your posture.";
 }
 
+function getRepThresholds(exercise: ExerciseKey) {
+  if (exercise === "squat") {
+    return {
+      up: 155,
+      down: 95,
+      mode: "lower_is_down" as const,
+    };
+  }
+
+  if (exercise === "pushup") {
+    return {
+      up: 150,
+      down: 115,
+      mode: "lower_is_down" as const,
+    };
+  }
+
+  if (exercise === "bicep_curl") {
+    return {
+      up: 145,
+      down: 85,
+      mode: "lower_is_down" as const,
+    };
+  }
+
+  if (exercise === "lunge") {
+    return {
+      up: 150,
+      down: 110,
+      mode: "lower_is_down" as const,
+    };
+  }
+
+  if (exercise === "situp") {
+    return {
+      up: 135,
+      down: 95,
+      mode: "lower_is_down" as const,
+    };
+  }
+
+  if (exercise === "jumping_jack") {
+    return {
+      up: 1.35,
+      down: 1.75,
+      mode: "higher_is_down" as const,
+    };
+  }
+
+  return {
+    up: 160,
+    down: 100,
+    mode: "lower_is_down" as const,
+  };
+}
+
+function getDisplayStage(
+  exercise: ExerciseKey,
+  angle?: number | null,
+  stage?: string
+) {
+  if (exercise === "plank") {
+    return "Hold";
+  }
+
+  if (angle === undefined || angle === null || Number.isNaN(Number(angle))) {
+    return stage === "down" ? "Down Position" : "Up Position";
+  }
+
+  if (exercise === "squat") {
+    if (angle > 155) return "Standing";
+    if (angle < 95) return "Deep Squat";
+    return "Going Down / Coming Up";
+  }
+
+  if (exercise === "pushup") {
+    if (angle > 150) return "Up Position";
+    if (angle < 115) return "Down Position";
+    return "Going Down / Coming Up";
+  }
+
+  if (exercise === "bicep_curl") {
+    if (angle > 145) return "Arm Extended";
+    if (angle < 85) return "Arm Curled";
+    return "Curling / Extending";
+  }
+
+  if (exercise === "lunge") {
+    if (angle > 150) return "Standing";
+    if (angle < 110) return "Lunge Down";
+    return "Going Down / Coming Up";
+  }
+
+  if (exercise === "situp") {
+    if (angle > 135) return "Lying Down";
+    if (angle < 95) return "Sit-up Position";
+    return "Going Up / Going Down";
+  }
+
+  if (exercise === "jumping_jack") {
+    if (angle < 1.35) return "Closed Position";
+    if (angle > 1.75) return "Open Position";
+    return "Opening / Closing";
+  }
+
+  return stage || "Waiting";
+}
+
 export default function ExerciseCameraScreen() {
   const cameraRef = useRef<CameraView | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -106,6 +222,11 @@ export default function ExerciseCameraScreen() {
 
   const lastSpokenMessageRef = useRef("");
   const lastSpokenTimeRef = useRef(0);
+
+  const repStageRef = useRef<"up" | "down" | "hold">("up");
+  const repCountRef = useRef(0);
+  const plankStartTimeRef = useRef<number | null>(null);
+  const plankToleranceRef = useRef(0);
 
   const [permission, requestPermission] = useCameraPermissions();
   const [selectedExercise, setSelectedExercise] =
@@ -117,12 +238,33 @@ export default function ExerciseCameraScreen() {
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [lastError, setLastError] = useState("");
 
+  const [repState, setRepState] = useState<RepState>({
+    rep_count: 0,
+    stage: "up",
+    hold_seconds: 0,
+    last_rep_completed: false,
+  });
+
   useEffect(() => {
     return () => {
       stopLiveAnalysis();
       Speech.stop();
     };
   }, []);
+
+  const resetRepCounter = () => {
+    repStageRef.current = "up";
+    repCountRef.current = 0;
+    plankStartTimeRef.current = null;
+    plankToleranceRef.current = 0;
+
+    setRepState({
+      rep_count: 0,
+      stage: "up",
+      hold_seconds: 0,
+      last_rep_completed: false,
+    });
+  };
 
   const speakFeedback = async (message: string) => {
     if (!voiceEnabled || !message) return;
@@ -146,6 +288,99 @@ export default function ExerciseCameraScreen() {
       });
     } catch (error) {
       console.log("Speech error:", error);
+    }
+  };
+
+  const updateFrontendRepCounter = (data: AnalysisResult) => {
+    if (!data.pose_detected) return;
+    if (data.exercise_match === false) return;
+
+    if (selectedExercise === "plank") {
+      if (data.status === "Correct") {
+        plankToleranceRef.current = 0;
+
+        if (plankStartTimeRef.current === null) {
+          plankStartTimeRef.current = Date.now();
+        }
+
+        const holdSeconds = Math.floor(
+          (Date.now() - plankStartTimeRef.current) / 1000
+        );
+
+        setRepState({
+          rep_count: 0,
+          stage: "hold",
+          hold_seconds: holdSeconds,
+          last_rep_completed: false,
+        });
+      } else {
+        plankToleranceRef.current += 1;
+
+        if (plankToleranceRef.current > 15) {
+          plankStartTimeRef.current = null;
+
+          setRepState({
+            rep_count: 0,
+            stage: "hold",
+            hold_seconds: 0,
+            last_rep_completed: false,
+          });
+        }
+      }
+
+      return;
+    }
+
+    if (data.primary_angle === undefined || data.primary_angle === null) {
+      return;
+    }
+
+    const value = Number(data.primary_angle);
+
+    if (Number.isNaN(value)) return;
+
+    const thresholds = getRepThresholds(selectedExercise);
+
+    let currentStage = repStageRef.current;
+    let currentRepCount = repCountRef.current;
+    let repCompleted = false;
+
+    if (thresholds.mode === "lower_is_down") {
+      if (value < thresholds.down && currentStage === "up") {
+        currentStage = "down";
+      }
+
+      if (value > thresholds.up && currentStage === "down") {
+        currentStage = "up";
+        currentRepCount += 1;
+        repCompleted = true;
+      }
+    }
+
+    if (thresholds.mode === "higher_is_down") {
+      if (value > thresholds.down && currentStage === "up") {
+        currentStage = "down";
+      }
+
+      if (value < thresholds.up && currentStage === "down") {
+        currentStage = "up";
+        currentRepCount += 1;
+        repCompleted = true;
+      }
+    }
+
+    repStageRef.current = currentStage;
+    repCountRef.current = currentRepCount;
+
+    setRepState({
+      rep_count: currentRepCount,
+      stage: currentStage,
+      hold_seconds: 0,
+      last_rep_completed: repCompleted,
+    });
+
+    if (repCompleted) {
+      speakFeedback(`One repetition completed. Total reps ${currentRepCount}`);
     }
   };
 
@@ -194,9 +429,12 @@ export default function ExerciseCameraScreen() {
       console.log("ML API RESULT:", data);
 
       setResult(data);
+      updateFrontendRepCounter(data);
 
-      const message = buildVoiceMessage(data);
-      speakFeedback(message);
+      if (!repState.last_rep_completed) {
+        const message = buildVoiceMessage(data);
+        speakFeedback(message);
+      }
     } catch (error: any) {
       console.log("ML API ERROR:", error?.message || error);
       setLastError(error?.message || "Failed to analyze frame.");
@@ -211,6 +449,7 @@ export default function ExerciseCameraScreen() {
 
     setResult(null);
     setLastError("");
+    resetRepCounter();
     setIsLive(true);
 
     lastSpokenMessageRef.current = "";
@@ -218,10 +457,9 @@ export default function ExerciseCameraScreen() {
 
     sendFrameToApi();
 
-    // 1500ms දැම්මේ shutter sound එක හැම තත්පරේම එන එක අඩු කරන්න.
     intervalRef.current = setInterval(() => {
       sendFrameToApi();
-    }, 1500);
+    }, 1000);
   };
 
   const stopLiveAnalysis = () => {
@@ -273,26 +511,26 @@ export default function ExerciseCameraScreen() {
   }
 
   return (
-  <View style={styles.container}>
-    <CameraView
-      ref={cameraRef}
-      style={styles.camera}
-      facing="back"
-      mode="picture"
-    />
+    <View style={styles.container}>
+      <CameraView
+        ref={cameraRef}
+        style={styles.camera}
+        facing="back"
+        mode="picture"
+      />
 
-    <Pressable
-      style={styles.backButton}
-      onPress={() => {
-  stopLiveAnalysis();
-  Speech.stop();
-  router.replace("/(tabs)/home" as any);
-}}
-    >
-      <Text style={styles.backButtonText}>‹</Text>
-    </Pressable>
+      <Pressable
+        style={styles.backButton}
+        onPress={() => {
+          stopLiveAnalysis();
+          Speech.stop();
+          router.replace("/(tabs)/home" as any);
+        }}
+      >
+        <Text style={styles.backButtonText}>‹</Text>
+      </Pressable>
 
-    <View style={styles.panel}>
+      <View style={styles.panel}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Text style={styles.title}>Real-time Posture Analysis</Text>
 
@@ -316,6 +554,7 @@ export default function ExerciseCameraScreen() {
                     setSelectedExercise(item.value);
                     setResult(null);
                     setLastError("");
+                    resetRepCounter();
                     Speech.stop();
                     lastSpokenMessageRef.current = "";
                     lastSpokenTimeRef.current = 0;
@@ -373,6 +612,34 @@ export default function ExerciseCameraScreen() {
               {liveStatus}
             </Text>
 
+            <View style={styles.repBox}>
+              <Text style={styles.cardLabel}>
+                {selectedExercise === "plank"
+                  ? "Plank Hold Time"
+                  : "Exercise Count"}
+              </Text>
+
+              <Text style={styles.repCountText}>
+                {selectedExercise === "plank"
+                  ? `${repState.hold_seconds}s`
+                  : repState.rep_count}
+              </Text>
+
+              <Text style={styles.cardLabel}>Current Phase</Text>
+              <Text style={styles.cardValue}>
+                {getDisplayStage(
+                  selectedExercise,
+                  result?.primary_angle,
+                  repState.stage
+                )}
+              </Text>
+
+              {repState.last_rep_completed &&
+              selectedExercise !== "plank" ? (
+                <Text style={styles.completedText}>Rep Completed</Text>
+              ) : null}
+            </View>
+
             {isSending ? (
               <Text style={styles.mutedText}>Analyzing current frame...</Text>
             ) : null}
@@ -383,12 +650,33 @@ export default function ExerciseCameraScreen() {
               </Text>
             ) : null}
 
-            {result?.primary_angle_name && result?.primary_angle !== undefined ? (
+            {result?.exercise_match === false ? (
+              <Text style={styles.errorText}>
+                Exercise mismatch detected. Please select the correct exercise.
+              </Text>
+            ) : null}
+
+            {result?.primary_angle_name &&
+            result?.primary_angle !== undefined &&
+            result?.primary_angle !== null ? (
               <>
                 <Text style={styles.cardLabel}>Primary Angle</Text>
                 <Text style={styles.cardValue}>
                   {result.primary_angle_name}:{" "}
                   {Number(result.primary_angle).toFixed(2)}
+                </Text>
+              </>
+            ) : null}
+
+            {result?.secondary_angle_name &&
+            result?.secondary_angle_name !== "N/A" &&
+            result?.secondary_angle !== undefined &&
+            result?.secondary_angle !== null ? (
+              <>
+                <Text style={styles.cardLabel}>Secondary Angle</Text>
+                <Text style={styles.cardValue}>
+                  {result.secondary_angle_name}:{" "}
+                  {Number(result.secondary_angle).toFixed(2)}
                 </Text>
               </>
             ) : null}
@@ -437,12 +725,7 @@ export default function ExerciseCameraScreen() {
           </Text>
 
           <Text style={styles.noteText}>
-            If you use an iPhone, turn off silent mode to hear voice feedback.
-          </Text>
-
-          <Text style={styles.noteText}>
-            Note: Some devices may play a camera capture sound during frame
-            analysis.
+            Count updates after completing a full movement: up → down → up.
           </Text>
         </ScrollView>
       </View>
@@ -459,7 +742,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   panel: {
-    maxHeight: "58%",
+    maxHeight: "63%",
     backgroundColor: "#0B1020",
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
@@ -556,6 +839,14 @@ const styles = StyleSheet.create({
     borderColor: "#27314A",
     gap: 6,
   },
+  repBox: {
+    backgroundColor: "#0B1224",
+    borderRadius: 18,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: "#22C55E",
+    marginVertical: 8,
+  },
   cardLabel: {
     color: "#94A3B8",
     fontSize: 12,
@@ -571,6 +862,18 @@ const styles = StyleSheet.create({
   statusText: {
     fontSize: 20,
     fontWeight: "900",
+  },
+  repCountText: {
+    color: "#22C55E",
+    fontSize: 44,
+    fontWeight: "900",
+    marginVertical: 2,
+  },
+  completedText: {
+    color: "#22C55E",
+    fontSize: 13,
+    fontWeight: "800",
+    marginTop: 8,
   },
   feedbackText: {
     color: "#E2E8F0",
@@ -589,31 +892,29 @@ const styles = StyleSheet.create({
     marginTop: 12,
     marginBottom: 2,
   },
-
-
   backButton: {
-  position: "absolute",
-  top: 48,
-  left: 18,
-  width: 46,
-  height: 46,
-  borderRadius: 23,
-  backgroundColor: "rgba(5, 8, 22, 0.82)",
-  borderWidth: 1,
-  borderColor: "#FF7A00",
-  alignItems: "center",
-  justifyContent: "center",
-  zIndex: 20,
-  shadowColor: "#FF7A00",
-  shadowOpacity: 0.45,
-  shadowRadius: 10,
-  elevation: 8,
-},
-backButtonText: {
-  color: "#FF7A00",
-  fontSize: 42,
-  fontWeight: "900",
-  lineHeight: 42,
-  marginTop: -4,
-},
+    position: "absolute",
+    top: 48,
+    left: 18,
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    backgroundColor: "rgba(5, 8, 22, 0.82)",
+    borderWidth: 1,
+    borderColor: "#FF7A00",
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 20,
+    shadowColor: "#FF7A00",
+    shadowOpacity: 0.45,
+    shadowRadius: 10,
+    elevation: 8,
+  },
+  backButtonText: {
+    color: "#FF7A00",
+    fontSize: 42,
+    fontWeight: "900",
+    lineHeight: 42,
+    marginTop: -4,
+  },
 });
