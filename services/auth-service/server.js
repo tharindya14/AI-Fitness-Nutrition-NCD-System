@@ -1,29 +1,42 @@
 const express = require("express");
 const cors = require("cors");
-const dotenv = require("dotenv");
-const mongoose = require("mongoose");
-
-dotenv.config();
-
-const authRoutes = require("./src/routes/authRoutes");
+const { createProxyMiddleware } = require("http-proxy-middleware");
+require("dotenv").config();
 
 const app = express();
 
 app.use(cors());
-app.use(express.json());
 
-app.use("/api/auth", authRoutes);
+// Auth Service → port 5001
+app.use(
+  "/api/auth",
+  createProxyMiddleware({
+    target: "http://localhost:5001",
+    changeOrigin: true,
+    logLevel: "debug",
+  })
+);
 
+// Diet Service → port 5002
+app.use(
+  "/api/diet",
+  createProxyMiddleware({
+    target: "http://localhost:5002",
+    changeOrigin: true,
+    logLevel: "debug",
+  })
+);
+
+// Health check route
 app.get("/", (req, res) => {
-  res.json({ message: "Auth Service is running" });
+  res.json({
+    success: true,
+    message: "FITSHIELD API Gateway is running",
+  });
 });
 
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log("Auth Service MongoDB connected");
-    app.listen(process.env.PORT, () => {
-      console.log(`Auth Service running on port ${process.env.PORT}`);
-    });
-  })
-  .catch((err) => console.error("MongoDB connection error:", err));
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`API Gateway running on http://0.0.0.0:${PORT}`);
+});

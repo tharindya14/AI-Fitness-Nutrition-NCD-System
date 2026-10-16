@@ -46,7 +46,7 @@ export default function LoginPage() {
 
       await saveItem("token", response.data.token);
       Alert.alert("Success", "Registered successfully");
-      router.replace("/diet");
+      router.replace("/home" as any);
     } catch (error: any) {
       showError("Register Failed", error);
     } finally {
@@ -65,7 +65,7 @@ export default function LoginPage() {
 
       await saveItem("token", response.data.token);
       Alert.alert("Success", "Login successful");
-      router.replace("/diet");
+      router.replace("/home" as any);
     } catch (error: any) {
       showError("Login Failed", error);
     } finally {

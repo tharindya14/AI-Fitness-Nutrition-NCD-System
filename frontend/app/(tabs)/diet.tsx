@@ -37,7 +37,7 @@ export default function DietPage() {
 
       if (!token) {
         Alert.alert("Login Required", "Please login first.");
-        router.replace("/");
+        router.replace("/" as any);
         return;
       }
 
@@ -61,10 +61,11 @@ export default function DietPage() {
       );
 
       await saveItem("latestResult", JSON.stringify(response.data));
+
       router.push({
-  pathname: "/result",
-  params: { refresh: Date.now().toString() },
-});
+        pathname: "/result",
+        params: { refresh: Date.now().toString() },
+      } as any);
     } catch (error: any) {
       console.log("Safety error:", error.response?.data || error.message);
       Alert.alert(
@@ -76,9 +77,22 @@ export default function DietPage() {
     }
   };
 
+  const goToRecommendations = () => {
+    router.push({
+      pathname: "/recommendations",
+    } as any);
+  };
+
+  const goToHistory = () => {
+    router.push({
+      pathname: "/history",
+    } as any);
+  };
+
   const logout = async () => {
     await deleteItem("token");
-    router.replace("/");
+    await deleteItem("latestResult");
+    router.replace("/" as any);
   };
 
   return (
@@ -135,16 +149,24 @@ export default function DietPage() {
               <Pressable style={styles.primaryButton} onPress={checkSafety}>
                 <Text style={styles.primaryText}>Check Safety</Text>
               </Pressable>
-
-              <Pressable
-                style={styles.secondaryButton}
-                onPress={() => router.push("/history")}
-              >
+              
+              <Pressable style={styles.secondaryButton} onPress={goToHistory}>
                 <Text style={styles.secondaryText}>View My History</Text>
               </Pressable>
 
               <Pressable style={styles.dangerButton} onPress={logout}>
                 <Text style={styles.primaryText}>Logout</Text>
+              </Pressable>
+
+              <Pressable
+                style={styles.secondaryButton}
+                onPress={() =>
+                  router.push({
+                    pathname: "/home",
+                } as any)
+              }   
+              >
+                <Text style={styles.secondaryText}>Back to Home</Text>
               </Pressable>
             </>
           )}
