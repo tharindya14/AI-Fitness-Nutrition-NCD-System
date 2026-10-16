@@ -11,11 +11,21 @@ const {
 
 const { searchFoods, searchDrugs } = require("../controllers/searchController");
 
+const {
+  getPersonalizedRecommendations,
+} = require("../controllers/recommendationController");
+
+const {
+  classifyFoodDrugStory,
+} = require("../controllers/storyController");
+
 router.get("/foods", searchFoods);
 router.get("/drugs", searchDrugs);
 
 router.post("/check-safety", authMiddleware, checkDietSafety);
 router.get("/history", authMiddleware, getMyDietHistory);
+router.get("/recommendations", authMiddleware, getPersonalizedRecommendations);
+router.post("/classify-story", authMiddleware, classifyFoodDrugStory);
 router.delete("/history/:id", authMiddleware, deleteDietHistoryItem);
 
 module.exports = router;

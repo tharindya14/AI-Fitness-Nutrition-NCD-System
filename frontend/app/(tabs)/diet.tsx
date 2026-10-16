@@ -141,7 +141,7 @@ export default function DietPage() {
 
       if (!token) {
         Alert.alert("Login Required", "Please login first.");
-        router.replace("/");
+        router.replace("/" as any);
         return;
       }
 
@@ -168,6 +168,10 @@ export default function DietPage() {
 
       await saveItem("latestResult", JSON.stringify(response.data));
 
+      router.push({
+        pathname: "/result",
+        params: { refresh: Date.now().toString() },
+      } as any);
       if (response.data?.user_profile) {
         await saveItem("userProfile", JSON.stringify(response.data.user_profile));
       }
@@ -190,9 +194,22 @@ export default function DietPage() {
     }
   };
 
+  const goToRecommendations = () => {
+    router.push({
+      pathname: "/recommendations",
+    } as any);
+  };
+
+  const goToHistory = () => {
+    router.push({
+      pathname: "/history",
+    } as any);
+  };
+
   const logout = async () => {
     await deleteItem("token");
-    router.replace("/");
+    await deleteItem("latestResult");
+    router.replace("/" as any);
   };
 
   return (
@@ -201,6 +218,56 @@ export default function DietPage() {
         style={styles.safe}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
+        <View style={styles.card}>
+          <Text style={styles.title}>Diet Safety Check</Text>
+          <Text style={styles.subtitle}>
+            Search medication and food using dataset-based autocomplete.
+          </Text>
+
+          <AutoCompleteInput
+            label="Medication"
+            placeholder="Search medication name..."
+            value={drugName}
+            onChangeValue={setDrugName}
+            data={DRUG_SUGGESTIONS}
+            subText={(item: any) =>
+              item.contains || "Tap to select medication"
+            }
+          />
+
+          <AutoCompleteInput
+            label="Food"
+            placeholder="Search food name..."
+            value={foodName}
+            onChangeValue={setFoodName}
+            data={FOOD_SUGGESTIONS}
+            subText={() => "Tap to select food"}
+          />
+
+          <Text style={styles.label}>Allergies</Text>
+          <TextInput
+            style={styles.input}
+            value={allergies}
+            onChangeText={setAllergies}
+            placeholder="Example: milk,wheat"
+            autoCorrect={false}
+            autoCapitalize="none"
+          />
+
+          {loading ? (
+            <ActivityIndicator
+              size="large"
+              color="#2D6A4F"
+              style={{ marginTop: 20 }}
+            />
+          ) : (
+            <>
+              <Pressable style={styles.primaryButton} onPress={checkSafety}>
+                <Text style={styles.primaryText}>Check Safety</Text>
+              </Pressable>
+              
+              <Pressable style={styles.secondaryButton} onPress={goToHistory}>
+                <Text style={styles.secondaryText}>View My History</Text>
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.scroll}
@@ -253,6 +320,24 @@ export default function DietPage() {
               </Pressable>
             </View>
 
+              <Pressable style={styles.dangerButton} onPress={logout}>
+                <Text style={styles.primaryText}>Logout</Text>
+              </Pressable>
+
+              <Pressable
+                style={styles.secondaryButton}
+                onPress={() =>
+                  router.push({
+                    pathname: "/home",
+                } as any)
+              }   
+              >
+                <Text style={styles.secondaryText}>Back to Home</Text>
+              </Pressable>
+            </>
+          )}
+        </View>
+      </ScrollView>
             <View style={styles.snapshotStats}>
               <View style={styles.snapshotStat}>
                 <View style={styles.statMiniIcon}>

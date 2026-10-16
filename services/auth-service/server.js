@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const { createProxyMiddleware } = require("http-proxy-middleware");
+require("dotenv").config();
 const dns = require("dns");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
@@ -17,12 +19,39 @@ app.use(cors());
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-app.use("/api/auth", authRoutes);
+// Auth Service → port 5001
+app.use(
+  "/api/auth",
+  createProxyMiddleware({
+    target: "http://localhost:5001",
+    changeOrigin: true,
+    logLevel: "debug",
+  })
+);
 
+// Diet Service → port 5002
+app.use(
+  "/api/diet",
+  createProxyMiddleware({
+    target: "http://localhost:5002",
+    changeOrigin: true,
+    logLevel: "debug",
+  })
+);
+
+// Health check route
 app.get("/", (req, res) => {
-  res.json({ message: "Auth Service is running" });
+  res.json({
+    success: true,
+    message: "FITSHIELD API Gateway is running",
+  });
 });
 
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`API Gateway running on http://0.0.0.0:${PORT}`);
+});
 mongoose
   .connect(process.env.MONGO_URI, {
     serverSelectionTimeoutMS: 10000,

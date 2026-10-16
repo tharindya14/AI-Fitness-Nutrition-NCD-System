@@ -10,6 +10,7 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen name="index" options={{ title: "Login" }} />
+      <Tabs.Screen name="home" options={{ title: "Home", href: null }} />
       <Tabs.Screen name="home" options={{ title: "Home" }} />
 
 
@@ -17,6 +18,14 @@ export default function TabLayout() {
        <Tabs.Screen name="profile" options={{ title: "Profile", href: null }} />
       <Tabs.Screen name="diet" options={{ title: "Diet", href: null }} />
       <Tabs.Screen name="history" options={{ title: "History", href: null }} />
+      <Tabs.Screen
+        name="recommendations"
+        options={{ title: "Recommendations", href: null }}
+      />
+      <Tabs.Screen
+        name="story-classifier"
+        options={{ title: "Story Classifier", href: null }}
+      />
       <Tabs.Screen name="result" options={{ title: "Result", href: null }} />
       <Tabs.Screen name="explore" options={{ href: null }} />
 

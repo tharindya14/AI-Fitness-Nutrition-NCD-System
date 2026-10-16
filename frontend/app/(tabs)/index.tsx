@@ -52,6 +52,8 @@ export default function AuthScreen() {
       });
 
       await saveItem("token", response.data.token);
+      Alert.alert("Success", "Registered successfully");
+      router.replace("/home" as any);
 
       const userName =
         response.data?.user?.fullName ||
@@ -97,6 +99,8 @@ export default function AuthScreen() {
       });
 
       await saveItem("token", response.data.token);
+      Alert.alert("Success", "Login successful");
+      router.replace("/home" as any);
       await saveItem("userName", fullNameRef.current.trim());
       
       goHome();
