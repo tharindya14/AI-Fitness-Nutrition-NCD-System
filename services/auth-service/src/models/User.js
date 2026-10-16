@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+
     email: {
       type: String,
       required: true,
@@ -14,18 +15,60 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
       trim: true,
     },
+
     password: {
       type: String,
       required: true,
     },
-    age: Number,
-    gender: String,
-    height: Number,
-    weight: Number,
-    bmi: Number,
-    allergies: [String],
-    medications: [String],
-    healthConditions: [String],
+
+    age: {
+      type: Number,
+      default: null,
+    },
+
+    gender: {
+      type: String,
+      default: "",
+    },
+
+    height: {
+      type: Number,
+      default: null,
+    },
+
+    weight: {
+      type: Number,
+      default: null,
+    },
+
+    bmi: {
+      type: Number,
+      default: null,
+    },
+
+    allergies: {
+      type: [String],
+      default: [],
+    },
+
+    medications: {
+      type: [String],
+      default: [],
+    },
+
+    healthConditions: {
+      type: [String],
+      default: [],
+    },
+    profileImage: {
+  type: String,
+  default: "",
+},
+
+defaultAvatar: {
+  type: String,
+  default: "",
+},
   },
   { timestamps: true }
 );

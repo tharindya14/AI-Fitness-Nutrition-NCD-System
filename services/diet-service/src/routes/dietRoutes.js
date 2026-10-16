@@ -6,6 +6,7 @@ const authMiddleware = require("../middleware/authMiddleware");
 const {
   checkDietSafety,
   getMyDietHistory,
+  deleteDietHistoryItem,
 } = require("../controllers/dietController");
 
 const { searchFoods, searchDrugs } = require("../controllers/searchController");
@@ -25,5 +26,6 @@ router.post("/check-safety", authMiddleware, checkDietSafety);
 router.get("/history", authMiddleware, getMyDietHistory);
 router.get("/recommendations", authMiddleware, getPersonalizedRecommendations);
 router.post("/classify-story", authMiddleware, classifyFoodDrugStory);
+router.delete("/history/:id", authMiddleware, deleteDietHistoryItem);
 
 module.exports = router;

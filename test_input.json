@@ -1,5 +1,7 @@
 {
-  "drug_name": "Warf 5 Tablet",
-  "food_name": "Spinach (Boiled, With Coconut Milk)",
+  "height_cm": 160,
+  "weight_kg": 72,
+  "medicine_names": ["Warf 5 Tablet", "Andol 0.5mg Tablet"],
+  "food_name": "Beer",
   "allergies": []
 }

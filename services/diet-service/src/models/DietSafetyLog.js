@@ -7,16 +7,28 @@ const dietSafetyLogSchema = new mongoose.Schema(
       required: true,
       index: true,
     },
-    drugName: String,
+
+    heightCm: Number,
+    weightKg: Number,
+    bmi: Number,
+    bmiCategory: String,
+    bmiAdvice: String,
+
+    medicineNames: [String],
     foodName: String,
-    mealType: String,
+    requestedFoodName: String,
     allergies: [String],
-    modelRisk: String,
-    allergyRisks: [String],
-    riskScore: Number,
+
+    drugDrugInteractions: Array,
+    foodDrugResults: Array,
+
+    finalRiskScore: Number,
     finalRiskLevel: String,
-    probability: [Number],
+    summary: [String],
+    overallAdvice: String,
+
     recommendedAlternatives: Array,
+    disclaimer: String,
   },
   { timestamps: true }
 );

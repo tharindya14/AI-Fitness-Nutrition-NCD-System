@@ -1,0 +1,1001 @@
+progress_id,user_id,supplement_id,log_date,taken_status,scheduled_time,dose_taken,weight_kg,bmi,energy_level_1_5,workout_performance_1_5,side_effects,goal_progress_percentage,adherence_percentage,note,created_at
+P0001,U0001,S1665,2026-05-02,taken,After workout,Yes,78.7,24.7,2,5,Nausea,11,80,Need to improve consistency,2026-05-07 06:56:01
+P0002,U0001,S1665,2026-05-09,missed,Morning,No,78.8,24.8,5,3,Mild stomach discomfort,21,76,Updated weekly progress,2026-05-07 06:56:01
+P0003,U0001,S1665,2026-05-16,missed,Night,No,77.3,24.3,2,2,Headache,32,69,Workout recovery improved,2026-05-07 06:56:01
+P0004,U0001,S1665,2026-05-22,taken,After dinner,Yes,79.0,24.8,5,3,None,32,83,Feeling normal,2026-05-07 06:56:01
+P0005,U0002,S1033,2026-05-02,skipped,Night,No,59.6,26.8,5,2,None,3,81,Missed due to busy schedule,2026-05-07 06:56:01
+P0006,U0002,S1033,2026-05-10,taken,After workout,Yes,60.0,27.0,5,2,None,19,91,Need to improve consistency,2026-05-07 06:56:01
+P0007,U0002,S1033,2026-05-17,taken,Night,Yes,59.6,26.8,2,3,None,21,94,Feeling normal,2026-05-07 06:56:01
+P0008,U0002,S1033,2026-05-22,taken,After dinner,Yes,61.6,27.7,5,3,Nausea,50,96,Minor side effect reported,2026-05-07 06:56:01
+P0009,U0003,S1713,2026-05-01,taken,Before workout,Yes,63.6,20.4,4,3,None,7,93,No noticeable change yet,2026-05-07 06:56:01
+P0010,U0003,S1713,2026-05-10,skipped,After dinner,No,63.5,20.4,4,5,Mild stomach discomfort,25,83,Missed due to busy schedule,2026-05-07 06:56:01
+P0011,U0003,S1713,2026-05-16,skipped,Night,No,64.9,20.8,5,2,None,25,83,Need to improve consistency,2026-05-07 06:56:01
+P0012,U0003,S1713,2026-05-22,taken,After breakfast,Yes,64.2,20.6,2,5,None,31,88,Felt better energy today,2026-05-07 06:56:01
+P0013,U0004,S0251,2026-05-03,taken,Before workout,Yes,61.4,26.6,2,3,None,11,92,No noticeable change yet,2026-05-07 06:56:01
+P0014,U0004,S0251,2026-05-09,missed,Before workout,No,62.4,27.0,3,2,Headache,25,85,Workout recovery improved,2026-05-07 06:56:01
+P0015,U0004,S0251,2026-05-15,skipped,Morning,No,61.1,26.4,3,5,None,27,88,No noticeable change yet,2026-05-07 06:56:01
+P0016,U0004,S0251,2026-05-24,missed,Morning,No,62.8,27.2,3,3,None,51,81,Workout recovery improved,2026-05-07 06:56:01
+P0017,U0005,S0588,2026-05-02,taken,After workout,Yes,58.8,22.6,5,5,None,5,78,No noticeable change yet,2026-05-07 06:56:01
+P0018,U0005,S0588,2026-05-10,taken,Night,Yes,58.6,22.6,5,4,None,23,76,Minor side effect reported,2026-05-07 06:56:01
+P0019,U0005,S0588,2026-05-16,missed,Night,No,57.9,22.3,4,3,Sleep disturbance,40,62,Need to improve consistency,2026-05-07 06:56:01
+P0020,U0005,S0588,2026-05-24,taken,After workout,Yes,59.3,22.8,4,3,None,40,78,Updated weekly progress,2026-05-07 06:56:01
+P0021,U0006,S1910,2026-05-03,taken,Before workout,Yes,71.3,27.2,3,2,None,6,88,Feeling normal,2026-05-07 06:56:01
+P0022,U0006,S1910,2026-05-09,missed,Morning,No,71.1,27.1,4,4,Headache,24,77,Completed as planned,2026-05-07 06:56:01
+P0023,U0006,S1910,2026-05-17,taken,Morning,Yes,70.4,26.8,4,4,Nausea,34,88,Completed as planned,2026-05-07 06:56:01
+P0024,U0006,S1910,2026-05-24,taken,After workout,Yes,73.4,28.0,5,3,Mild stomach discomfort,57,92,Minor side effect reported,2026-05-07 06:56:01
+P0025,U0007,S0426,2026-05-02,taken,Morning,Yes,85.7,27.4,5,2,None,5,64,Feeling normal,2026-05-07 06:56:01
+P0026,U0007,S0426,2026-05-10,skipped,After breakfast,No,84.8,27.2,2,4,Sleep disturbance,20,56,Updated weekly progress,2026-05-07 06:56:01
+P0027,U0007,S0426,2026-05-17,taken,Morning,Yes,87.0,27.9,5,5,Sleep disturbance,42,70,Completed as planned,2026-05-07 06:56:01
+P0028,U0007,S0426,2026-05-22,taken,Morning,Yes,87.2,27.9,3,5,None,53,66,No noticeable change yet,2026-05-07 06:56:01
+P0029,U0008,S2493,2026-05-03,missed,Before workout,No,69.4,25.4,4,2,None,3,66,Feeling normal,2026-05-07 06:56:01
+P0030,U0008,S2493,2026-05-10,skipped,Morning,No,68.8,25.1,3,2,None,19,63,Updated weekly progress,2026-05-07 06:56:01
+P0031,U0008,S2493,2026-05-17,skipped,Night,No,71.1,26.0,4,5,None,23,65,Missed due to busy schedule,2026-05-07 06:56:01
+P0032,U0008,S2493,2026-05-23,skipped,Morning,No,70.4,25.7,5,4,None,38,66,No noticeable change yet,2026-05-07 06:56:01
+P0033,U0009,S0576,2026-05-02,taken,Before workout,Yes,74.6,30.3,4,5,None,6,82,Felt better energy today,2026-05-07 06:56:01
+P0034,U0009,S0576,2026-05-09,taken,Night,Yes,74.6,30.3,3,2,Sleep disturbance,24,87,Need to improve consistency,2026-05-07 06:56:01
+P0035,U0009,S0576,2026-05-15,missed,Night,No,74.7,30.3,4,3,None,36,80,Minor side effect reported,2026-05-07 06:56:01
+P0036,U0009,S0576,2026-05-24,skipped,Before workout,No,75.8,30.8,3,5,None,38,73,Completed as planned,2026-05-07 06:56:01
+P0037,U0010,S0473,2026-05-03,skipped,Before workout,No,58.0,22.1,4,5,Nausea,10,92,Completed as planned,2026-05-07 06:56:01
+P0038,U0010,S0473,2026-05-09,skipped,After workout,No,57.6,21.9,5,4,None,16,85,Felt better energy today,2026-05-07 06:56:01
+P0039,U0010,S0473,2026-05-15,taken,Morning,Yes,57.9,22.0,5,5,Headache,41,95,Need to improve consistency,2026-05-07 06:56:01
+P0040,U0010,S0473,2026-05-24,taken,After dinner,Yes,58.5,22.3,4,5,Nausea,40,98,Need to improve consistency,2026-05-07 06:56:01
+P0041,U0011,S1230,2026-05-01,missed,After workout,No,79.4,24.5,2,3,Headache,7,61,Workout recovery improved,2026-05-07 06:56:01
+P0042,U0011,S1230,2026-05-09,missed,After breakfast,No,80.8,25.0,3,4,Sleep disturbance,22,61,Completed as planned,2026-05-07 06:56:01
+P0043,U0011,S1230,2026-05-15,taken,After workout,Yes,80.9,25.0,3,5,None,28,69,Workout recovery improved,2026-05-07 06:56:01
+P0044,U0011,S1230,2026-05-22,taken,After breakfast,Yes,79.3,24.5,5,2,Nausea,32,65,Missed due to busy schedule,2026-05-07 06:56:01
+P0045,U0012,S0632,2026-05-01,taken,Night,Yes,74.1,25.5,5,3,Mild stomach discomfort,10,91,Need to improve consistency,2026-05-07 06:56:01
+P0046,U0012,S0632,2026-05-09,skipped,Before workout,No,74.0,25.5,3,5,Sleep disturbance,18,75,Updated weekly progress,2026-05-07 06:56:01
+P0047,U0012,S0632,2026-05-16,skipped,After dinner,No,75.3,25.9,2,4,Mild stomach discomfort,40,79,Completed as planned,2026-05-07 06:56:01
+P0048,U0012,S0632,2026-05-22,missed,Before workout,No,73.4,25.2,2,5,None,41,78,Missed due to busy schedule,2026-05-07 06:56:01
+P0049,U0013,S0566,2026-05-01,taken,After workout,Yes,73.7,21.3,3,5,None,4,96,No noticeable change yet,2026-05-07 06:56:01
+P0050,U0013,S0566,2026-05-09,taken,After workout,Yes,74.5,21.5,3,3,Mild stomach discomfort,18,95,Minor side effect reported,2026-05-07 06:56:01
+P0051,U0013,S0566,2026-05-15,taken,After workout,Yes,75.1,21.7,2,3,None,30,100,Workout recovery improved,2026-05-07 06:56:01
+P0052,U0013,S0566,2026-05-24,missed,Night,No,73.8,21.3,5,5,Sleep disturbance,48,88,Completed as planned,2026-05-07 06:56:01
+P0053,U0014,S1241,2026-05-02,skipped,Before workout,No,74.6,25.4,5,4,Sleep disturbance,10,85,Minor side effect reported,2026-05-07 06:56:01
+P0054,U0014,S1241,2026-05-09,taken,Night,Yes,75.2,25.6,2,3,None,25,93,Updated weekly progress,2026-05-07 06:56:01
+P0055,U0014,S1241,2026-05-17,missed,After workout,No,74.0,25.2,2,5,None,44,84,Completed as planned,2026-05-07 06:56:01
+P0056,U0014,S1241,2026-05-22,taken,Before workout,Yes,74.6,25.4,4,5,None,36,97,No noticeable change yet,2026-05-07 06:56:01
+P0057,U0015,S0097,2026-05-01,taken,Before workout,Yes,62.9,29.1,2,2,None,10,82,Completed as planned,2026-05-07 06:56:01
+P0058,U0015,S0097,2026-05-10,skipped,Morning,No,62.9,29.1,3,3,Nausea,14,75,Feeling normal,2026-05-07 06:56:01
+P0059,U0015,S0097,2026-05-16,taken,Night,Yes,62.7,29.0,5,2,None,42,80,Updated weekly progress,2026-05-07 06:56:01
+P0060,U0015,S0097,2026-05-23,taken,After dinner,Yes,61.9,28.6,2,4,Nausea,58,83,No noticeable change yet,2026-05-07 06:56:01
+P0061,U0016,S1731,2026-05-01,taken,Morning,Yes,84.0,28.5,3,4,None,4,91,Minor side effect reported,2026-05-07 06:56:01
+P0062,U0016,S1731,2026-05-10,taken,After workout,Yes,84.0,28.5,3,5,None,16,94,Workout recovery improved,2026-05-07 06:56:01
+P0063,U0016,S1731,2026-05-16,missed,Night,No,84.2,28.5,4,4,None,43,77,Need to improve consistency,2026-05-07 06:56:01
+P0064,U0016,S1731,2026-05-22,taken,Before workout,Yes,84.9,28.8,5,4,None,59,89,Missed due to busy schedule,2026-05-07 06:56:01
+P0065,U0017,S0921,2026-05-03,taken,After workout,Yes,66.9,29.7,5,4,Headache,7,70,Need to improve consistency,2026-05-07 06:56:01
+P0066,U0017,S0921,2026-05-09,missed,After workout,No,66.3,29.4,3,5,Sleep disturbance,21,56,Feeling normal,2026-05-07 06:56:01
+P0067,U0017,S0921,2026-05-15,missed,After workout,No,68.0,30.1,2,2,Nausea,45,55,Feeling normal,2026-05-07 06:56:01
+P0068,U0017,S0921,2026-05-24,taken,Before workout,Yes,65.8,29.2,4,5,Nausea,56,65,Feeling normal,2026-05-07 06:56:01
+P0069,U0018,S0122,2026-05-03,missed,After workout,No,54.1,19.8,2,4,Headache,12,65,Feeling normal,2026-05-07 06:56:01
+P0070,U0018,S0122,2026-05-08,taken,Morning,Yes,55.3,20.2,2,5,None,19,78,Missed due to busy schedule,2026-05-07 06:56:01
+P0071,U0018,S0122,2026-05-15,missed,After workout,No,54.0,19.7,4,3,Mild stomach discomfort,29,67,No noticeable change yet,2026-05-07 06:56:01
+P0072,U0018,S0122,2026-05-23,taken,After dinner,Yes,55.2,20.2,5,3,Sleep disturbance,62,77,Need to improve consistency,2026-05-07 06:56:01
+P0073,U0019,S2027,2026-05-02,taken,Morning,Yes,81.8,29.1,4,5,Nausea,9,93,Workout recovery improved,2026-05-07 06:56:01
+P0074,U0019,S2027,2026-05-10,taken,After workout,Yes,82.0,29.1,3,2,Headache,27,95,Missed due to busy schedule,2026-05-07 06:56:01
+P0075,U0019,S2027,2026-05-15,missed,Night,No,82.7,29.4,5,2,None,30,88,Missed due to busy schedule,2026-05-07 06:56:01
+P0076,U0019,S2027,2026-05-22,missed,Morning,No,82.9,29.4,5,3,Sleep disturbance,58,84,Workout recovery improved,2026-05-07 06:56:01
+P0077,U0020,S1876,2026-05-03,taken,Before workout,Yes,80.5,28.1,2,2,None,8,85,Feeling normal,2026-05-07 06:56:01
+P0078,U0020,S1876,2026-05-09,taken,After workout,Yes,81.3,28.4,2,4,Sleep disturbance,21,85,Workout recovery improved,2026-05-07 06:56:01
+P0079,U0020,S1876,2026-05-15,taken,Night,Yes,81.7,28.5,5,5,Sleep disturbance,21,83,Need to improve consistency,2026-05-07 06:56:01
+P0080,U0020,S1876,2026-05-22,taken,Night,Yes,82.9,28.9,2,5,Mild stomach discomfort,52,92,Completed as planned,2026-05-07 06:56:01
+P0081,U0021,S1200,2026-05-03,taken,Morning,Yes,68.7,32.3,2,3,Sleep disturbance,10,91,No noticeable change yet,2026-05-07 06:56:01
+P0082,U0021,S1200,2026-05-10,taken,Before workout,Yes,69.3,32.6,3,3,Sleep disturbance,22,95,Feeling normal,2026-05-07 06:56:01
+P0083,U0021,S1200,2026-05-15,taken,Night,Yes,67.8,31.9,5,3,Sleep disturbance,40,92,No noticeable change yet,2026-05-07 06:56:01
+P0084,U0021,S1200,2026-05-23,taken,After dinner,Yes,69.9,32.8,4,2,Sleep disturbance,49,89,Workout recovery improved,2026-05-07 06:56:01
+P0085,U0022,S0607,2026-05-02,taken,Night,Yes,60.2,20.7,4,4,Nausea,12,98,Workout recovery improved,2026-05-07 06:56:01
+P0086,U0022,S0607,2026-05-10,skipped,Night,No,60.2,20.7,3,3,Headache,22,85,No noticeable change yet,2026-05-07 06:56:01
+P0087,U0022,S0607,2026-05-16,taken,Before workout,Yes,61.1,21.0,3,2,None,22,100,Updated weekly progress,2026-05-07 06:56:01
+P0088,U0022,S0607,2026-05-24,missed,After dinner,No,61.8,21.3,3,4,Nausea,57,90,Workout recovery improved,2026-05-07 06:56:01
+P0089,U0023,S2405,2026-05-02,missed,After workout,No,43.8,19.3,3,5,Mild stomach discomfort,5,90,Completed as planned,2026-05-07 06:56:01
+P0090,U0023,S2405,2026-05-10,taken,After breakfast,Yes,43.7,19.2,4,2,Nausea,18,95,Missed due to busy schedule,2026-05-07 06:56:01
+P0091,U0023,S2405,2026-05-16,taken,After breakfast,Yes,44.0,19.3,3,4,Nausea,39,100,Completed as planned,2026-05-07 06:56:01
+P0092,U0023,S2405,2026-05-23,skipped,Before workout,No,42.6,18.7,2,2,Mild stomach discomfort,50,83,Minor side effect reported,2026-05-07 06:56:01
+P0093,U0024,S1016,2026-05-02,skipped,Night,No,78.2,25.2,5,3,None,6,68,No noticeable change yet,2026-05-07 06:56:01
+P0094,U0024,S1016,2026-05-10,taken,After dinner,Yes,77.8,25.1,4,2,None,15,77,Missed due to busy schedule,2026-05-07 06:56:01
+P0095,U0024,S1016,2026-05-15,missed,After dinner,No,79.5,25.7,2,4,Sleep disturbance,40,66,Felt better energy today,2026-05-07 06:56:01
+P0096,U0024,S1016,2026-05-22,taken,Morning,Yes,77.3,25.0,3,5,None,37,78,Completed as planned,2026-05-07 06:56:01
+P0097,U0025,S2383,2026-05-01,skipped,Night,No,74.4,21.6,5,2,None,6,86,Need to improve consistency,2026-05-07 06:56:01
+P0098,U0025,S2383,2026-05-10,taken,After workout,Yes,74.1,21.5,4,4,None,18,95,Minor side effect reported,2026-05-07 06:56:01
+P0099,U0025,S2383,2026-05-15,taken,Night,Yes,73.5,21.4,5,2,Sleep disturbance,43,91,Workout recovery improved,2026-05-07 06:56:01
+P0100,U0025,S2383,2026-05-23,taken,After breakfast,Yes,73.6,21.4,3,2,Sleep disturbance,58,94,Need to improve consistency,2026-05-07 06:56:01
+P0101,U0026,S2757,2026-05-01,taken,After breakfast,Yes,61.0,25.4,2,3,None,11,81,No noticeable change yet,2026-05-07 06:56:01
+P0102,U0026,S2757,2026-05-10,taken,Night,Yes,60.9,25.4,4,3,Headache,26,80,Workout recovery improved,2026-05-07 06:56:01
+P0103,U0026,S2757,2026-05-16,taken,After dinner,Yes,60.5,25.2,3,4,Headache,33,81,Feeling normal,2026-05-07 06:56:01
+P0104,U0026,S2757,2026-05-24,missed,After workout,No,62.7,26.1,4,4,None,42,73,No noticeable change yet,2026-05-07 06:56:01
+P0105,U0027,S1367,2026-05-03,taken,After workout,Yes,92.1,27.3,2,5,None,12,88,Need to improve consistency,2026-05-07 06:56:01
+P0106,U0027,S1367,2026-05-09,skipped,Night,No,92.9,27.5,3,3,Nausea,22,72,No noticeable change yet,2026-05-07 06:56:01
+P0107,U0027,S1367,2026-05-16,taken,After dinner,Yes,91.0,27.0,3,3,Headache,37,87,Minor side effect reported,2026-05-07 06:56:01
+P0108,U0027,S1367,2026-05-23,taken,Night,Yes,90.9,26.9,5,5,None,38,87,Need to improve consistency,2026-05-07 06:56:01
+P0109,U0028,S2818,2026-05-01,taken,Morning,Yes,88.7,26.0,2,4,None,9,91,Minor side effect reported,2026-05-07 06:56:01
+P0110,U0028,S2818,2026-05-09,taken,Night,Yes,89.1,26.1,2,4,Sleep disturbance,19,93,Need to improve consistency,2026-05-07 06:56:01
+P0111,U0028,S2818,2026-05-15,taken,Morning,Yes,88.7,26.0,5,3,None,40,99,Minor side effect reported,2026-05-07 06:56:01
+P0112,U0028,S2818,2026-05-24,taken,Morning,Yes,88.7,26.0,4,4,Sleep disturbance,39,93,Feeling normal,2026-05-07 06:56:01
+P0113,U0029,S0880,2026-05-02,taken,Night,Yes,45.6,20.4,4,4,Headache,8,74,Completed as planned,2026-05-07 06:56:01
+P0114,U0029,S0880,2026-05-08,taken,Morning,Yes,46.3,20.7,2,4,None,23,78,Need to improve consistency,2026-05-07 06:56:01
+P0115,U0029,S0880,2026-05-15,missed,Before workout,No,47.2,21.1,4,2,Nausea,37,68,Felt better energy today,2026-05-07 06:56:01
+P0116,U0029,S0880,2026-05-24,taken,After dinner,Yes,48.1,21.5,2,5,Headache,38,73,Missed due to busy schedule,2026-05-07 06:56:01
+P0117,U0030,S0300,2026-05-02,taken,After breakfast,Yes,58.9,26.4,4,5,Headache,8,88,Need to improve consistency,2026-05-07 06:56:01
+P0118,U0030,S0300,2026-05-08,taken,Morning,Yes,59.1,26.5,2,3,None,20,93,Need to improve consistency,2026-05-07 06:56:01
+P0119,U0030,S0300,2026-05-15,taken,After workout,Yes,60.2,27.0,3,4,Nausea,42,95,Workout recovery improved,2026-05-07 06:56:01
+P0120,U0030,S0300,2026-05-22,taken,After dinner,Yes,58.0,26.0,2,3,Headache,34,87,Updated weekly progress,2026-05-07 06:56:01
+P0121,U0031,S0284,2026-05-02,taken,After workout,Yes,75.2,26.3,4,3,None,7,82,Updated weekly progress,2026-05-07 06:56:01
+P0122,U0031,S0284,2026-05-08,taken,Morning,Yes,75.9,26.5,5,3,Mild stomach discomfort,19,86,Completed as planned,2026-05-07 06:56:01
+P0123,U0031,S0284,2026-05-16,taken,Morning,Yes,74.9,26.2,2,3,Headache,31,89,Minor side effect reported,2026-05-07 06:56:01
+P0124,U0031,S0284,2026-05-22,taken,Before workout,Yes,76.3,26.7,4,5,None,37,89,Missed due to busy schedule,2026-05-07 06:56:01
+P0125,U0032,S0372,2026-05-02,taken,Morning,Yes,80.6,26.5,5,5,Mild stomach discomfort,10,92,Felt better energy today,2026-05-07 06:56:01
+P0126,U0032,S0372,2026-05-09,taken,Before workout,Yes,81.8,26.9,3,2,Nausea,18,100,Need to improve consistency,2026-05-07 06:56:01
+P0127,U0032,S0372,2026-05-16,taken,After breakfast,Yes,82.4,27.1,3,3,Headache,32,92,Completed as planned,2026-05-07 06:56:01
+P0128,U0032,S0372,2026-05-22,missed,After dinner,No,79.7,26.2,3,4,None,48,82,Need to improve consistency,2026-05-07 06:56:01
+P0129,U0033,S0646,2026-05-01,taken,Morning,Yes,71.4,25.6,3,2,Mild stomach discomfort,5,91,Missed due to busy schedule,2026-05-07 06:56:01
+P0130,U0033,S0646,2026-05-09,taken,Morning,Yes,71.4,25.6,2,4,None,24,91,Feeling normal,2026-05-07 06:56:01
+P0131,U0033,S0646,2026-05-15,skipped,After workout,No,72.3,26.0,3,3,None,31,84,Completed as planned,2026-05-07 06:56:01
+P0132,U0033,S0646,2026-05-23,taken,After workout,Yes,69.7,25.0,5,5,None,31,93,Completed as planned,2026-05-07 06:56:01
+P0133,U0034,S1276,2026-05-02,taken,After dinner,Yes,92.8,28.5,2,5,Mild stomach discomfort,11,95,Missed due to busy schedule,2026-05-07 06:56:01
+P0134,U0034,S1276,2026-05-08,taken,Morning,Yes,93.3,28.7,2,5,None,16,100,Felt better energy today,2026-05-07 06:56:01
+P0135,U0034,S1276,2026-05-15,taken,Night,Yes,92.7,28.5,5,4,Sleep disturbance,43,95,Workout recovery improved,2026-05-07 06:56:01
+P0136,U0034,S1276,2026-05-23,taken,Night,Yes,93.0,28.6,5,2,Sleep disturbance,42,90,Missed due to busy schedule,2026-05-07 06:56:01
+P0137,U0035,S0747,2026-05-01,skipped,Before workout,No,70.9,25.5,2,5,Mild stomach discomfort,5,56,Updated weekly progress,2026-05-07 06:56:01
+P0138,U0035,S0747,2026-05-08,skipped,After breakfast,No,72.2,25.9,5,4,Headache,26,57,Feeling normal,2026-05-07 06:56:01
+P0139,U0035,S0747,2026-05-15,skipped,After breakfast,No,70.9,25.5,4,4,Sleep disturbance,40,55,Feeling normal,2026-05-07 06:56:01
+P0140,U0035,S0747,2026-05-24,taken,Before workout,Yes,72.4,26.0,2,4,Mild stomach discomfort,62,68,Completed as planned,2026-05-07 06:56:01
+P0141,U0036,S2226,2026-05-01,taken,Night,Yes,80.5,27.4,4,3,Sleep disturbance,4,76,Updated weekly progress,2026-05-07 06:56:01
+P0142,U0036,S2226,2026-05-09,taken,After workout,Yes,80.0,27.3,3,3,Sleep disturbance,20,70,Missed due to busy schedule,2026-05-07 06:56:01
+P0143,U0036,S2226,2026-05-15,taken,After breakfast,Yes,80.9,27.6,2,4,Headache,37,77,Missed due to busy schedule,2026-05-07 06:56:01
+P0144,U0036,S2226,2026-05-24,missed,After breakfast,No,79.0,26.9,3,3,Headache,34,68,Need to improve consistency,2026-05-07 06:56:01
+P0145,U0037,S0829,2026-05-01,taken,After workout,Yes,45.3,19.3,4,3,Nausea,9,84,No noticeable change yet,2026-05-07 06:56:01
+P0146,U0037,S0829,2026-05-08,taken,Night,Yes,45.1,19.2,2,2,Sleep disturbance,23,80,Need to improve consistency,2026-05-07 06:56:01
+P0147,U0037,S0829,2026-05-15,taken,After breakfast,Yes,45.6,19.4,5,5,Headache,26,83,Missed due to busy schedule,2026-05-07 06:56:01
+P0148,U0037,S0829,2026-05-22,taken,Morning,Yes,44.1,18.7,3,3,Mild stomach discomfort,41,83,Workout recovery improved,2026-05-07 06:56:01
+P0149,U0038,S2754,2026-05-02,taken,Morning,Yes,45.4,21.1,5,3,Nausea,7,85,Feeling normal,2026-05-07 06:56:01
+P0150,U0038,S2754,2026-05-09,taken,Morning,Yes,45.5,21.1,4,4,None,27,79,Need to improve consistency,2026-05-07 06:56:01
+P0151,U0038,S2754,2026-05-16,taken,Night,Yes,45.9,21.3,5,4,None,40,79,Minor side effect reported,2026-05-07 06:56:01
+P0152,U0038,S2754,2026-05-22,taken,After breakfast,Yes,47.6,22.1,5,5,Mild stomach discomfort,63,82,Completed as planned,2026-05-07 06:56:01
+P0153,U0039,S2614,2026-05-02,skipped,After workout,No,61.8,24.4,4,4,None,11,61,Completed as planned,2026-05-07 06:56:01
+P0154,U0039,S2614,2026-05-08,skipped,After breakfast,No,62.3,24.6,5,4,None,23,63,Feeling normal,2026-05-07 06:56:01
+P0155,U0039,S2614,2026-05-17,missed,Night,No,62.8,24.8,5,2,Headache,40,64,Felt better energy today,2026-05-07 06:56:01
+P0156,U0039,S2614,2026-05-24,skipped,After breakfast,No,63.7,25.2,4,5,Sleep disturbance,55,57,Need to improve consistency,2026-05-07 06:56:01
+P0157,U0040,S2943,2026-05-02,skipped,Morning,No,80.4,26.9,5,5,Nausea,12,60,Completed as planned,2026-05-07 06:56:01
+P0158,U0040,S2943,2026-05-08,missed,Before workout,No,79.6,26.6,5,2,Nausea,26,53,Feeling normal,2026-05-07 06:56:01
+P0159,U0040,S2943,2026-05-16,taken,Before workout,Yes,81.3,27.2,5,2,None,34,65,Feeling normal,2026-05-07 06:56:01
+P0160,U0040,S2943,2026-05-24,skipped,After dinner,No,79.5,26.6,4,5,Sleep disturbance,36,60,Updated weekly progress,2026-05-07 06:56:01
+P0161,U0041,S0705,2026-05-01,taken,Before workout,Yes,79.8,32.4,2,2,Nausea,6,96,Need to improve consistency,2026-05-07 06:56:01
+P0162,U0041,S0705,2026-05-09,missed,Before workout,No,80.0,32.5,5,4,None,19,84,Feeling normal,2026-05-07 06:56:01
+P0163,U0041,S0705,2026-05-16,taken,After breakfast,Yes,81.5,33.1,4,4,Sleep disturbance,29,92,Minor side effect reported,2026-05-07 06:56:01
+P0164,U0041,S0705,2026-05-24,taken,Morning,Yes,79.8,32.4,5,4,None,33,92,Updated weekly progress,2026-05-07 06:56:01
+P0165,U0042,S2183,2026-05-02,taken,After dinner,Yes,60.7,21.2,2,4,None,7,91,Feeling normal,2026-05-07 06:56:01
+P0166,U0042,S2183,2026-05-08,taken,After workout,Yes,60.5,21.1,3,3,None,25,82,Missed due to busy schedule,2026-05-07 06:56:01
+P0167,U0042,S2183,2026-05-16,skipped,After breakfast,No,61.4,21.4,2,5,Sleep disturbance,23,76,Feeling normal,2026-05-07 06:56:01
+P0168,U0042,S2183,2026-05-23,missed,After breakfast,No,60.8,21.2,5,5,Nausea,57,78,No noticeable change yet,2026-05-07 06:56:01
+P0169,U0043,S2895,2026-05-02,taken,Before workout,Yes,81.3,26.6,2,3,None,8,91,Missed due to busy schedule,2026-05-07 06:56:01
+P0170,U0043,S2895,2026-05-10,missed,Before workout,No,80.8,26.4,2,3,Nausea,26,81,Updated weekly progress,2026-05-07 06:56:01
+P0171,U0043,S2895,2026-05-17,skipped,Before workout,No,82.0,26.8,2,5,Headache,38,80,Feeling normal,2026-05-07 06:56:01
+P0172,U0043,S2895,2026-05-23,missed,After workout,No,81.4,26.6,2,4,Mild stomach discomfort,33,81,Workout recovery improved,2026-05-07 06:56:01
+P0173,U0044,S0262,2026-05-01,skipped,After workout,No,58.7,23.6,5,3,Mild stomach discomfort,3,81,Missed due to busy schedule,2026-05-07 06:56:01
+P0174,U0044,S0262,2026-05-10,taken,After breakfast,Yes,58.6,23.6,5,3,Sleep disturbance,25,87,Minor side effect reported,2026-05-07 06:56:01
+P0175,U0044,S0262,2026-05-17,missed,Night,No,58.5,23.5,4,2,Sleep disturbance,28,72,Felt better energy today,2026-05-07 06:56:01
+P0176,U0044,S0262,2026-05-24,taken,After dinner,Yes,59.3,23.8,3,3,None,36,85,Feeling normal,2026-05-07 06:56:01
+P0177,U0045,S2985,2026-05-02,taken,After workout,Yes,68.4,24.3,5,5,Nausea,12,77,Feeling normal,2026-05-07 06:56:01
+P0178,U0045,S2985,2026-05-08,taken,Night,Yes,68.3,24.3,5,4,Mild stomach discomfort,20,69,Felt better energy today,2026-05-07 06:56:01
+P0179,U0045,S2985,2026-05-15,taken,Night,Yes,68.7,24.4,2,4,Mild stomach discomfort,30,77,Felt better energy today,2026-05-07 06:56:01
+P0180,U0045,S2985,2026-05-24,taken,Morning,Yes,67.2,23.9,4,2,None,54,75,Completed as planned,2026-05-07 06:56:01
+P0181,U0046,S2168,2026-05-01,taken,Before workout,Yes,108.8,33.7,2,3,None,12,69,Feeling normal,2026-05-07 06:56:01
+P0182,U0046,S2168,2026-05-08,missed,After breakfast,No,108.4,33.6,4,3,Mild stomach discomfort,17,60,Workout recovery improved,2026-05-07 06:56:01
+P0183,U0046,S2168,2026-05-17,taken,Morning,Yes,110.0,34.1,2,4,None,33,69,Felt better energy today,2026-05-07 06:56:01
+P0184,U0046,S2168,2026-05-23,skipped,After workout,No,107.9,33.4,3,3,Headache,53,51,Updated weekly progress,2026-05-07 06:56:01
+P0185,U0047,S1863,2026-05-02,taken,Before workout,Yes,70.8,26.3,3,3,Sleep disturbance,8,87,Feeling normal,2026-05-07 06:56:01
+P0186,U0047,S1863,2026-05-08,taken,Night,Yes,69.8,25.9,2,2,Nausea,18,94,Updated weekly progress,2026-05-07 06:56:01
+P0187,U0047,S1863,2026-05-17,missed,After dinner,No,71.0,26.3,3,4,None,43,80,Workout recovery improved,2026-05-07 06:56:01
+P0188,U0047,S1863,2026-05-23,taken,After workout,Yes,70.1,26.0,5,2,Mild stomach discomfort,63,90,Completed as planned,2026-05-07 06:56:01
+P0189,U0048,S2013,2026-05-02,missed,Before workout,No,72.2,24.6,2,2,None,7,63,Felt better energy today,2026-05-07 06:56:01
+P0190,U0048,S2013,2026-05-09,missed,Night,No,72.8,24.8,4,2,Headache,28,58,Completed as planned,2026-05-07 06:56:01
+P0191,U0048,S2013,2026-05-15,taken,Night,Yes,72.1,24.6,5,3,Headache,37,66,Updated weekly progress,2026-05-07 06:56:01
+P0192,U0048,S2013,2026-05-24,skipped,After breakfast,No,70.7,24.1,3,4,None,37,63,Missed due to busy schedule,2026-05-07 06:56:01
+P0193,U0049,S2029,2026-05-03,skipped,Night,No,90.0,25.7,2,4,None,9,66,Missed due to busy schedule,2026-05-07 06:56:01
+P0194,U0049,S2029,2026-05-10,taken,After workout,Yes,91.0,26.0,2,3,None,20,78,Missed due to busy schedule,2026-05-07 06:56:01
+P0195,U0049,S2029,2026-05-17,skipped,Before workout,No,89.4,25.6,3,4,Mild stomach discomfort,40,73,Completed as planned,2026-05-07 06:56:01
+P0196,U0049,S2029,2026-05-23,taken,After dinner,Yes,89.7,25.7,2,5,None,43,77,Feeling normal,2026-05-07 06:56:01
+P0197,U0050,S0528,2026-05-01,skipped,After breakfast,No,70.1,24.2,4,3,Nausea,10,65,No noticeable change yet,2026-05-07 06:56:01
+P0198,U0050,S0528,2026-05-10,skipped,Before workout,No,71.5,24.7,4,4,None,21,72,Felt better energy today,2026-05-07 06:56:01
+P0199,U0050,S0528,2026-05-16,taken,After breakfast,Yes,72.1,24.9,2,5,Mild stomach discomfort,42,77,Felt better energy today,2026-05-07 06:56:01
+P0200,U0050,S0528,2026-05-22,taken,Night,Yes,69.0,23.8,2,3,Mild stomach discomfort,47,75,Updated weekly progress,2026-05-07 06:56:01
+P0201,U0051,S1795,2026-05-02,missed,After breakfast,No,83.4,25.3,4,2,Headache,11,62,Completed as planned,2026-05-07 06:56:01
+P0202,U0051,S1795,2026-05-08,taken,After workout,Yes,83.9,25.5,3,2,Mild stomach discomfort,17,74,Need to improve consistency,2026-05-07 06:56:01
+P0203,U0051,S1795,2026-05-15,taken,After breakfast,Yes,83.3,25.3,4,5,None,27,79,Feeling normal,2026-05-07 06:56:01
+P0204,U0051,S1795,2026-05-22,taken,After breakfast,Yes,83.8,25.4,4,2,None,47,71,Felt better energy today,2026-05-07 06:56:01
+P0205,U0052,S1680,2026-05-03,taken,Morning,Yes,78.8,23.9,3,2,Nausea,8,98,Missed due to busy schedule,2026-05-07 06:56:01
+P0206,U0052,S1680,2026-05-08,taken,Morning,Yes,77.8,23.6,3,2,Headache,17,100,Minor side effect reported,2026-05-07 06:56:01
+P0207,U0052,S1680,2026-05-15,taken,After workout,Yes,79.3,24.1,4,5,Mild stomach discomfort,42,100,Missed due to busy schedule,2026-05-07 06:56:01
+P0208,U0052,S1680,2026-05-24,taken,After breakfast,Yes,79.5,24.1,5,4,None,49,100,Workout recovery improved,2026-05-07 06:56:01
+P0209,U0053,S1175,2026-05-02,taken,Before workout,Yes,63.9,26.6,3,2,Mild stomach discomfort,3,77,Need to improve consistency,2026-05-07 06:56:01
+P0210,U0053,S1175,2026-05-10,missed,Before workout,No,64.3,26.8,3,5,Mild stomach discomfort,19,71,Need to improve consistency,2026-05-07 06:56:01
+P0211,U0053,S1175,2026-05-16,skipped,Before workout,No,63.6,26.5,4,5,None,38,66,Minor side effect reported,2026-05-07 06:56:01
+P0212,U0053,S1175,2026-05-22,taken,Night,Yes,62.7,26.1,4,5,Headache,45,74,Need to improve consistency,2026-05-07 06:56:01
+P0213,U0054,S1536,2026-05-01,taken,After workout,Yes,53.4,20.1,4,5,None,11,89,Missed due to busy schedule,2026-05-07 06:56:01
+P0214,U0054,S1536,2026-05-08,taken,After workout,Yes,54.0,20.3,3,5,None,19,87,Missed due to busy schedule,2026-05-07 06:56:01
+P0215,U0054,S1536,2026-05-16,missed,Night,No,54.5,20.5,5,3,None,36,71,Need to improve consistency,2026-05-07 06:56:01
+P0216,U0054,S1536,2026-05-23,taken,After dinner,Yes,53.1,20.0,2,2,Sleep disturbance,40,84,Felt better energy today,2026-05-07 06:56:01
+P0217,U0055,S0352,2026-05-01,taken,After breakfast,Yes,78.7,29.6,3,3,None,8,66,Felt better energy today,2026-05-07 06:56:01
+P0218,U0055,S0352,2026-05-09,missed,Before workout,No,79.8,30.0,3,4,None,27,58,Felt better energy today,2026-05-07 06:56:01
+P0219,U0055,S0352,2026-05-17,taken,Morning,Yes,80.3,30.2,5,3,Headache,25,67,Minor side effect reported,2026-05-07 06:56:01
+P0220,U0055,S0352,2026-05-24,taken,Night,Yes,80.0,30.1,3,5,None,42,62,Completed as planned,2026-05-07 06:56:01
+P0221,U0056,S0556,2026-05-02,taken,After workout,Yes,85.7,23.9,3,5,None,12,89,Feeling normal,2026-05-07 06:56:01
+P0222,U0056,S0556,2026-05-10,missed,Morning,No,85.5,23.9,3,3,Headache,17,79,No noticeable change yet,2026-05-07 06:56:01
+P0223,U0056,S0556,2026-05-17,taken,Before workout,Yes,87.2,24.3,4,2,None,24,94,Feeling normal,2026-05-07 06:56:01
+P0224,U0056,S0556,2026-05-22,missed,Before workout,No,87.6,24.4,3,4,Headache,47,79,Completed as planned,2026-05-07 06:56:01
+P0225,U0057,S2006,2026-05-01,taken,After workout,Yes,112.1,31.3,4,2,None,7,87,Feeling normal,2026-05-07 06:56:01
+P0226,U0057,S2006,2026-05-10,taken,Morning,Yes,111.8,31.2,2,4,Mild stomach discomfort,13,89,Missed due to busy schedule,2026-05-07 06:56:01
+P0227,U0057,S2006,2026-05-16,taken,Before workout,Yes,111.9,31.2,4,5,Mild stomach discomfort,43,86,Updated weekly progress,2026-05-07 06:56:01
+P0228,U0057,S2006,2026-05-22,taken,Before workout,Yes,113.2,31.6,4,2,Mild stomach discomfort,54,87,Felt better energy today,2026-05-07 06:56:01
+P0229,U0058,S2729,2026-05-03,taken,Morning,Yes,105.8,30.4,3,4,None,4,83,Workout recovery improved,2026-05-07 06:56:01
+P0230,U0058,S2729,2026-05-10,taken,Night,Yes,107.0,30.7,4,2,None,12,80,Feeling normal,2026-05-07 06:56:01
+P0231,U0058,S2729,2026-05-17,taken,Morning,Yes,107.4,30.8,3,3,Nausea,30,81,Felt better energy today,2026-05-07 06:56:01
+P0232,U0058,S2729,2026-05-22,taken,Night,Yes,107.5,30.8,3,3,None,30,86,Felt better energy today,2026-05-07 06:56:01
+P0233,U0059,S1585,2026-05-03,missed,Night,No,90.3,33.4,3,5,None,10,79,Completed as planned,2026-05-07 06:56:01
+P0234,U0059,S1585,2026-05-09,taken,Before workout,Yes,90.7,33.6,3,3,Nausea,14,83,Felt better energy today,2026-05-07 06:56:01
+P0235,U0059,S1585,2026-05-17,taken,After workout,Yes,89.9,33.3,4,5,Headache,32,82,No noticeable change yet,2026-05-07 06:56:01
+P0236,U0059,S1585,2026-05-22,taken,Morning,Yes,89.9,33.3,4,4,Sleep disturbance,45,88,Workout recovery improved,2026-05-07 06:56:01
+P0237,U0060,S0265,2026-05-01,taken,Morning,Yes,65.8,21.5,5,2,Nausea,12,69,Felt better energy today,2026-05-07 06:56:01
+P0238,U0060,S0265,2026-05-09,missed,Morning,No,66.6,21.7,4,4,Mild stomach discomfort,25,63,Updated weekly progress,2026-05-07 06:56:01
+P0239,U0060,S0265,2026-05-17,taken,After dinner,Yes,65.8,21.5,3,3,Headache,34,68,Workout recovery improved,2026-05-07 06:56:01
+P0240,U0060,S0265,2026-05-22,skipped,After workout,No,65.7,21.5,5,5,Mild stomach discomfort,55,58,Workout recovery improved,2026-05-07 06:56:01
+P0241,U0061,S0582,2026-05-02,taken,After breakfast,Yes,60.0,19.6,5,4,None,9,94,Need to improve consistency,2026-05-07 06:56:01
+P0242,U0061,S0582,2026-05-10,taken,Morning,Yes,59.0,19.3,5,5,None,16,85,No noticeable change yet,2026-05-07 06:56:01
+P0243,U0061,S0582,2026-05-16,taken,After dinner,Yes,58.4,19.1,4,3,None,33,88,Feeling normal,2026-05-07 06:56:01
+P0244,U0061,S0582,2026-05-24,skipped,Night,No,59.9,19.6,2,4,None,47,81,Felt better energy today,2026-05-07 06:56:01
+P0245,U0062,S1325,2026-05-03,taken,After workout,Yes,73.5,29.2,5,2,None,10,93,Workout recovery improved,2026-05-07 06:56:01
+P0246,U0062,S1325,2026-05-09,skipped,Morning,No,73.6,29.2,3,4,None,26,89,Updated weekly progress,2026-05-07 06:56:01
+P0247,U0062,S1325,2026-05-17,taken,After workout,Yes,73.7,29.3,4,5,None,34,90,Missed due to busy schedule,2026-05-07 06:56:01
+P0248,U0062,S1325,2026-05-23,skipped,After dinner,No,73.1,29.0,4,4,Nausea,49,84,Missed due to busy schedule,2026-05-07 06:56:01
+P0249,U0063,S0521,2026-05-03,missed,After breakfast,No,38.8,16.2,3,5,Headache,12,79,Feeling normal,2026-05-07 06:56:01
+P0250,U0063,S0521,2026-05-08,taken,After dinner,Yes,38.4,16.1,4,2,Headache,18,82,Feeling normal,2026-05-07 06:56:01
+P0251,U0063,S0521,2026-05-16,missed,After workout,No,39.7,16.6,3,4,Nausea,28,77,Workout recovery improved,2026-05-07 06:56:01
+P0252,U0063,S0521,2026-05-23,taken,Before workout,Yes,38.5,16.1,5,3,Sleep disturbance,36,85,No noticeable change yet,2026-05-07 06:56:01
+P0253,U0064,S1311,2026-05-02,missed,After dinner,No,80.1,26.2,2,4,Nausea,6,90,Completed as planned,2026-05-07 06:56:01
+P0254,U0064,S1311,2026-05-10,taken,After workout,Yes,79.8,26.1,5,2,None,23,94,No noticeable change yet,2026-05-07 06:56:01
+P0255,U0064,S1311,2026-05-15,taken,Before workout,Yes,79.3,25.9,5,3,Mild stomach discomfort,25,92,Need to improve consistency,2026-05-07 06:56:01
+P0256,U0064,S1311,2026-05-24,taken,After workout,Yes,80.4,26.3,4,3,Nausea,43,95,Feeling normal,2026-05-07 06:56:01
+P0257,U0065,S1167,2026-05-03,taken,Before workout,Yes,65.4,27.6,5,4,None,4,70,Updated weekly progress,2026-05-07 06:56:01
+P0258,U0065,S1167,2026-05-10,taken,Before workout,Yes,65.8,27.7,5,3,None,27,80,Completed as planned,2026-05-07 06:56:01
+P0259,U0065,S1167,2026-05-17,taken,Morning,Yes,65.3,27.5,3,5,None,37,78,Felt better energy today,2026-05-07 06:56:01
+P0260,U0065,S1167,2026-05-22,taken,Before workout,Yes,64.3,27.1,4,4,None,36,71,Need to improve consistency,2026-05-07 06:56:01
+P0261,U0066,S1408,2026-05-02,taken,After workout,Yes,73.1,25.0,3,2,Sleep disturbance,9,74,Missed due to busy schedule,2026-05-07 06:56:01
+P0262,U0066,S1408,2026-05-09,taken,Morning,Yes,72.4,24.8,2,2,Nausea,18,67,Missed due to busy schedule,2026-05-07 06:56:01
+P0263,U0066,S1408,2026-05-16,taken,After dinner,Yes,71.9,24.6,4,4,Mild stomach discomfort,27,66,Need to improve consistency,2026-05-07 06:56:01
+P0264,U0066,S1408,2026-05-22,missed,Night,No,74.5,25.5,5,2,None,48,64,Missed due to busy schedule,2026-05-07 06:56:01
+P0265,U0067,S2416,2026-05-01,taken,After dinner,Yes,96.1,31.6,4,3,Mild stomach discomfort,8,63,Missed due to busy schedule,2026-05-07 06:56:01
+P0266,U0067,S2416,2026-05-08,missed,Before workout,No,95.1,31.2,4,5,None,30,56,Missed due to busy schedule,2026-05-07 06:56:01
+P0267,U0067,S2416,2026-05-17,taken,Morning,Yes,95.7,31.4,4,5,None,33,68,Feeling normal,2026-05-07 06:56:01
+P0268,U0067,S2416,2026-05-24,skipped,Morning,No,97.0,31.9,2,5,Sleep disturbance,48,54,Felt better energy today,2026-05-07 06:56:01
+P0269,U0068,S0843,2026-05-03,skipped,Before workout,No,87.8,24.8,4,5,None,6,71,Missed due to busy schedule,2026-05-07 06:56:01
+P0270,U0068,S0843,2026-05-10,taken,After breakfast,Yes,87.1,24.6,3,4,None,15,72,Feeling normal,2026-05-07 06:56:01
+P0271,U0068,S0843,2026-05-17,taken,After breakfast,Yes,88.5,25.0,5,5,Headache,39,81,No noticeable change yet,2026-05-07 06:56:01
+P0272,U0068,S0843,2026-05-24,taken,After dinner,Yes,86.2,24.4,2,2,None,30,72,Completed as planned,2026-05-07 06:56:01
+P0273,U0069,S1243,2026-05-02,skipped,Before workout,No,62.8,27.7,3,3,Mild stomach discomfort,4,78,Updated weekly progress,2026-05-07 06:56:01
+P0274,U0069,S1243,2026-05-08,taken,Morning,Yes,62.6,27.6,4,3,None,15,88,Feeling normal,2026-05-07 06:56:01
+P0275,U0069,S1243,2026-05-15,taken,After breakfast,Yes,64.2,28.3,2,2,None,39,95,Missed due to busy schedule,2026-05-07 06:56:01
+P0276,U0069,S1243,2026-05-23,missed,Night,No,63.8,28.2,5,2,Nausea,43,78,Workout recovery improved,2026-05-07 06:56:01
+P0277,U0070,S0883,2026-05-02,skipped,After workout,No,95.9,28.0,5,3,None,10,60,Completed as planned,2026-05-07 06:56:01
+P0278,U0070,S0883,2026-05-10,taken,After breakfast,Yes,97.0,28.3,4,2,Nausea,19,71,No noticeable change yet,2026-05-07 06:56:01
+P0279,U0070,S0883,2026-05-15,taken,After workout,Yes,96.8,28.3,5,3,Nausea,19,73,Completed as planned,2026-05-07 06:56:01
+P0280,U0070,S0883,2026-05-23,taken,After dinner,Yes,94.7,27.6,3,4,Nausea,49,71,Updated weekly progress,2026-05-07 06:56:01
+P0281,U0071,S2975,2026-05-02,skipped,After workout,No,67.5,24.4,4,5,None,5,68,No noticeable change yet,2026-05-07 06:56:01
+P0282,U0071,S2975,2026-05-08,skipped,Before workout,No,68.0,24.6,5,2,Headache,26,65,No noticeable change yet,2026-05-07 06:56:01
+P0283,U0071,S2975,2026-05-15,taken,After dinner,Yes,68.9,24.9,3,2,None,46,76,Minor side effect reported,2026-05-07 06:56:01
+P0284,U0071,S2975,2026-05-24,taken,After breakfast,Yes,68.1,24.6,3,5,None,53,78,Need to improve consistency,2026-05-07 06:56:01
+P0285,U0072,S0459,2026-05-03,taken,After dinner,Yes,61.1,27.7,3,3,Nausea,3,96,Updated weekly progress,2026-05-07 06:56:01
+P0286,U0072,S0459,2026-05-09,taken,After dinner,Yes,60.9,27.6,5,3,Headache,24,98,Updated weekly progress,2026-05-07 06:56:01
+P0287,U0072,S0459,2026-05-17,taken,Night,Yes,61.9,28.1,5,3,Sleep disturbance,24,100,Missed due to busy schedule,2026-05-07 06:56:01
+P0288,U0072,S0459,2026-05-24,taken,After breakfast,Yes,63.0,28.6,2,4,None,52,99,Need to improve consistency,2026-05-07 06:56:01
+P0289,U0073,S1241,2026-05-03,skipped,Morning,No,59.1,26.8,4,2,None,3,63,Workout recovery improved,2026-05-07 06:56:01
+P0290,U0073,S1241,2026-05-10,taken,Before workout,Yes,58.7,26.6,5,2,Nausea,19,79,No noticeable change yet,2026-05-07 06:56:01
+P0291,U0073,S1241,2026-05-16,taken,After dinner,Yes,59.3,26.9,5,2,Nausea,33,82,Feeling normal,2026-05-07 06:56:01
+P0292,U0073,S1241,2026-05-22,taken,After workout,Yes,59.1,26.8,2,5,Nausea,31,80,Updated weekly progress,2026-05-07 06:56:01
+P0293,U0074,S2806,2026-05-01,taken,Before workout,Yes,79.5,27.7,2,2,None,4,98,Felt better energy today,2026-05-07 06:56:01
+P0294,U0074,S2806,2026-05-09,taken,Morning,Yes,80.6,28.1,4,4,Headache,23,98,Feeling normal,2026-05-07 06:56:01
+P0295,U0074,S2806,2026-05-15,missed,Night,No,79.9,27.8,2,5,None,21,90,Minor side effect reported,2026-05-07 06:56:01
+P0296,U0074,S2806,2026-05-22,taken,Night,Yes,79.4,27.7,2,4,Headache,60,99,Felt better energy today,2026-05-07 06:56:01
+P0297,U0075,S2860,2026-05-02,taken,Before workout,Yes,64.2,21.9,4,5,None,5,93,Workout recovery improved,2026-05-07 06:56:01
+P0298,U0075,S2860,2026-05-08,taken,Night,Yes,63.9,21.8,3,5,None,14,99,No noticeable change yet,2026-05-07 06:56:01
+P0299,U0075,S2860,2026-05-15,taken,After breakfast,Yes,63.5,21.6,5,2,None,48,100,Workout recovery improved,2026-05-07 06:56:01
+P0300,U0075,S2860,2026-05-22,taken,After workout,Yes,65.1,22.2,5,4,Sleep disturbance,63,93,Need to improve consistency,2026-05-07 06:56:01
+P0301,U0076,S0085,2026-05-03,taken,Morning,Yes,42.1,16.8,4,5,Headache,9,100,Need to improve consistency,2026-05-07 06:56:01
+P0302,U0076,S0085,2026-05-08,taken,After workout,Yes,41.3,16.5,3,3,None,26,100,Completed as planned,2026-05-07 06:56:01
+P0303,U0076,S0085,2026-05-15,taken,Night,Yes,42.4,16.9,4,4,Mild stomach discomfort,42,100,Felt better energy today,2026-05-07 06:56:01
+P0304,U0076,S0085,2026-05-24,taken,After breakfast,Yes,42.6,17.0,3,3,None,38,93,Workout recovery improved,2026-05-07 06:56:01
+P0305,U0077,S2874,2026-05-01,taken,Night,Yes,72.4,21.1,4,2,None,4,93,Workout recovery improved,2026-05-07 06:56:01
+P0306,U0077,S2874,2026-05-09,taken,After workout,Yes,73.6,21.4,5,5,None,17,95,Felt better energy today,2026-05-07 06:56:01
+P0307,U0077,S2874,2026-05-15,taken,After breakfast,Yes,73.2,21.3,3,3,Sleep disturbance,47,86,Felt better energy today,2026-05-07 06:56:01
+P0308,U0077,S2874,2026-05-23,missed,After breakfast,No,75.1,21.8,5,4,None,39,77,No noticeable change yet,2026-05-07 06:56:01
+P0309,U0078,S1665,2026-05-02,taken,Night,Yes,66.4,24.9,4,5,Mild stomach discomfort,3,66,Missed due to busy schedule,2026-05-07 06:56:01
+P0310,U0078,S1665,2026-05-10,taken,Night,Yes,66.1,24.8,3,3,Headache,25,73,Minor side effect reported,2026-05-07 06:56:01
+P0311,U0078,S1665,2026-05-16,taken,After workout,Yes,67.0,25.2,2,2,Nausea,40,63,Workout recovery improved,2026-05-07 06:56:01
+P0312,U0078,S1665,2026-05-24,taken,Night,Yes,65.8,24.7,4,4,Sleep disturbance,49,70,Minor side effect reported,2026-05-07 06:56:01
+P0313,U0079,S2480,2026-05-02,taken,Night,Yes,66.8,19.4,3,5,None,12,88,Felt better energy today,2026-05-07 06:56:01
+P0314,U0079,S2480,2026-05-10,taken,Night,Yes,67.9,19.7,2,4,Nausea,27,89,No noticeable change yet,2026-05-07 06:56:01
+P0315,U0079,S2480,2026-05-16,taken,After breakfast,Yes,67.3,19.5,3,4,None,30,85,Missed due to busy schedule,2026-05-07 06:56:01
+P0316,U0079,S2480,2026-05-23,missed,After workout,No,67.8,19.6,3,3,Sleep disturbance,43,79,No noticeable change yet,2026-05-07 06:56:01
+P0317,U0080,S0779,2026-05-03,missed,After dinner,No,52.1,21.2,3,2,Nausea,10,82,No noticeable change yet,2026-05-07 06:56:01
+P0318,U0080,S0779,2026-05-10,taken,Night,Yes,51.5,21.0,5,4,None,26,85,Need to improve consistency,2026-05-07 06:56:01
+P0319,U0080,S0779,2026-05-16,skipped,Before workout,No,51.5,21.0,3,4,Headache,44,81,Felt better energy today,2026-05-07 06:56:01
+P0320,U0080,S0779,2026-05-23,taken,Morning,Yes,54.2,22.1,3,4,Mild stomach discomfort,57,83,Feeling normal,2026-05-07 06:56:01
+P0321,U0081,S2256,2026-05-03,missed,Night,No,64.6,24.6,5,2,Mild stomach discomfort,3,73,Need to improve consistency,2026-05-07 06:56:01
+P0322,U0081,S2256,2026-05-09,taken,Morning,Yes,64.0,24.4,2,2,None,14,82,Felt better energy today,2026-05-07 06:56:01
+P0323,U0081,S2256,2026-05-17,missed,Morning,No,64.2,24.4,2,2,None,27,70,Updated weekly progress,2026-05-07 06:56:01
+P0324,U0081,S2256,2026-05-24,skipped,After breakfast,No,64.1,24.4,4,4,Sleep disturbance,48,70,Missed due to busy schedule,2026-05-07 06:56:01
+P0325,U0082,S0622,2026-05-03,missed,After breakfast,No,35.8,16.5,2,3,None,5,57,No noticeable change yet,2026-05-07 06:56:01
+P0326,U0082,S0622,2026-05-09,taken,After workout,Yes,35.3,16.3,3,3,None,20,64,No noticeable change yet,2026-05-07 06:56:01
+P0327,U0082,S0622,2026-05-15,taken,After dinner,Yes,35.4,16.3,5,5,None,33,70,Missed due to busy schedule,2026-05-07 06:56:01
+P0328,U0082,S0622,2026-05-22,taken,Night,Yes,35.9,16.5,5,5,None,55,63,Minor side effect reported,2026-05-07 06:56:01
+P0329,U0083,S1113,2026-05-03,taken,Morning,Yes,75.3,24.8,5,5,Sleep disturbance,8,78,Feeling normal,2026-05-07 06:56:01
+P0330,U0083,S1113,2026-05-10,taken,After workout,Yes,75.2,24.8,3,5,None,21,83,Missed due to busy schedule,2026-05-07 06:56:01
+P0331,U0083,S1113,2026-05-16,taken,After workout,Yes,75.3,24.8,5,2,Nausea,29,76,Missed due to busy schedule,2026-05-07 06:56:01
+P0332,U0083,S1113,2026-05-24,skipped,Before workout,No,74.0,24.4,4,5,None,33,72,Feeling normal,2026-05-07 06:56:01
+P0333,U0084,S1788,2026-05-02,taken,Before workout,Yes,44.2,16.0,4,5,None,6,92,Workout recovery improved,2026-05-07 06:56:01
+P0334,U0084,S1788,2026-05-08,missed,Morning,No,44.7,16.2,5,4,None,28,81,Missed due to busy schedule,2026-05-07 06:56:01
+P0335,U0084,S1788,2026-05-15,skipped,Morning,No,45.7,16.5,4,2,Headache,30,86,No noticeable change yet,2026-05-07 06:56:01
+P0336,U0084,S1788,2026-05-23,taken,After breakfast,Yes,43.8,15.8,5,4,None,49,90,Minor side effect reported,2026-05-07 06:56:01
+P0337,U0085,S0274,2026-05-01,missed,After dinner,No,44.1,18.9,5,5,None,5,68,Missed due to busy schedule,2026-05-07 06:56:01
+P0338,U0085,S0274,2026-05-08,taken,Before workout,Yes,44.8,19.2,3,2,Sleep disturbance,13,75,Feeling normal,2026-05-07 06:56:01
+P0339,U0085,S0274,2026-05-17,taken,After breakfast,Yes,45.4,19.5,2,4,Sleep disturbance,31,76,Workout recovery improved,2026-05-07 06:56:01
+P0340,U0085,S0274,2026-05-23,missed,After workout,No,46.1,19.8,3,3,None,59,64,Feeling normal,2026-05-07 06:56:01
+P0341,U0086,S0639,2026-05-01,missed,After breakfast,No,70.7,20.3,5,3,Nausea,7,65,Felt better energy today,2026-05-07 06:56:01
+P0342,U0086,S0639,2026-05-10,taken,After workout,Yes,69.8,20.0,3,2,None,20,69,Feeling normal,2026-05-07 06:56:01
+P0343,U0086,S0639,2026-05-17,taken,Night,Yes,71.1,20.4,5,5,Nausea,39,76,Minor side effect reported,2026-05-07 06:56:01
+P0344,U0086,S0639,2026-05-23,missed,After workout,No,71.0,20.3,3,5,None,49,66,Completed as planned,2026-05-07 06:56:01
+P0345,U0087,S0848,2026-05-03,taken,After workout,Yes,72.2,23.3,5,4,None,12,70,Completed as planned,2026-05-07 06:56:01
+P0346,U0087,S0848,2026-05-09,taken,Night,Yes,71.4,23.0,3,5,Sleep disturbance,14,70,Workout recovery improved,2026-05-07 06:56:01
+P0347,U0087,S0848,2026-05-17,taken,After workout,Yes,71.8,23.2,4,5,Mild stomach discomfort,23,67,Feeling normal,2026-05-07 06:56:01
+P0348,U0087,S0848,2026-05-24,taken,After workout,Yes,71.7,23.1,2,3,None,43,66,Felt better energy today,2026-05-07 06:56:01
+P0349,U0088,S1211,2026-05-01,taken,After dinner,Yes,67.3,23.2,4,4,Sleep disturbance,9,84,Minor side effect reported,2026-05-07 06:56:01
+P0350,U0088,S1211,2026-05-10,taken,Before workout,Yes,66.5,22.9,3,4,Headache,19,88,Workout recovery improved,2026-05-07 06:56:01
+P0351,U0088,S1211,2026-05-15,taken,Morning,Yes,66.4,22.8,3,4,None,39,83,Feeling normal,2026-05-07 06:56:01
+P0352,U0088,S1211,2026-05-23,taken,Before workout,Yes,68.8,23.7,4,4,None,53,92,Minor side effect reported,2026-05-07 06:56:01
+P0353,U0089,S2399,2026-05-02,taken,After dinner,Yes,87.5,28.9,2,3,Sleep disturbance,3,77,Need to improve consistency,2026-05-07 06:56:01
+P0354,U0089,S2399,2026-05-09,skipped,After breakfast,No,88.1,29.1,3,2,Headache,25,59,Need to improve consistency,2026-05-07 06:56:01
+P0355,U0089,S2399,2026-05-16,taken,After breakfast,Yes,87.0,28.7,3,5,Headache,23,67,Missed due to busy schedule,2026-05-07 06:56:01
+P0356,U0089,S2399,2026-05-23,taken,Morning,Yes,87.6,28.9,2,3,Sleep disturbance,58,70,Completed as planned,2026-05-07 06:56:01
+P0357,U0090,S1088,2026-05-01,taken,Morning,Yes,68.3,24.9,5,4,Headache,10,91,Updated weekly progress,2026-05-07 06:56:01
+P0358,U0090,S1088,2026-05-09,taken,Night,Yes,68.6,25.0,4,3,Nausea,24,100,Minor side effect reported,2026-05-07 06:56:01
+P0359,U0090,S1088,2026-05-17,taken,After workout,Yes,69.4,25.3,5,4,None,28,90,Minor side effect reported,2026-05-07 06:56:01
+P0360,U0090,S1088,2026-05-23,taken,Before workout,Yes,70.5,25.7,4,2,Sleep disturbance,45,99,Workout recovery improved,2026-05-07 06:56:01
+P0361,U0091,S2274,2026-05-01,taken,After dinner,Yes,65.3,26.4,4,5,Nausea,4,82,Need to improve consistency,2026-05-07 06:56:01
+P0362,U0091,S2274,2026-05-09,missed,After dinner,No,65.1,26.3,5,2,Sleep disturbance,15,66,Updated weekly progress,2026-05-07 06:56:01
+P0363,U0091,S2274,2026-05-15,taken,After workout,Yes,65.2,26.4,2,4,None,33,80,Felt better energy today,2026-05-07 06:56:01
+P0364,U0091,S2274,2026-05-23,taken,After breakfast,Yes,65.5,26.5,5,5,Sleep disturbance,54,83,Missed due to busy schedule,2026-05-07 06:56:01
+P0365,U0092,S1174,2026-05-03,taken,After workout,Yes,65.8,19.6,2,2,None,8,84,Felt better energy today,2026-05-07 06:56:01
+P0366,U0092,S1174,2026-05-10,taken,Night,Yes,65.4,19.5,3,2,None,24,76,Feeling normal,2026-05-07 06:56:01
+P0367,U0092,S1174,2026-05-15,taken,After dinner,Yes,65.1,19.4,2,2,None,34,85,No noticeable change yet,2026-05-07 06:56:01
+P0368,U0092,S1174,2026-05-23,taken,After dinner,Yes,64.5,19.2,2,3,Sleep disturbance,55,75,Workout recovery improved,2026-05-07 06:56:01
+P0369,U0093,S1601,2026-05-01,taken,After dinner,Yes,59.0,21.4,4,3,None,11,92,Feeling normal,2026-05-07 06:56:01
+P0370,U0093,S1601,2026-05-10,taken,After dinner,Yes,58.3,21.2,3,4,None,20,98,Need to improve consistency,2026-05-07 06:56:01
+P0371,U0093,S1601,2026-05-16,skipped,After dinner,No,58.1,21.1,4,4,Nausea,40,86,Need to improve consistency,2026-05-07 06:56:01
+P0372,U0093,S1601,2026-05-23,taken,After breakfast,Yes,60.4,21.9,5,3,Nausea,44,94,Workout recovery improved,2026-05-07 06:56:01
+P0373,U0094,S0151,2026-05-01,missed,After breakfast,No,72.1,22.0,3,2,None,4,62,Updated weekly progress,2026-05-07 06:56:01
+P0374,U0094,S0151,2026-05-10,taken,Morning,Yes,72.0,22.0,4,3,Mild stomach discomfort,24,71,Completed as planned,2026-05-07 06:56:01
+P0375,U0094,S0151,2026-05-16,taken,Morning,Yes,71.6,21.9,4,5,None,30,65,Feeling normal,2026-05-07 06:56:01
+P0376,U0094,S0151,2026-05-23,skipped,Before workout,No,73.9,22.6,5,4,Sleep disturbance,49,57,Workout recovery improved,2026-05-07 06:56:01
+P0377,U0095,S0031,2026-05-02,taken,After breakfast,Yes,58.1,24.6,3,5,None,5,70,Missed due to busy schedule,2026-05-07 06:56:01
+P0378,U0095,S0031,2026-05-10,taken,After dinner,Yes,58.4,24.8,4,4,None,16,75,Felt better energy today,2026-05-07 06:56:01
+P0379,U0095,S0031,2026-05-16,missed,Night,No,57.8,24.5,4,5,Headache,28,70,Missed due to busy schedule,2026-05-07 06:56:01
+P0380,U0095,S0031,2026-05-23,skipped,Before workout,No,60.0,25.4,5,2,None,57,68,Updated weekly progress,2026-05-07 06:56:01
+P0381,U0096,S0074,2026-05-03,skipped,After workout,No,81.0,29.0,3,4,Sleep disturbance,10,82,Missed due to busy schedule,2026-05-07 06:56:01
+P0382,U0096,S0074,2026-05-09,taken,Night,Yes,80.2,28.7,4,5,None,21,89,Completed as planned,2026-05-07 06:56:01
+P0383,U0096,S0074,2026-05-17,taken,Morning,Yes,79.3,28.4,5,2,None,36,92,No noticeable change yet,2026-05-07 06:56:01
+P0384,U0096,S0074,2026-05-24,missed,Before workout,No,82.6,29.6,2,5,Headache,35,86,Missed due to busy schedule,2026-05-07 06:56:01
+P0385,U0097,S2188,2026-05-01,taken,After breakfast,Yes,55.0,22.6,3,2,Nausea,11,83,Need to improve consistency,2026-05-07 06:56:01
+P0386,U0097,S2188,2026-05-08,taken,After breakfast,Yes,55.0,22.6,4,3,Nausea,18,79,No noticeable change yet,2026-05-07 06:56:01
+P0387,U0097,S2188,2026-05-17,taken,Before workout,Yes,54.5,22.4,2,4,None,34,80,Minor side effect reported,2026-05-07 06:56:01
+P0388,U0097,S2188,2026-05-24,missed,Morning,No,55.5,22.8,3,2,Sleep disturbance,32,69,No noticeable change yet,2026-05-07 06:56:01
+P0389,U0098,S0734,2026-05-02,taken,Morning,Yes,65.3,20.9,5,4,Sleep disturbance,10,75,Felt better energy today,2026-05-07 06:56:01
+P0390,U0098,S0734,2026-05-09,taken,Before workout,Yes,65.5,21.0,2,2,None,20,75,Workout recovery improved,2026-05-07 06:56:01
+P0391,U0098,S0734,2026-05-15,taken,Night,Yes,64.9,20.8,4,2,None,38,74,Need to improve consistency,2026-05-07 06:56:01
+P0392,U0098,S0734,2026-05-23,taken,After breakfast,Yes,67.2,21.5,5,2,Nausea,48,69,Missed due to busy schedule,2026-05-07 06:56:01
+P0393,U0099,S2692,2026-05-03,taken,Morning,Yes,60.9,24.0,2,5,None,8,94,Completed as planned,2026-05-07 06:56:01
+P0394,U0099,S2692,2026-05-10,taken,Before workout,Yes,60.1,23.7,5,2,None,26,100,Feeling normal,2026-05-07 06:56:01
+P0395,U0099,S2692,2026-05-15,taken,Morning,Yes,62.2,24.5,3,5,Mild stomach discomfort,45,99,Minor side effect reported,2026-05-07 06:56:01
+P0396,U0099,S2692,2026-05-24,skipped,Night,No,62.3,24.6,4,3,None,39,81,Minor side effect reported,2026-05-07 06:56:01
+P0397,U0100,S1744,2026-05-01,taken,After workout,Yes,46.8,15.9,3,4,None,5,82,Need to improve consistency,2026-05-07 06:56:01
+P0398,U0100,S1744,2026-05-08,missed,After workout,No,47.0,16.0,2,2,None,22,72,Updated weekly progress,2026-05-07 06:56:01
+P0399,U0100,S1744,2026-05-15,skipped,After dinner,No,46.2,15.7,2,4,None,31,77,Felt better energy today,2026-05-07 06:56:01
+P0400,U0100,S1744,2026-05-23,taken,After breakfast,Yes,46.8,15.9,2,3,None,32,87,No noticeable change yet,2026-05-07 06:56:01
+P0401,U0101,S1276,2026-05-03,missed,Night,No,56.2,22.4,4,2,Mild stomach discomfort,7,63,Completed as planned,2026-05-07 06:56:01
+P0402,U0101,S1276,2026-05-09,taken,After breakfast,Yes,55.1,22.0,2,2,Headache,20,65,Completed as planned,2026-05-07 06:56:01
+P0403,U0101,S1276,2026-05-15,taken,Morning,Yes,54.6,21.8,4,3,Headache,35,73,Minor side effect reported,2026-05-07 06:56:01
+P0404,U0101,S1276,2026-05-22,taken,Night,Yes,55.4,22.1,2,5,None,42,66,Workout recovery improved,2026-05-07 06:56:01
+P0405,U0102,S0694,2026-05-01,taken,Night,Yes,78.2,27.1,3,5,Headache,7,100,Missed due to busy schedule,2026-05-07 06:56:01
+P0406,U0102,S0694,2026-05-08,taken,After dinner,Yes,78.2,27.1,4,4,None,27,95,Need to improve consistency,2026-05-07 06:56:01
+P0407,U0102,S0694,2026-05-17,taken,After dinner,Yes,80.1,27.7,2,5,None,31,95,Feeling normal,2026-05-07 06:56:01
+P0408,U0102,S0694,2026-05-22,taken,After dinner,Yes,78.6,27.2,3,2,Nausea,40,94,Missed due to busy schedule,2026-05-07 06:56:01
+P0409,U0103,S0543,2026-05-01,taken,After breakfast,Yes,50.1,23.6,4,2,Headache,9,64,Completed as planned,2026-05-07 06:56:01
+P0410,U0103,S0543,2026-05-10,taken,Before workout,Yes,50.4,23.8,3,5,None,17,63,Workout recovery improved,2026-05-07 06:56:01
+P0411,U0103,S0543,2026-05-17,skipped,After workout,No,51.0,24.1,4,5,Nausea,34,58,Missed due to busy schedule,2026-05-07 06:56:01
+P0412,U0103,S0543,2026-05-24,taken,Night,Yes,49.0,23.1,3,5,Mild stomach discomfort,45,72,No noticeable change yet,2026-05-07 06:56:01
+P0413,U0104,S1792,2026-05-02,taken,Night,Yes,63.8,29.2,5,4,None,3,63,Need to improve consistency,2026-05-07 06:56:01
+P0414,U0104,S1792,2026-05-08,taken,Morning,Yes,63.3,28.9,5,2,Headache,17,69,Feeling normal,2026-05-07 06:56:01
+P0415,U0104,S1792,2026-05-16,taken,After workout,Yes,64.5,29.5,5,4,None,36,67,Feeling normal,2026-05-07 06:56:01
+P0416,U0104,S1792,2026-05-22,taken,After workout,Yes,65.8,30.1,5,3,Headache,30,73,Minor side effect reported,2026-05-07 06:56:01
+P0417,U0105,S2630,2026-05-01,taken,Before workout,Yes,96.2,27.3,4,5,None,7,70,Felt better energy today,2026-05-07 06:56:01
+P0418,U0105,S2630,2026-05-10,taken,Night,Yes,95.6,27.1,3,5,Headache,19,72,Completed as planned,2026-05-07 06:56:01
+P0419,U0105,S2630,2026-05-15,taken,Before workout,Yes,95.7,27.2,2,5,None,41,78,Workout recovery improved,2026-05-07 06:56:01
+P0420,U0105,S2630,2026-05-22,skipped,After dinner,No,95.5,27.1,3,5,Nausea,49,63,Updated weekly progress,2026-05-07 06:56:01
+P0421,U0106,S0394,2026-05-02,missed,Before workout,No,62.7,26.0,4,5,Sleep disturbance,8,74,Missed due to busy schedule,2026-05-07 06:56:01
+P0422,U0106,S0394,2026-05-10,taken,Night,Yes,63.1,26.2,2,2,Headache,25,84,Workout recovery improved,2026-05-07 06:56:01
+P0423,U0106,S0394,2026-05-15,taken,After dinner,Yes,64.3,26.7,2,2,Nausea,32,90,Minor side effect reported,2026-05-07 06:56:01
+P0424,U0106,S0394,2026-05-23,skipped,Morning,No,61.8,25.7,2,4,None,39,79,Need to improve consistency,2026-05-07 06:56:01
+P0425,U0107,S0493,2026-05-03,missed,After breakfast,No,81.4,22.6,2,2,Sleep disturbance,4,72,No noticeable change yet,2026-05-07 06:56:01
+P0426,U0107,S0493,2026-05-10,missed,Night,No,81.6,22.7,4,3,Nausea,14,74,Completed as planned,2026-05-07 06:56:01
+P0427,U0107,S0493,2026-05-16,taken,After dinner,Yes,82.1,22.8,3,4,None,30,78,Need to improve consistency,2026-05-07 06:56:01
+P0428,U0107,S0493,2026-05-24,taken,Morning,Yes,83.0,23.1,2,2,Nausea,56,79,No noticeable change yet,2026-05-07 06:56:01
+P0429,U0108,S0789,2026-05-01,taken,After breakfast,Yes,91.9,30.1,3,4,Mild stomach discomfort,6,74,Completed as planned,2026-05-07 06:56:01
+P0430,U0108,S0789,2026-05-10,taken,Night,Yes,91.3,29.9,3,4,Nausea,13,72,No noticeable change yet,2026-05-07 06:56:01
+P0431,U0108,S0789,2026-05-17,taken,After workout,Yes,90.9,29.8,2,3,None,23,78,Completed as planned,2026-05-07 06:56:01
+P0432,U0108,S0789,2026-05-24,taken,After breakfast,Yes,92.7,30.4,3,2,None,46,72,Need to improve consistency,2026-05-07 06:56:01
+P0433,U0109,S0445,2026-05-01,skipped,Night,No,61.1,22.9,4,5,None,11,85,Minor side effect reported,2026-05-07 06:56:01
+P0434,U0109,S0445,2026-05-10,missed,After dinner,No,60.3,22.6,5,4,None,24,79,No noticeable change yet,2026-05-07 06:56:01
+P0435,U0109,S0445,2026-05-17,taken,Before workout,Yes,62.3,23.3,5,5,None,22,93,Felt better energy today,2026-05-07 06:56:01
+P0436,U0109,S0445,2026-05-24,taken,After dinner,Yes,62.7,23.5,5,5,Nausea,44,88,Workout recovery improved,2026-05-07 06:56:01
+P0437,U0110,S0217,2026-05-01,missed,After dinner,No,55.5,20.3,2,3,Headache,6,83,Minor side effect reported,2026-05-07 06:56:01
+P0438,U0110,S0217,2026-05-08,taken,Before workout,Yes,55.3,20.2,3,3,None,16,97,Need to improve consistency,2026-05-07 06:56:01
+P0439,U0110,S0217,2026-05-16,taken,After breakfast,Yes,54.2,19.8,5,2,Mild stomach discomfort,26,100,Minor side effect reported,2026-05-07 06:56:01
+P0440,U0110,S0217,2026-05-22,skipped,Before workout,No,56.4,20.6,4,2,None,50,93,Completed as planned,2026-05-07 06:56:01
+P0441,U0111,S0112,2026-05-03,taken,Morning,Yes,69.0,19.7,3,5,Sleep disturbance,12,62,Felt better energy today,2026-05-07 06:56:01
+P0442,U0111,S0112,2026-05-09,missed,Night,No,69.8,20.0,3,4,None,20,51,Need to improve consistency,2026-05-07 06:56:01
+P0443,U0111,S0112,2026-05-17,taken,Before workout,Yes,70.5,20.2,3,2,Headache,39,65,Workout recovery improved,2026-05-07 06:56:01
+P0444,U0111,S0112,2026-05-24,skipped,After dinner,No,70.0,20.0,2,3,None,52,58,No noticeable change yet,2026-05-07 06:56:01
+P0445,U0112,S2054,2026-05-02,taken,Morning,Yes,87.9,26.9,2,2,None,9,69,No noticeable change yet,2026-05-07 06:56:01
+P0446,U0112,S2054,2026-05-08,taken,Night,Yes,87.7,26.9,4,3,Mild stomach discomfort,17,67,Need to improve consistency,2026-05-07 06:56:01
+P0447,U0112,S2054,2026-05-17,taken,After breakfast,Yes,87.3,26.7,4,4,Nausea,27,70,Completed as planned,2026-05-07 06:56:01
+P0448,U0112,S2054,2026-05-23,taken,After dinner,Yes,89.5,27.4,2,5,None,60,62,Need to improve consistency,2026-05-07 06:56:01
+P0449,U0113,S0852,2026-05-02,missed,Before workout,No,66.7,21.5,2,3,None,10,74,Felt better energy today,2026-05-07 06:56:01
+P0450,U0113,S0852,2026-05-08,taken,After dinner,Yes,67.0,21.6,2,2,None,18,79,No noticeable change yet,2026-05-07 06:56:01
+P0451,U0113,S0852,2026-05-17,taken,After dinner,Yes,66.6,21.5,3,5,Nausea,40,78,Missed due to busy schedule,2026-05-07 06:56:01
+P0452,U0113,S0852,2026-05-24,skipped,Night,No,64.9,21.0,2,3,Nausea,42,67,Need to improve consistency,2026-05-07 06:56:01
+P0453,U0114,S2536,2026-05-03,taken,Before workout,Yes,54.9,16.0,3,2,None,7,84,Need to improve consistency,2026-05-07 06:56:01
+P0454,U0114,S2536,2026-05-10,taken,Morning,Yes,54.7,16.0,4,4,None,25,81,Feeling normal,2026-05-07 06:56:01
+P0455,U0114,S2536,2026-05-15,taken,Before workout,Yes,54.5,15.9,4,4,Sleep disturbance,45,80,Completed as planned,2026-05-07 06:56:01
+P0456,U0114,S2536,2026-05-22,taken,After dinner,Yes,56.4,16.5,3,4,None,62,83,Completed as planned,2026-05-07 06:56:01
+P0457,U0115,S2739,2026-05-02,taken,After dinner,Yes,86.2,28.1,2,3,Nausea,7,73,Felt better energy today,2026-05-07 06:56:01
+P0458,U0115,S2739,2026-05-09,taken,Before workout,Yes,86.6,28.2,4,3,Mild stomach discomfort,27,67,Completed as planned,2026-05-07 06:56:01
+P0459,U0115,S2739,2026-05-17,skipped,After breakfast,No,86.1,28.0,3,3,None,27,59,Updated weekly progress,2026-05-07 06:56:01
+P0460,U0115,S2739,2026-05-22,missed,Night,No,85.7,27.9,3,3,Sleep disturbance,43,61,Felt better energy today,2026-05-07 06:56:01
+P0461,U0116,S0369,2026-05-03,missed,Morning,No,47.3,20.2,3,3,Headache,4,64,Felt better energy today,2026-05-07 06:56:01
+P0462,U0116,S0369,2026-05-10,skipped,Night,No,46.8,20.0,4,3,None,16,62,Need to improve consistency,2026-05-07 06:56:01
+P0463,U0116,S0369,2026-05-15,skipped,After workout,No,46.2,19.8,4,5,None,30,64,Feeling normal,2026-05-07 06:56:01
+P0464,U0116,S0369,2026-05-24,taken,After breakfast,Yes,48.7,20.8,3,2,Sleep disturbance,51,66,Completed as planned,2026-05-07 06:56:01
+P0465,U0117,S2401,2026-05-02,taken,Morning,Yes,77.9,28.8,3,5,None,12,74,Feeling normal,2026-05-07 06:56:01
+P0466,U0117,S2401,2026-05-10,skipped,Night,No,78.4,28.9,5,2,Headache,24,57,Missed due to busy schedule,2026-05-07 06:56:01
+P0467,U0117,S2401,2026-05-16,taken,Morning,Yes,78.8,29.1,4,2,Sleep disturbance,31,66,Felt better energy today,2026-05-07 06:56:01
+P0468,U0117,S2401,2026-05-24,skipped,Before workout,No,79.7,29.4,3,3,Mild stomach discomfort,40,64,Minor side effect reported,2026-05-07 06:56:01
+P0469,U0118,S1956,2026-05-01,missed,Night,No,53.6,15.9,3,3,Headache,6,73,Minor side effect reported,2026-05-07 06:56:01
+P0470,U0118,S1956,2026-05-08,taken,After workout,Yes,53.6,15.9,2,2,None,20,86,Completed as planned,2026-05-07 06:56:01
+P0471,U0118,S1956,2026-05-17,skipped,After dinner,No,55.3,16.4,5,2,Sleep disturbance,29,79,Updated weekly progress,2026-05-07 06:56:01
+P0472,U0118,S1956,2026-05-24,taken,After workout,Yes,55.4,16.4,5,5,Sleep disturbance,45,88,Completed as planned,2026-05-07 06:56:01
+P0473,U0119,S2128,2026-05-01,skipped,Morning,No,66.0,20.0,3,4,Mild stomach discomfort,3,59,Need to improve consistency,2026-05-07 06:56:01
+P0474,U0119,S2128,2026-05-10,taken,Night,Yes,67.1,20.3,5,2,None,17,68,Missed due to busy schedule,2026-05-07 06:56:01
+P0475,U0119,S2128,2026-05-15,taken,Morning,Yes,67.4,20.4,5,3,Mild stomach discomfort,32,71,Felt better energy today,2026-05-07 06:56:01
+P0476,U0119,S2128,2026-05-23,skipped,After breakfast,No,68.1,20.6,3,4,None,53,66,Completed as planned,2026-05-07 06:56:01
+P0477,U0120,S0475,2026-05-02,missed,Before workout,No,76.1,22.9,4,3,Mild stomach discomfort,10,68,Minor side effect reported,2026-05-07 06:56:01
+P0478,U0120,S0475,2026-05-10,missed,Night,No,76.0,22.9,4,2,None,14,68,Felt better energy today,2026-05-07 06:56:01
+P0479,U0120,S0475,2026-05-17,taken,After dinner,Yes,76.7,23.1,4,2,Sleep disturbance,28,75,No noticeable change yet,2026-05-07 06:56:01
+P0480,U0120,S0475,2026-05-23,missed,After dinner,No,75.6,22.8,3,5,Sleep disturbance,34,69,Need to improve consistency,2026-05-07 06:56:01
+P0481,U0121,S2558,2026-05-03,taken,Night,Yes,64.8,24.9,5,2,Headache,12,93,No noticeable change yet,2026-05-07 06:56:01
+P0482,U0121,S2558,2026-05-08,missed,After dinner,No,65.2,25.1,3,3,None,26,84,Felt better energy today,2026-05-07 06:56:01
+P0483,U0121,S2558,2026-05-16,taken,After breakfast,Yes,65.5,25.2,3,3,None,36,93,Workout recovery improved,2026-05-07 06:56:01
+P0484,U0121,S2558,2026-05-22,taken,After dinner,Yes,65.9,25.3,2,5,Headache,51,93,Completed as planned,2026-05-07 06:56:01
+P0485,U0122,S2286,2026-05-01,taken,Night,Yes,46.7,18.7,5,3,Nausea,9,90,Missed due to busy schedule,2026-05-07 06:56:01
+P0486,U0122,S2286,2026-05-09,missed,After breakfast,No,47.6,19.1,4,4,Nausea,22,89,Missed due to busy schedule,2026-05-07 06:56:01
+P0487,U0122,S2286,2026-05-17,taken,Morning,Yes,47.3,18.9,4,5,Nausea,35,94,Felt better energy today,2026-05-07 06:56:01
+P0488,U0122,S2286,2026-05-22,skipped,After dinner,No,47.2,18.9,3,5,Headache,50,80,Updated weekly progress,2026-05-07 06:56:01
+P0489,U0123,S2231,2026-05-02,skipped,After workout,No,73.2,24.6,4,5,Nausea,9,68,Felt better energy today,2026-05-07 06:56:01
+P0490,U0123,S2231,2026-05-08,taken,Night,Yes,73.6,24.8,3,3,Sleep disturbance,18,79,Minor side effect reported,2026-05-07 06:56:01
+P0491,U0123,S2231,2026-05-16,missed,Before workout,No,73.1,24.6,5,3,None,25,62,No noticeable change yet,2026-05-07 06:56:01
+P0492,U0123,S2231,2026-05-24,taken,After workout,Yes,74.2,25.0,3,2,None,27,71,Minor side effect reported,2026-05-07 06:56:01
+P0493,U0124,S1779,2026-05-02,taken,After breakfast,Yes,90.8,27.1,2,2,Nausea,9,93,Missed due to busy schedule,2026-05-07 06:56:01
+P0494,U0124,S1779,2026-05-10,taken,After workout,Yes,91.0,27.2,2,4,None,11,86,No noticeable change yet,2026-05-07 06:56:01
+P0495,U0124,S1779,2026-05-17,missed,After workout,No,89.2,26.7,3,3,Sleep disturbance,29,82,Feeling normal,2026-05-07 06:56:01
+P0496,U0124,S1779,2026-05-24,taken,Night,Yes,91.1,27.2,4,4,None,32,88,Feeling normal,2026-05-07 06:56:01
+P0497,U0125,S1805,2026-05-03,taken,Night,Yes,66.4,21.1,5,5,Nausea,10,90,Workout recovery improved,2026-05-07 06:56:01
+P0498,U0125,S1805,2026-05-10,taken,Night,Yes,66.3,21.1,5,5,None,20,95,Workout recovery improved,2026-05-07 06:56:01
+P0499,U0125,S1805,2026-05-17,skipped,After workout,No,68.0,21.7,4,2,None,25,78,Missed due to busy schedule,2026-05-07 06:56:01
+P0500,U0125,S1805,2026-05-22,taken,Night,Yes,65.7,20.9,3,3,None,38,93,Need to improve consistency,2026-05-07 06:56:01
+P0501,U0126,S0446,2026-05-03,taken,Morning,Yes,64.1,24.3,2,3,None,5,99,Need to improve consistency,2026-05-07 06:56:01
+P0502,U0126,S0446,2026-05-08,taken,Before workout,Yes,64.7,24.6,3,5,Mild stomach discomfort,22,99,Minor side effect reported,2026-05-07 06:56:01
+P0503,U0126,S0446,2026-05-17,taken,Morning,Yes,63.9,24.3,4,4,None,28,96,Completed as planned,2026-05-07 06:56:01
+P0504,U0126,S0446,2026-05-24,taken,After workout,Yes,65.9,25.0,4,2,Sleep disturbance,42,91,Felt better energy today,2026-05-07 06:56:01
+P0505,U0127,S1767,2026-05-02,taken,After workout,Yes,68.9,20.5,5,2,None,7,78,Feeling normal,2026-05-07 06:56:01
+P0506,U0127,S1767,2026-05-10,taken,Morning,Yes,69.6,20.7,3,2,Mild stomach discomfort,15,78,Minor side effect reported,2026-05-07 06:56:01
+P0507,U0127,S1767,2026-05-15,taken,After breakfast,Yes,69.8,20.8,4,5,Sleep disturbance,35,83,Feeling normal,2026-05-07 06:56:01
+P0508,U0127,S1767,2026-05-22,taken,Morning,Yes,71.0,21.1,3,4,Mild stomach discomfort,44,80,Completed as planned,2026-05-07 06:56:01
+P0509,U0128,S1387,2026-05-03,taken,After dinner,Yes,90.6,30.9,5,5,Nausea,10,83,Felt better energy today,2026-05-07 06:56:01
+P0510,U0128,S1387,2026-05-09,taken,After workout,Yes,90.6,30.9,3,2,None,24,77,Completed as planned,2026-05-07 06:56:01
+P0511,U0128,S1387,2026-05-16,missed,After breakfast,No,89.2,30.5,4,4,Nausea,41,66,Workout recovery improved,2026-05-07 06:56:01
+P0512,U0128,S1387,2026-05-22,taken,Before workout,Yes,91.1,31.1,5,2,Nausea,62,74,No noticeable change yet,2026-05-07 06:56:01
+P0513,U0129,S1659,2026-05-03,taken,After breakfast,Yes,63.7,24.9,4,5,Mild stomach discomfort,4,78,Completed as planned,2026-05-07 06:56:01
+P0514,U0129,S1659,2026-05-10,missed,After workout,No,63.9,25.0,4,2,None,25,62,Workout recovery improved,2026-05-07 06:56:01
+P0515,U0129,S1659,2026-05-15,taken,After dinner,Yes,64.8,25.3,5,4,Headache,40,79,No noticeable change yet,2026-05-07 06:56:01
+P0516,U0129,S1659,2026-05-24,taken,After dinner,Yes,63.2,24.7,2,2,None,59,78,Updated weekly progress,2026-05-07 06:56:01
+P0517,U0130,S1851,2026-05-02,taken,After breakfast,Yes,49.7,20.6,3,5,Mild stomach discomfort,4,97,Need to improve consistency,2026-05-07 06:56:01
+P0518,U0130,S1851,2026-05-09,taken,After dinner,Yes,49.7,20.6,5,4,Mild stomach discomfort,23,92,Felt better energy today,2026-05-07 06:56:01
+P0519,U0130,S1851,2026-05-17,taken,After dinner,Yes,50.4,20.8,5,5,Headache,46,99,Workout recovery improved,2026-05-07 06:56:01
+P0520,U0130,S1851,2026-05-24,missed,After breakfast,No,51.5,21.3,4,3,Mild stomach discomfort,58,84,Completed as planned,2026-05-07 06:56:01
+P0521,U0131,S2635,2026-05-03,missed,Night,No,64.9,19.7,3,4,None,5,80,No noticeable change yet,2026-05-07 06:56:01
+P0522,U0131,S2635,2026-05-08,skipped,Night,No,66.3,20.1,4,5,Headache,22,76,Completed as planned,2026-05-07 06:56:01
+P0523,U0131,S2635,2026-05-15,skipped,Night,No,64.5,19.6,4,4,None,35,72,No noticeable change yet,2026-05-07 06:56:01
+P0524,U0131,S2635,2026-05-22,missed,After breakfast,No,65.3,19.8,4,4,None,60,73,Missed due to busy schedule,2026-05-07 06:56:01
+P0525,U0132,S2597,2026-05-03,missed,After breakfast,No,101.7,28.7,2,4,Mild stomach discomfort,9,61,Workout recovery improved,2026-05-07 06:56:01
+P0526,U0132,S2597,2026-05-09,taken,Before workout,Yes,102.0,28.7,5,3,None,18,76,Need to improve consistency,2026-05-07 06:56:01
+P0527,U0132,S2597,2026-05-15,missed,Before workout,No,100.7,28.4,4,2,None,40,61,Minor side effect reported,2026-05-07 06:56:01
+P0528,U0132,S2597,2026-05-22,missed,Night,No,102.6,28.9,5,4,Mild stomach discomfort,47,58,Minor side effect reported,2026-05-07 06:56:01
+P0529,U0133,S1329,2026-05-03,taken,After breakfast,Yes,65.5,23.9,2,3,None,7,65,Felt better energy today,2026-05-07 06:56:01
+P0530,U0133,S1329,2026-05-10,missed,After dinner,No,65.9,24.0,5,3,None,13,58,Missed due to busy schedule,2026-05-07 06:56:01
+P0531,U0133,S1329,2026-05-17,skipped,Morning,No,64.9,23.7,4,3,Mild stomach discomfort,29,51,No noticeable change yet,2026-05-07 06:56:01
+P0532,U0133,S1329,2026-05-22,taken,After breakfast,Yes,64.7,23.6,2,3,Nausea,35,66,Workout recovery improved,2026-05-07 06:56:01
+P0533,U0134,S1500,2026-05-02,taken,After workout,Yes,50.2,20.4,5,4,None,4,76,Completed as planned,2026-05-07 06:56:01
+P0534,U0134,S1500,2026-05-10,taken,Morning,Yes,51.0,20.7,2,4,None,14,77,Feeling normal,2026-05-07 06:56:01
+P0535,U0134,S1500,2026-05-16,missed,After workout,No,50.3,20.4,2,3,Sleep disturbance,30,71,Feeling normal,2026-05-07 06:56:01
+P0536,U0134,S1500,2026-05-22,taken,After dinner,Yes,49.7,20.2,4,5,None,44,81,Workout recovery improved,2026-05-07 06:56:01
+P0537,U0135,S1356,2026-05-02,taken,After workout,Yes,91.8,27.3,5,4,None,11,93,Workout recovery improved,2026-05-07 06:56:01
+P0538,U0135,S1356,2026-05-08,taken,Before workout,Yes,91.8,27.3,4,5,None,24,97,Updated weekly progress,2026-05-07 06:56:01
+P0539,U0135,S1356,2026-05-17,missed,After dinner,No,90.9,27.0,2,2,Sleep disturbance,37,81,Need to improve consistency,2026-05-07 06:56:01
+P0540,U0135,S1356,2026-05-23,taken,After breakfast,Yes,90.1,26.8,4,4,Nausea,27,87,Missed due to busy schedule,2026-05-07 06:56:01
+P0541,U0136,S2402,2026-05-01,taken,Morning,Yes,51.3,21.2,3,2,None,8,79,Updated weekly progress,2026-05-07 06:56:01
+P0542,U0136,S2402,2026-05-09,taken,Night,Yes,51.8,21.4,3,2,None,27,82,No noticeable change yet,2026-05-07 06:56:01
+P0543,U0136,S2402,2026-05-16,missed,After dinner,No,52.0,21.5,5,3,Mild stomach discomfort,37,73,Missed due to busy schedule,2026-05-07 06:56:01
+P0544,U0136,S2402,2026-05-23,taken,After workout,Yes,53.6,22.1,3,2,None,52,84,Updated weekly progress,2026-05-07 06:56:01
+P0545,U0137,S2111,2026-05-02,taken,After breakfast,Yes,41.8,18.7,2,3,None,11,73,Felt better energy today,2026-05-07 06:56:01
+P0546,U0137,S2111,2026-05-08,taken,Before workout,Yes,42.4,19.0,2,2,Mild stomach discomfort,21,80,Completed as planned,2026-05-07 06:56:01
+P0547,U0137,S2111,2026-05-15,missed,After breakfast,No,41.5,18.6,5,4,None,34,62,Minor side effect reported,2026-05-07 06:56:01
+P0548,U0137,S2111,2026-05-22,taken,After breakfast,Yes,42.0,18.8,4,5,Mild stomach discomfort,37,72,Updated weekly progress,2026-05-07 06:56:01
+P0549,U0138,S1067,2026-05-03,skipped,After dinner,No,39.4,18.1,2,4,None,9,75,Felt better energy today,2026-05-07 06:56:01
+P0550,U0138,S1067,2026-05-10,skipped,Night,No,40.2,18.5,2,5,None,25,76,Minor side effect reported,2026-05-07 06:56:01
+P0551,U0138,S1067,2026-05-15,skipped,Morning,No,39.6,18.2,5,3,None,28,75,Feeling normal,2026-05-07 06:56:01
+P0552,U0138,S1067,2026-05-24,skipped,Morning,No,38.8,17.8,4,3,None,63,75,Workout recovery improved,2026-05-07 06:56:01
+P0553,U0139,S2362,2026-05-03,taken,Night,Yes,73.7,25.4,2,4,None,9,78,Minor side effect reported,2026-05-07 06:56:01
+P0554,U0139,S2362,2026-05-10,taken,Before workout,Yes,72.9,25.1,3,3,None,18,83,Minor side effect reported,2026-05-07 06:56:01
+P0555,U0139,S2362,2026-05-16,taken,After breakfast,Yes,73.3,25.2,3,5,None,40,80,Missed due to busy schedule,2026-05-07 06:56:01
+P0556,U0139,S2362,2026-05-22,missed,After dinner,No,72.9,25.1,2,3,Mild stomach discomfort,48,70,Feeling normal,2026-05-07 06:56:01
+P0557,U0140,S0012,2026-05-03,taken,After breakfast,Yes,64.6,22.0,5,5,Nausea,3,76,Felt better energy today,2026-05-07 06:56:01
+P0558,U0140,S0012,2026-05-08,taken,After dinner,Yes,65.2,22.2,3,3,None,18,80,Completed as planned,2026-05-07 06:56:01
+P0559,U0140,S0012,2026-05-17,taken,After dinner,Yes,63.8,21.8,3,3,None,35,71,Completed as planned,2026-05-07 06:56:01
+P0560,U0140,S0012,2026-05-23,missed,After dinner,No,65.0,22.2,5,4,Nausea,64,69,Missed due to busy schedule,2026-05-07 06:56:01
+P0561,U0141,S2840,2026-05-03,missed,Morning,No,72.7,21.1,2,3,None,11,79,No noticeable change yet,2026-05-07 06:56:01
+P0562,U0141,S2840,2026-05-09,taken,After dinner,Yes,73.7,21.4,4,2,Mild stomach discomfort,22,92,Felt better energy today,2026-05-07 06:56:01
+P0563,U0141,S2840,2026-05-16,taken,After breakfast,Yes,74.4,21.6,3,4,Nausea,38,83,Completed as planned,2026-05-07 06:56:01
+P0564,U0141,S2840,2026-05-22,taken,Morning,Yes,71.9,20.9,3,2,Headache,47,86,Need to improve consistency,2026-05-07 06:56:01
+P0565,U0142,S1926,2026-05-01,skipped,After breakfast,No,63.6,25.3,5,2,Nausea,12,56,Workout recovery improved,2026-05-07 06:56:01
+P0566,U0142,S1926,2026-05-10,taken,Night,Yes,62.8,25.0,5,5,Mild stomach discomfort,14,75,Workout recovery improved,2026-05-07 06:56:01
+P0567,U0142,S1926,2026-05-15,taken,Morning,Yes,64.0,25.5,5,5,None,40,66,Workout recovery improved,2026-05-07 06:56:01
+P0568,U0142,S1926,2026-05-22,taken,Night,Yes,62.3,24.8,4,5,None,34,67,Missed due to busy schedule,2026-05-07 06:56:01
+P0569,U0143,S2552,2026-05-01,taken,After breakfast,Yes,49.7,21.0,2,3,Mild stomach discomfort,9,78,No noticeable change yet,2026-05-07 06:56:01
+P0570,U0143,S2552,2026-05-10,taken,Morning,Yes,49.0,20.7,4,2,Sleep disturbance,17,74,Minor side effect reported,2026-05-07 06:56:01
+P0571,U0143,S2552,2026-05-17,taken,After dinner,Yes,50.2,21.2,4,3,None,28,73,No noticeable change yet,2026-05-07 06:56:01
+P0572,U0143,S2552,2026-05-23,taken,Before workout,Yes,48.0,20.2,5,2,Sleep disturbance,57,78,Completed as planned,2026-05-07 06:56:01
+P0573,U0144,S0880,2026-05-01,skipped,After workout,No,69.6,27.8,2,3,None,4,75,Missed due to busy schedule,2026-05-07 06:56:01
+P0574,U0144,S0880,2026-05-09,taken,Before workout,Yes,69.7,27.8,3,3,Sleep disturbance,24,88,Completed as planned,2026-05-07 06:56:01
+P0575,U0144,S0880,2026-05-16,taken,After workout,Yes,70.9,28.3,2,5,None,23,84,Updated weekly progress,2026-05-07 06:56:01
+P0576,U0144,S0880,2026-05-24,taken,Morning,Yes,69.7,27.8,3,2,Mild stomach discomfort,58,86,Felt better energy today,2026-05-07 06:56:01
+P0577,U0145,S1767,2026-05-03,taken,After dinner,Yes,75.7,24.5,2,4,None,5,91,No noticeable change yet,2026-05-07 06:56:01
+P0578,U0145,S1767,2026-05-08,skipped,Morning,No,76.2,24.6,3,2,None,14,81,Completed as planned,2026-05-07 06:56:01
+P0579,U0145,S1767,2026-05-17,taken,Night,Yes,77.2,25.0,5,4,Mild stomach discomfort,38,96,No noticeable change yet,2026-05-07 06:56:01
+P0580,U0145,S1767,2026-05-24,taken,Before workout,Yes,75.6,24.4,5,3,None,59,92,No noticeable change yet,2026-05-07 06:56:01
+P0581,U0146,S1965,2026-05-01,taken,After dinner,Yes,60.1,23.2,2,2,Sleep disturbance,4,66,Minor side effect reported,2026-05-07 06:56:01
+P0582,U0146,S1965,2026-05-08,taken,Morning,Yes,59.6,23.0,5,5,None,25,69,Felt better energy today,2026-05-07 06:56:01
+P0583,U0146,S1965,2026-05-16,taken,After dinner,Yes,60.1,23.2,2,4,Mild stomach discomfort,27,66,Felt better energy today,2026-05-07 06:56:01
+P0584,U0146,S1965,2026-05-22,missed,After workout,No,58.5,22.6,2,3,Headache,35,56,Completed as planned,2026-05-07 06:56:01
+P0585,U0147,S1674,2026-05-01,taken,Morning,Yes,66.8,29.2,4,4,Headache,8,89,No noticeable change yet,2026-05-07 06:56:01
+P0586,U0147,S1674,2026-05-09,taken,Night,Yes,66.7,29.2,3,2,None,19,89,Need to improve consistency,2026-05-07 06:56:01
+P0587,U0147,S1674,2026-05-15,taken,After workout,Yes,67.5,29.5,5,4,Mild stomach discomfort,40,95,Completed as planned,2026-05-07 06:56:01
+P0588,U0147,S1674,2026-05-22,taken,After breakfast,Yes,67.7,29.6,5,3,Sleep disturbance,45,98,Feeling normal,2026-05-07 06:56:01
+P0589,U0148,S1042,2026-05-02,taken,Morning,Yes,63.9,28.1,3,3,Nausea,8,96,Feeling normal,2026-05-07 06:56:01
+P0590,U0148,S1042,2026-05-08,taken,After workout,Yes,62.8,27.6,2,4,None,21,93,Completed as planned,2026-05-07 06:56:01
+P0591,U0148,S1042,2026-05-15,taken,After workout,Yes,62.5,27.4,2,4,None,44,97,Completed as planned,2026-05-07 06:56:01
+P0592,U0148,S1042,2026-05-24,skipped,Morning,No,63.0,27.7,4,2,None,44,85,Missed due to busy schedule,2026-05-07 06:56:01
+P0593,U0149,S2735,2026-05-02,taken,Morning,Yes,36.0,15.8,4,5,Mild stomach discomfort,12,72,Minor side effect reported,2026-05-07 06:56:01
+P0594,U0149,S2735,2026-05-09,skipped,After dinner,No,36.0,15.8,5,2,Sleep disturbance,15,61,Need to improve consistency,2026-05-07 06:56:01
+P0595,U0149,S2735,2026-05-16,missed,After workout,No,36.9,16.2,2,3,None,28,60,Feeling normal,2026-05-07 06:56:01
+P0596,U0149,S2735,2026-05-23,taken,After breakfast,Yes,36.7,16.1,3,4,Mild stomach discomfort,58,67,Workout recovery improved,2026-05-07 06:56:01
+P0597,U0150,S0864,2026-05-03,missed,After dinner,No,76.7,21.8,5,2,None,12,83,No noticeable change yet,2026-05-07 06:56:01
+P0598,U0150,S0864,2026-05-08,taken,After breakfast,Yes,77.4,22.0,5,2,Headache,23,92,Feeling normal,2026-05-07 06:56:01
+P0599,U0150,S0864,2026-05-17,taken,Night,Yes,75.6,21.5,2,4,None,31,94,Minor side effect reported,2026-05-07 06:56:01
+P0600,U0150,S0864,2026-05-22,taken,After dinner,Yes,76.4,21.7,5,3,None,63,100,Felt better energy today,2026-05-07 06:56:01
+P0601,U0151,S1821,2026-05-03,missed,After dinner,No,85.0,30.8,2,2,Headache,7,61,Need to improve consistency,2026-05-07 06:56:01
+P0602,U0151,S1821,2026-05-09,taken,Before workout,Yes,85.2,30.9,3,5,Headache,14,68,Updated weekly progress,2026-05-07 06:56:01
+P0603,U0151,S1821,2026-05-16,taken,After dinner,Yes,85.3,30.9,2,5,Mild stomach discomfort,19,65,Updated weekly progress,2026-05-07 06:56:01
+P0604,U0151,S1821,2026-05-23,skipped,After dinner,No,83.7,30.3,2,4,Headache,36,57,Need to improve consistency,2026-05-07 06:56:01
+P0605,U0152,S0375,2026-05-01,missed,After breakfast,No,73.9,27.9,5,3,Mild stomach discomfort,12,59,Need to improve consistency,2026-05-07 06:56:01
+P0606,U0152,S0375,2026-05-10,skipped,Morning,No,74.5,28.1,4,3,Nausea,18,59,Felt better energy today,2026-05-07 06:56:01
+P0607,U0152,S0375,2026-05-16,taken,After workout,Yes,74.6,28.1,2,5,Headache,32,70,Missed due to busy schedule,2026-05-07 06:56:01
+P0608,U0152,S0375,2026-05-22,taken,Before workout,Yes,72.9,27.5,5,4,None,59,68,Feeling normal,2026-05-07 06:56:01
+P0609,U0153,S2380,2026-05-01,taken,Before workout,Yes,54.8,17.8,5,5,Headache,9,95,Missed due to busy schedule,2026-05-07 06:56:01
+P0610,U0153,S2380,2026-05-10,taken,After workout,Yes,55.7,18.1,4,3,None,17,89,Feeling normal,2026-05-07 06:56:01
+P0611,U0153,S2380,2026-05-15,taken,After breakfast,Yes,55.1,17.9,4,3,Sleep disturbance,27,87,Need to improve consistency,2026-05-07 06:56:01
+P0612,U0153,S2380,2026-05-23,missed,After breakfast,No,55.2,18.0,4,5,Headache,35,84,Minor side effect reported,2026-05-07 06:56:01
+P0613,U0154,S0934,2026-05-02,taken,After dinner,Yes,62.0,20.7,5,2,Mild stomach discomfort,10,64,Completed as planned,2026-05-07 06:56:01
+P0614,U0154,S0934,2026-05-10,taken,After dinner,Yes,60.8,20.3,3,4,Nausea,15,63,Workout recovery improved,2026-05-07 06:56:01
+P0615,U0154,S0934,2026-05-15,skipped,Night,No,61.4,20.5,5,2,None,28,59,Workout recovery improved,2026-05-07 06:56:01
+P0616,U0154,S0934,2026-05-22,taken,Morning,Yes,63.5,21.2,5,4,Sleep disturbance,50,70,Completed as planned,2026-05-07 06:56:01
+P0617,U0155,S0679,2026-05-02,taken,Morning,Yes,54.8,18.2,5,4,Nausea,4,92,Completed as planned,2026-05-07 06:56:01
+P0618,U0155,S0679,2026-05-08,skipped,After workout,No,54.5,18.1,2,5,Sleep disturbance,20,79,Feeling normal,2026-05-07 06:56:01
+P0619,U0155,S0679,2026-05-17,taken,After dinner,Yes,55.8,18.5,2,2,Sleep disturbance,27,92,Need to improve consistency,2026-05-07 06:56:01
+P0620,U0155,S0679,2026-05-23,missed,Before workout,No,53.7,17.8,5,2,Sleep disturbance,40,80,Missed due to busy schedule,2026-05-07 06:56:01
+P0621,U0156,S1338,2026-05-02,skipped,After dinner,No,65.4,26.0,3,5,Nausea,11,67,Minor side effect reported,2026-05-07 06:56:01
+P0622,U0156,S1338,2026-05-09,taken,Night,Yes,66.5,26.4,2,4,None,26,75,No noticeable change yet,2026-05-07 06:56:01
+P0623,U0156,S1338,2026-05-16,skipped,Night,No,64.3,25.5,3,2,Sleep disturbance,30,63,Feeling normal,2026-05-07 06:56:01
+P0624,U0156,S1338,2026-05-23,taken,Morning,Yes,66.6,26.4,2,5,None,45,76,Need to improve consistency,2026-05-07 06:56:01
+P0625,U0157,S2797,2026-05-01,missed,After workout,No,58.0,21.2,4,3,Mild stomach discomfort,9,56,Workout recovery improved,2026-05-07 06:56:01
+P0626,U0157,S2797,2026-05-08,missed,Morning,No,58.3,21.3,5,5,None,21,62,Completed as planned,2026-05-07 06:56:01
+P0627,U0157,S2797,2026-05-15,missed,Before workout,No,58.7,21.5,4,3,None,41,55,No noticeable change yet,2026-05-07 06:56:01
+P0628,U0157,S2797,2026-05-23,taken,After workout,Yes,59.0,21.6,5,5,Mild stomach discomfort,47,72,Completed as planned,2026-05-07 06:56:01
+P0629,U0158,S1339,2026-05-02,taken,Before workout,Yes,55.7,18.3,5,5,None,8,93,Minor side effect reported,2026-05-07 06:56:01
+P0630,U0158,S1339,2026-05-08,missed,After breakfast,No,56.2,18.5,2,5,None,20,80,Missed due to busy schedule,2026-05-07 06:56:01
+P0631,U0158,S1339,2026-05-16,taken,After breakfast,Yes,57.3,18.8,5,4,Nausea,33,97,No noticeable change yet,2026-05-07 06:56:01
+P0632,U0158,S1339,2026-05-22,taken,Before workout,Yes,56.1,18.4,3,2,None,51,96,Need to improve consistency,2026-05-07 06:56:01
+P0633,U0159,S0657,2026-05-01,taken,After workout,Yes,51.6,21.5,5,4,Mild stomach discomfort,10,77,Workout recovery improved,2026-05-07 06:56:01
+P0634,U0159,S0657,2026-05-09,missed,After breakfast,No,51.1,21.3,4,2,None,12,62,Updated weekly progress,2026-05-07 06:56:01
+P0635,U0159,S0657,2026-05-17,taken,Morning,Yes,52.2,21.8,2,2,Mild stomach discomfort,41,71,Minor side effect reported,2026-05-07 06:56:01
+P0636,U0159,S0657,2026-05-23,taken,Morning,Yes,53.0,22.1,3,4,Mild stomach discomfort,53,74,Completed as planned,2026-05-07 06:56:01
+P0637,U0160,S1120,2026-05-01,skipped,After workout,No,67.8,25.5,2,3,Nausea,5,88,Felt better energy today,2026-05-07 06:56:01
+P0638,U0160,S1120,2026-05-08,taken,Before workout,Yes,67.4,25.4,3,5,None,18,95,Need to improve consistency,2026-05-07 06:56:01
+P0639,U0160,S1120,2026-05-17,taken,Before workout,Yes,68.0,25.6,3,4,None,31,93,Felt better energy today,2026-05-07 06:56:01
+P0640,U0160,S1120,2026-05-24,missed,Before workout,No,69.0,26.0,4,4,None,44,83,Completed as planned,2026-05-07 06:56:01
+P0641,U0161,S2769,2026-05-02,taken,Night,Yes,72.2,23.9,3,3,Sleep disturbance,10,92,Felt better energy today,2026-05-07 06:56:01
+P0642,U0161,S2769,2026-05-08,taken,After dinner,Yes,73.0,24.1,5,2,Mild stomach discomfort,20,91,Feeling normal,2026-05-07 06:56:01
+P0643,U0161,S2769,2026-05-16,taken,After breakfast,Yes,71.4,23.6,2,3,Sleep disturbance,29,94,Minor side effect reported,2026-05-07 06:56:01
+P0644,U0161,S2769,2026-05-24,taken,Night,Yes,73.0,24.1,2,2,Sleep disturbance,37,92,Felt better energy today,2026-05-07 06:56:01
+P0645,U0162,S2486,2026-05-01,taken,After workout,Yes,79.7,24.0,3,4,Nausea,6,84,Minor side effect reported,2026-05-07 06:56:01
+P0646,U0162,S2486,2026-05-10,taken,Before workout,Yes,79.5,23.9,2,2,Sleep disturbance,19,87,Felt better energy today,2026-05-07 06:56:01
+P0647,U0162,S2486,2026-05-17,taken,After dinner,Yes,80.7,24.3,4,2,Sleep disturbance,38,91,Need to improve consistency,2026-05-07 06:56:01
+P0648,U0162,S2486,2026-05-23,taken,Before workout,Yes,79.3,23.9,5,2,Sleep disturbance,44,88,Minor side effect reported,2026-05-07 06:56:01
+P0649,U0163,S0862,2026-05-03,taken,Night,Yes,57.0,24.8,2,2,Nausea,6,90,Updated weekly progress,2026-05-07 06:56:01
+P0650,U0163,S0862,2026-05-08,skipped,After dinner,No,57.3,24.9,4,5,Sleep disturbance,21,80,Need to improve consistency,2026-05-07 06:56:01
+P0651,U0163,S0862,2026-05-17,missed,Before workout,No,57.2,24.9,4,5,Headache,32,73,Workout recovery improved,2026-05-07 06:56:01
+P0652,U0163,S0862,2026-05-23,taken,After workout,Yes,56.4,24.5,3,2,Sleep disturbance,50,87,Felt better energy today,2026-05-07 06:56:01
+P0653,U0164,S2986,2026-05-03,taken,Night,Yes,56.6,24.2,3,5,None,6,92,Minor side effect reported,2026-05-07 06:56:01
+P0654,U0164,S2986,2026-05-08,taken,Night,Yes,57.1,24.4,5,2,Mild stomach discomfort,14,85,Workout recovery improved,2026-05-07 06:56:01
+P0655,U0164,S2986,2026-05-17,taken,Night,Yes,58.6,25.1,3,3,None,43,84,Felt better energy today,2026-05-07 06:56:01
+P0656,U0164,S2986,2026-05-22,taken,Morning,Yes,55.3,23.7,2,5,Mild stomach discomfort,38,84,Need to improve consistency,2026-05-07 06:56:01
+P0657,U0165,S1555,2026-05-01,taken,After dinner,Yes,77.9,23.9,5,5,None,12,77,Completed as planned,2026-05-07 06:56:01
+P0658,U0165,S1555,2026-05-10,taken,Morning,Yes,78.6,24.1,4,2,Nausea,19,73,Missed due to busy schedule,2026-05-07 06:56:01
+P0659,U0165,S1555,2026-05-17,taken,Morning,Yes,79.4,24.4,2,5,None,42,77,Need to improve consistency,2026-05-07 06:56:01
+P0660,U0165,S1555,2026-05-24,skipped,After dinner,No,76.8,23.6,4,2,None,46,63,Completed as planned,2026-05-07 06:56:01
+P0661,U0166,S0814,2026-05-02,taken,Before workout,Yes,77.4,24.3,5,5,Sleep disturbance,8,65,Felt better energy today,2026-05-07 06:56:01
+P0662,U0166,S0814,2026-05-09,taken,Night,Yes,77.9,24.4,5,5,None,17,67,Felt better energy today,2026-05-07 06:56:01
+P0663,U0166,S0814,2026-05-15,taken,Morning,Yes,78.4,24.6,2,3,None,36,65,Completed as planned,2026-05-07 06:56:01
+P0664,U0166,S0814,2026-05-23,missed,Before workout,No,76.6,24.0,5,2,Headache,54,60,Completed as planned,2026-05-07 06:56:01
+P0665,U0167,S1505,2026-05-02,taken,After workout,Yes,72.3,25.7,5,3,Mild stomach discomfort,11,74,Feeling normal,2026-05-07 06:56:01
+P0666,U0167,S1505,2026-05-08,missed,After dinner,No,71.9,25.6,2,5,Headache,25,70,Feeling normal,2026-05-07 06:56:01
+P0667,U0167,S1505,2026-05-17,taken,After breakfast,Yes,72.1,25.6,4,5,Sleep disturbance,38,78,Felt better energy today,2026-05-07 06:56:01
+P0668,U0167,S1505,2026-05-24,taken,After breakfast,Yes,74.2,26.4,2,2,None,36,75,Need to improve consistency,2026-05-07 06:56:01
+P0669,U0168,S2874,2026-05-02,skipped,Morning,No,85.6,24.1,4,2,Headache,5,78,Completed as planned,2026-05-07 06:56:01
+P0670,U0168,S2874,2026-05-10,taken,Before workout,Yes,86.6,24.4,4,2,Mild stomach discomfort,19,87,Feeling normal,2026-05-07 06:56:01
+P0671,U0168,S2874,2026-05-16,taken,Before workout,Yes,86.4,24.3,5,3,Sleep disturbance,41,89,Felt better energy today,2026-05-07 06:56:01
+P0672,U0168,S2874,2026-05-22,missed,Before workout,No,86.6,24.4,2,5,None,65,74,Need to improve consistency,2026-05-07 06:56:01
+P0673,U0169,S1091,2026-05-01,taken,After dinner,Yes,72.5,26.0,2,5,None,8,79,No noticeable change yet,2026-05-07 06:56:01
+P0674,U0169,S1091,2026-05-10,skipped,Before workout,No,72.2,25.9,4,4,Mild stomach discomfort,14,69,Completed as planned,2026-05-07 06:56:01
+P0675,U0169,S1091,2026-05-16,taken,After breakfast,Yes,73.4,26.3,3,4,Mild stomach discomfort,23,80,Completed as planned,2026-05-07 06:56:01
+P0676,U0169,S1091,2026-05-24,missed,After workout,No,70.8,25.4,3,4,Mild stomach discomfort,28,71,No noticeable change yet,2026-05-07 06:56:01
+P0677,U0170,S0217,2026-05-01,taken,After dinner,Yes,71.5,23.8,3,4,Nausea,10,91,No noticeable change yet,2026-05-07 06:56:01
+P0678,U0170,S0217,2026-05-08,taken,After breakfast,Yes,70.5,23.4,4,5,None,27,91,Felt better energy today,2026-05-07 06:56:01
+P0679,U0170,S0217,2026-05-15,taken,After workout,Yes,70.1,23.3,2,2,Sleep disturbance,40,89,Updated weekly progress,2026-05-07 06:56:01
+P0680,U0170,S0217,2026-05-24,skipped,After dinner,No,72.3,24.0,4,2,Headache,28,80,Workout recovery improved,2026-05-07 06:56:01
+P0681,U0171,S1900,2026-05-03,taken,Night,Yes,62.8,23.0,4,3,Sleep disturbance,4,66,Feeling normal,2026-05-07 06:56:01
+P0682,U0171,S1900,2026-05-08,missed,Morning,No,62.4,22.8,5,4,Nausea,11,63,Completed as planned,2026-05-07 06:56:01
+P0683,U0171,S1900,2026-05-15,taken,After dinner,Yes,62.5,22.8,4,4,Nausea,40,74,No noticeable change yet,2026-05-07 06:56:01
+P0684,U0171,S1900,2026-05-22,skipped,After workout,No,61.9,22.6,3,5,None,62,63,Workout recovery improved,2026-05-07 06:56:01
+P0685,U0172,S2438,2026-05-02,taken,Night,Yes,62.8,23.5,3,5,None,4,85,No noticeable change yet,2026-05-07 06:56:01
+P0686,U0172,S2438,2026-05-10,taken,Before workout,Yes,62.0,23.2,2,3,None,12,80,Minor side effect reported,2026-05-07 06:56:01
+P0687,U0172,S2438,2026-05-17,missed,After workout,No,62.4,23.3,4,3,Sleep disturbance,41,67,Updated weekly progress,2026-05-07 06:56:01
+P0688,U0172,S2438,2026-05-23,taken,After workout,Yes,62.9,23.5,2,5,Sleep disturbance,41,78,No noticeable change yet,2026-05-07 06:56:01
+P0689,U0173,S2236,2026-05-01,skipped,After breakfast,No,61.2,24.2,4,4,Headache,12,85,Minor side effect reported,2026-05-07 06:56:01
+P0690,U0173,S2236,2026-05-08,missed,After workout,No,61.0,24.1,4,5,None,18,80,Minor side effect reported,2026-05-07 06:56:01
+P0691,U0173,S2236,2026-05-15,taken,Night,Yes,61.0,24.1,2,5,None,40,91,Feeling normal,2026-05-07 06:56:01
+P0692,U0173,S2236,2026-05-24,taken,After breakfast,Yes,61.0,24.1,3,2,Headache,48,89,Completed as planned,2026-05-07 06:56:01
+P0693,U0174,S2216,2026-05-02,taken,Night,Yes,77.3,34.7,2,3,None,7,81,Felt better energy today,2026-05-07 06:56:01
+P0694,U0174,S2216,2026-05-08,taken,Night,Yes,78.5,35.3,2,3,None,18,90,No noticeable change yet,2026-05-07 06:56:01
+P0695,U0174,S2216,2026-05-17,taken,Night,Yes,78.5,35.3,2,5,Nausea,21,83,Updated weekly progress,2026-05-07 06:56:01
+P0696,U0174,S2216,2026-05-22,taken,After breakfast,Yes,79.4,35.7,2,2,Nausea,40,91,Workout recovery improved,2026-05-07 06:56:01
+P0697,U0175,S0747,2026-05-02,missed,After workout,No,66.1,18.7,2,2,None,3,80,Felt better energy today,2026-05-07 06:56:01
+P0698,U0175,S0747,2026-05-09,taken,Night,Yes,67.0,19.0,4,5,Nausea,18,98,Updated weekly progress,2026-05-07 06:56:01
+P0699,U0175,S0747,2026-05-15,taken,Night,Yes,65.7,18.6,3,3,Mild stomach discomfort,34,95,Minor side effect reported,2026-05-07 06:56:01
+P0700,U0175,S0747,2026-05-22,taken,Morning,Yes,67.3,19.0,3,2,None,59,98,Completed as planned,2026-05-07 06:56:01
+P0701,U0176,S1609,2026-05-03,missed,Night,No,65.3,22.1,2,2,None,3,71,Updated weekly progress,2026-05-07 06:56:01
+P0702,U0176,S1609,2026-05-08,taken,After dinner,Yes,66.5,22.5,4,2,None,17,86,Minor side effect reported,2026-05-07 06:56:01
+P0703,U0176,S1609,2026-05-16,skipped,Before workout,No,66.1,22.3,3,4,None,24,78,Missed due to busy schedule,2026-05-07 06:56:01
+P0704,U0176,S1609,2026-05-23,skipped,After workout,No,66.2,22.4,2,2,None,33,73,Need to improve consistency,2026-05-07 06:56:01
+P0705,U0177,S1995,2026-05-03,taken,Morning,Yes,71.6,21.4,5,5,Mild stomach discomfort,11,60,No noticeable change yet,2026-05-07 06:56:01
+P0706,U0177,S1995,2026-05-08,skipped,Night,No,72.6,21.7,3,3,Nausea,26,54,Missed due to busy schedule,2026-05-07 06:56:01
+P0707,U0177,S1995,2026-05-17,taken,Morning,Yes,71.3,21.3,5,5,Mild stomach discomfort,32,60,Need to improve consistency,2026-05-07 06:56:01
+P0708,U0177,S1995,2026-05-22,taken,Before workout,Yes,71.3,21.3,2,2,Mild stomach discomfort,38,70,Missed due to busy schedule,2026-05-07 06:56:01
+P0709,U0178,S1555,2026-05-02,taken,After workout,Yes,97.0,29.0,4,3,Headache,7,81,Completed as planned,2026-05-07 06:56:01
+P0710,U0178,S1555,2026-05-10,taken,After breakfast,Yes,97.0,29.0,4,4,Sleep disturbance,22,83,Felt better energy today,2026-05-07 06:56:01
+P0711,U0178,S1555,2026-05-15,taken,Night,Yes,97.5,29.1,5,2,None,28,80,Missed due to busy schedule,2026-05-07 06:56:01
+P0712,U0178,S1555,2026-05-22,skipped,After dinner,No,98.0,29.3,4,3,None,59,76,Workout recovery improved,2026-05-07 06:56:01
+P0713,U0179,S0478,2026-05-02,taken,Before workout,Yes,67.2,27.3,4,5,None,12,65,Minor side effect reported,2026-05-07 06:56:01
+P0714,U0179,S0478,2026-05-10,taken,After breakfast,Yes,67.0,27.2,5,4,None,22,66,Need to improve consistency,2026-05-07 06:56:01
+P0715,U0179,S0478,2026-05-15,taken,After breakfast,Yes,68.9,28.0,2,3,Mild stomach discomfort,31,75,Updated weekly progress,2026-05-07 06:56:01
+P0716,U0179,S0478,2026-05-23,missed,Morning,No,66.3,26.9,3,2,Mild stomach discomfort,46,62,Felt better energy today,2026-05-07 06:56:01
+P0717,U0180,S0373,2026-05-01,taken,After breakfast,Yes,70.0,30.5,5,3,None,3,84,Workout recovery improved,2026-05-07 06:56:01
+P0718,U0180,S0373,2026-05-08,taken,After dinner,Yes,70.7,30.8,5,2,Nausea,20,90,Updated weekly progress,2026-05-07 06:56:01
+P0719,U0180,S0373,2026-05-17,taken,After breakfast,Yes,69.8,30.5,4,4,Headache,29,88,Minor side effect reported,2026-05-07 06:56:01
+P0720,U0180,S0373,2026-05-22,skipped,Night,No,70.5,30.8,5,3,Nausea,51,79,Felt better energy today,2026-05-07 06:56:01
+P0721,U0181,S1564,2026-05-01,skipped,After dinner,No,45.3,20.4,3,2,Headache,6,90,Need to improve consistency,2026-05-07 06:56:01
+P0722,U0181,S1564,2026-05-10,taken,After dinner,Yes,45.8,20.6,4,4,None,27,95,Completed as planned,2026-05-07 06:56:01
+P0723,U0181,S1564,2026-05-17,taken,After breakfast,Yes,47.4,21.3,2,2,None,25,100,Minor side effect reported,2026-05-07 06:56:01
+P0724,U0181,S1564,2026-05-22,missed,Night,No,45.2,20.3,3,2,None,36,85,Felt better energy today,2026-05-07 06:56:01
+P0725,U0182,S1137,2026-05-02,taken,Morning,Yes,77.2,23.8,5,4,Headache,11,78,Missed due to busy schedule,2026-05-07 06:56:01
+P0726,U0182,S1137,2026-05-10,taken,Morning,Yes,77.4,23.9,3,2,None,21,79,Workout recovery improved,2026-05-07 06:56:01
+P0727,U0182,S1137,2026-05-15,taken,After breakfast,Yes,76.1,23.5,2,3,None,40,82,Missed due to busy schedule,2026-05-07 06:56:01
+P0728,U0182,S1137,2026-05-22,taken,After workout,Yes,77.3,23.9,4,5,None,50,77,Completed as planned,2026-05-07 06:56:01
+P0729,U0183,S2795,2026-05-02,skipped,After workout,No,69.0,23.1,4,5,Headache,10,60,Felt better energy today,2026-05-07 06:56:01
+P0730,U0183,S2795,2026-05-10,missed,After breakfast,No,68.2,22.8,2,5,Nausea,12,63,Felt better energy today,2026-05-07 06:56:01
+P0731,U0183,S2795,2026-05-16,taken,After dinner,Yes,68.5,22.9,3,2,Sleep disturbance,37,65,Completed as planned,2026-05-07 06:56:01
+P0732,U0183,S2795,2026-05-23,taken,After dinner,Yes,70.4,23.6,5,5,None,55,64,Workout recovery improved,2026-05-07 06:56:01
+P0733,U0184,S2325,2026-05-01,taken,Before workout,Yes,51.5,21.5,5,4,Sleep disturbance,11,65,Need to improve consistency,2026-05-07 06:56:01
+P0734,U0184,S2325,2026-05-09,taken,Night,Yes,52.6,22.0,5,3,None,17,68,Minor side effect reported,2026-05-07 06:56:01
+P0735,U0184,S2325,2026-05-16,taken,Before workout,Yes,51.4,21.5,4,2,Mild stomach discomfort,36,69,Need to improve consistency,2026-05-07 06:56:01
+P0736,U0184,S2325,2026-05-23,taken,After dinner,Yes,52.6,22.0,5,4,None,57,68,No noticeable change yet,2026-05-07 06:56:01
+P0737,U0185,S2652,2026-05-01,taken,After workout,Yes,56.1,18.2,2,2,None,9,86,Workout recovery improved,2026-05-07 06:56:01
+P0738,U0185,S2652,2026-05-09,taken,Night,Yes,57.1,18.5,4,4,Nausea,23,89,Workout recovery improved,2026-05-07 06:56:01
+P0739,U0185,S2652,2026-05-15,skipped,Night,No,56.6,18.4,5,2,Nausea,35,82,Need to improve consistency,2026-05-07 06:56:01
+P0740,U0185,S2652,2026-05-22,skipped,After dinner,No,55.7,18.1,5,4,None,40,84,Missed due to busy schedule,2026-05-07 06:56:01
+P0741,U0186,S2293,2026-05-01,taken,Before workout,Yes,63.2,25.1,2,4,Headache,10,83,Missed due to busy schedule,2026-05-07 06:56:01
+P0742,U0186,S2293,2026-05-08,taken,Morning,Yes,62.6,24.9,2,4,Sleep disturbance,14,84,Minor side effect reported,2026-05-07 06:56:01
+P0743,U0186,S2293,2026-05-16,taken,Night,Yes,61.8,24.6,5,4,Mild stomach discomfort,32,88,Updated weekly progress,2026-05-07 06:56:01
+P0744,U0186,S2293,2026-05-23,taken,Before workout,Yes,63.6,25.3,3,5,None,44,84,Feeling normal,2026-05-07 06:56:01
+P0745,U0187,S1110,2026-05-02,skipped,After workout,No,51.8,24.5,3,4,None,9,76,Felt better energy today,2026-05-07 06:56:01
+P0746,U0187,S1110,2026-05-08,taken,After dinner,Yes,51.4,24.3,4,4,Headache,19,85,Felt better energy today,2026-05-07 06:56:01
+P0747,U0187,S1110,2026-05-16,taken,Before workout,Yes,52.7,25.0,5,5,None,39,90,Feeling normal,2026-05-07 06:56:01
+P0748,U0187,S1110,2026-05-22,taken,Before workout,Yes,53.4,25.3,3,3,None,36,92,Felt better energy today,2026-05-07 06:56:01
+P0749,U0188,S1089,2026-05-02,taken,Before workout,Yes,72.5,22.1,3,3,Sleep disturbance,3,81,Workout recovery improved,2026-05-07 06:56:01
+P0750,U0188,S1089,2026-05-09,taken,Night,Yes,71.8,21.8,2,5,Headache,20,74,Need to improve consistency,2026-05-07 06:56:01
+P0751,U0188,S1089,2026-05-15,skipped,Morning,No,73.1,22.2,2,2,Mild stomach discomfort,26,71,Minor side effect reported,2026-05-07 06:56:01
+P0752,U0188,S1089,2026-05-23,taken,Night,Yes,71.0,21.6,5,2,Headache,31,76,No noticeable change yet,2026-05-07 06:56:01
+P0753,U0189,S1304,2026-05-01,taken,After workout,Yes,50.6,22.9,5,4,None,7,72,Feeling normal,2026-05-07 06:56:01
+P0754,U0189,S1304,2026-05-08,taken,Night,Yes,50.4,22.9,2,5,Sleep disturbance,23,80,Updated weekly progress,2026-05-07 06:56:01
+P0755,U0189,S1304,2026-05-17,taken,After breakfast,Yes,49.7,22.5,5,5,Nausea,40,77,Updated weekly progress,2026-05-07 06:56:01
+P0756,U0189,S1304,2026-05-23,taken,Morning,Yes,49.4,22.4,2,4,Sleep disturbance,28,74,Workout recovery improved,2026-05-07 06:56:01
+P0757,U0190,S1800,2026-05-01,taken,Morning,Yes,101.5,28.6,3,5,Sleep disturbance,3,64,Workout recovery improved,2026-05-07 06:56:01
+P0758,U0190,S1800,2026-05-10,taken,Night,Yes,100.9,28.4,3,2,Mild stomach discomfort,18,71,Completed as planned,2026-05-07 06:56:01
+P0759,U0190,S1800,2026-05-17,taken,After workout,Yes,101.1,28.5,2,5,None,38,67,Completed as planned,2026-05-07 06:56:01
+P0760,U0190,S1800,2026-05-22,taken,Night,Yes,100.8,28.4,3,5,None,59,69,Completed as planned,2026-05-07 06:56:01
+P0761,U0191,S2462,2026-05-03,skipped,After breakfast,No,83.0,24.8,4,4,Sleep disturbance,6,66,Missed due to busy schedule,2026-05-07 06:56:01
+P0762,U0191,S2462,2026-05-08,taken,Night,Yes,82.3,24.6,3,3,None,28,74,No noticeable change yet,2026-05-07 06:56:01
+P0763,U0191,S2462,2026-05-16,taken,After breakfast,Yes,83.7,25.0,3,5,Mild stomach discomfort,30,74,Felt better energy today,2026-05-07 06:56:01
+P0764,U0191,S2462,2026-05-24,taken,Morning,Yes,85.1,25.4,5,2,Headache,54,72,Workout recovery improved,2026-05-07 06:56:01
+P0765,U0192,S1594,2026-05-01,missed,Morning,No,98.0,30.2,2,5,None,9,81,Workout recovery improved,2026-05-07 06:56:01
+P0766,U0192,S1594,2026-05-09,taken,Night,Yes,97.5,30.1,3,2,Sleep disturbance,22,99,Feeling normal,2026-05-07 06:56:01
+P0767,U0192,S1594,2026-05-17,skipped,After workout,No,97.7,30.1,5,3,None,35,85,Feeling normal,2026-05-07 06:56:01
+P0768,U0192,S1594,2026-05-23,taken,After breakfast,Yes,96.6,29.8,2,2,Sleep disturbance,38,93,No noticeable change yet,2026-05-07 06:56:01
+P0769,U0193,S1040,2026-05-02,missed,Night,No,59.6,18.4,3,3,Nausea,5,69,Updated weekly progress,2026-05-07 06:56:01
+P0770,U0193,S1040,2026-05-09,taken,Before workout,Yes,59.0,18.2,2,5,None,25,72,Feeling normal,2026-05-07 06:56:01
+P0771,U0193,S1040,2026-05-15,taken,Before workout,Yes,60.4,18.7,5,5,None,29,69,Felt better energy today,2026-05-07 06:56:01
+P0772,U0193,S1040,2026-05-22,taken,Before workout,Yes,59.3,18.3,2,4,None,45,77,Completed as planned,2026-05-07 06:56:01
+P0773,U0194,S2704,2026-05-01,taken,Before workout,Yes,78.0,32.9,5,3,Headache,3,72,Feeling normal,2026-05-07 06:56:01
+P0774,U0194,S2704,2026-05-10,taken,Morning,Yes,78.2,33.0,4,4,None,20,71,Felt better energy today,2026-05-07 06:56:01
+P0775,U0194,S2704,2026-05-15,skipped,Night,No,79.0,33.4,4,2,None,30,60,Updated weekly progress,2026-05-07 06:56:01
+P0776,U0194,S2704,2026-05-23,taken,Night,Yes,77.7,32.8,5,3,Headache,55,73,Updated weekly progress,2026-05-07 06:56:01
+P0777,U0195,S1847,2026-05-02,taken,Before workout,Yes,79.1,24.7,3,5,None,5,91,Completed as planned,2026-05-07 06:56:01
+P0778,U0195,S1847,2026-05-08,missed,Night,No,80.3,25.1,2,3,None,19,83,Felt better energy today,2026-05-07 06:56:01
+P0779,U0195,S1847,2026-05-15,missed,After workout,No,78.9,24.6,5,5,None,40,87,Minor side effect reported,2026-05-07 06:56:01
+P0780,U0195,S1847,2026-05-23,taken,After breakfast,Yes,78.1,24.4,2,3,None,52,98,Feeling normal,2026-05-07 06:56:01
+P0781,U0196,S2671,2026-05-03,taken,After dinner,Yes,43.8,20.0,5,5,None,12,92,Missed due to busy schedule,2026-05-07 06:56:01
+P0782,U0196,S2671,2026-05-10,taken,After breakfast,Yes,44.8,20.4,2,2,Nausea,30,88,Need to improve consistency,2026-05-07 06:56:01
+P0783,U0196,S2671,2026-05-16,taken,Before workout,Yes,43.1,19.7,3,3,None,44,94,Workout recovery improved,2026-05-07 06:56:01
+P0784,U0196,S2671,2026-05-22,taken,Before workout,Yes,42.6,19.4,5,5,None,35,84,No noticeable change yet,2026-05-07 06:56:01
+P0785,U0197,S2307,2026-05-02,taken,After workout,Yes,63.8,22.7,5,5,None,3,91,No noticeable change yet,2026-05-07 06:56:01
+P0786,U0197,S2307,2026-05-10,skipped,After dinner,No,64.9,23.0,5,5,None,24,83,Felt better energy today,2026-05-07 06:56:01
+P0787,U0197,S2307,2026-05-16,taken,Before workout,Yes,64.2,22.8,4,2,None,35,89,Need to improve consistency,2026-05-07 06:56:01
+P0788,U0197,S2307,2026-05-22,taken,Morning,Yes,63.9,22.7,5,4,Headache,43,92,Need to improve consistency,2026-05-07 06:56:01
+P0789,U0198,S2526,2026-05-02,taken,Before workout,Yes,96.6,28.7,3,5,None,12,81,Updated weekly progress,2026-05-07 06:56:01
+P0790,U0198,S2526,2026-05-08,taken,After breakfast,Yes,97.5,29.0,4,4,None,27,71,Workout recovery improved,2026-05-07 06:56:01
+P0791,U0198,S2526,2026-05-17,taken,Before workout,Yes,97.1,28.8,3,2,Sleep disturbance,42,77,Updated weekly progress,2026-05-07 06:56:01
+P0792,U0198,S2526,2026-05-24,taken,Before workout,Yes,99.0,29.4,5,4,None,62,80,Need to improve consistency,2026-05-07 06:56:01
+P0793,U0199,S2693,2026-05-01,taken,Before workout,Yes,92.4,28.3,4,2,Sleep disturbance,7,90,No noticeable change yet,2026-05-07 06:56:01
+P0794,U0199,S2693,2026-05-10,taken,After dinner,Yes,91.8,28.1,3,4,None,29,90,Feeling normal,2026-05-07 06:56:01
+P0795,U0199,S2693,2026-05-16,taken,Morning,Yes,92.3,28.3,3,3,None,33,91,Completed as planned,2026-05-07 06:56:01
+P0796,U0199,S2693,2026-05-24,taken,Night,Yes,92.2,28.3,3,4,None,42,94,Missed due to busy schedule,2026-05-07 06:56:01
+P0797,U0200,S0646,2026-05-01,missed,After workout,No,61.0,21.7,2,5,None,5,57,No noticeable change yet,2026-05-07 06:56:01
+P0798,U0200,S0646,2026-05-10,taken,Before workout,Yes,60.6,21.6,5,3,Sleep disturbance,27,71,Workout recovery improved,2026-05-07 06:56:01
+P0799,U0200,S0646,2026-05-15,taken,After workout,Yes,59.8,21.3,4,5,None,31,75,Workout recovery improved,2026-05-07 06:56:01
+P0800,U0200,S0646,2026-05-24,missed,Night,No,60.3,21.5,4,2,None,27,58,Felt better energy today,2026-05-07 06:56:01
+P0801,U0201,S0836,2026-05-02,taken,After breakfast,Yes,53.2,24.0,4,4,Nausea,12,95,Feeling normal,2026-05-07 06:56:01
+P0802,U0201,S0836,2026-05-08,missed,After breakfast,No,53.8,24.3,2,4,Nausea,21,88,Updated weekly progress,2026-05-07 06:56:01
+P0803,U0201,S0836,2026-05-17,taken,After breakfast,Yes,52.1,23.5,2,2,None,35,95,Minor side effect reported,2026-05-07 06:56:01
+P0804,U0201,S0836,2026-05-24,taken,After breakfast,Yes,51.3,23.2,5,3,Nausea,40,91,Workout recovery improved,2026-05-07 06:56:01
+P0805,U0202,S0138,2026-05-01,taken,After breakfast,Yes,61.5,23.6,2,2,None,7,81,Missed due to busy schedule,2026-05-07 06:56:01
+P0806,U0202,S0138,2026-05-10,taken,Night,Yes,62.0,23.8,5,2,None,25,85,Minor side effect reported,2026-05-07 06:56:01
+P0807,U0202,S0138,2026-05-17,taken,After workout,Yes,62.3,23.9,2,3,Sleep disturbance,32,79,Felt better energy today,2026-05-07 06:56:01
+P0808,U0202,S0138,2026-05-24,skipped,After workout,No,63.7,24.5,4,3,None,52,66,No noticeable change yet,2026-05-07 06:56:01
+P0809,U0203,S0852,2026-05-01,taken,After breakfast,Yes,47.4,21.8,4,5,Mild stomach discomfort,3,82,Updated weekly progress,2026-05-07 06:56:01
+P0810,U0203,S0852,2026-05-08,taken,After breakfast,Yes,48.3,22.2,3,3,None,16,83,Workout recovery improved,2026-05-07 06:56:01
+P0811,U0203,S0852,2026-05-15,taken,After breakfast,Yes,47.4,21.8,2,3,None,38,83,Missed due to busy schedule,2026-05-07 06:56:01
+P0812,U0203,S0852,2026-05-22,taken,Night,Yes,47.6,21.9,5,5,None,49,81,Completed as planned,2026-05-07 06:56:01
+P0813,U0204,S1793,2026-05-01,taken,Night,Yes,66.3,21.8,2,3,None,8,90,Updated weekly progress,2026-05-07 06:56:01
+P0814,U0204,S1793,2026-05-08,taken,After dinner,Yes,65.5,21.5,4,5,None,16,96,Missed due to busy schedule,2026-05-07 06:56:01
+P0815,U0204,S1793,2026-05-15,taken,After dinner,Yes,65.7,21.6,4,5,None,23,89,Completed as planned,2026-05-07 06:56:01
+P0816,U0204,S1793,2026-05-22,taken,Morning,Yes,67.4,22.1,4,2,Mild stomach discomfort,35,91,Need to improve consistency,2026-05-07 06:56:01
+P0817,U0205,S1061,2026-05-03,taken,Before workout,Yes,41.8,18.2,5,2,Headache,10,94,Workout recovery improved,2026-05-07 06:56:01
+P0818,U0205,S1061,2026-05-09,taken,After dinner,Yes,41.4,18.1,5,3,Sleep disturbance,29,92,Feeling normal,2026-05-07 06:56:01
+P0819,U0205,S1061,2026-05-17,taken,Before workout,Yes,41.2,18.0,2,4,Mild stomach discomfort,23,91,Need to improve consistency,2026-05-07 06:56:01
+P0820,U0205,S1061,2026-05-24,taken,After workout,Yes,42.7,18.6,3,3,Mild stomach discomfort,53,92,Felt better energy today,2026-05-07 06:56:01
+P0821,U0206,S0764,2026-05-01,taken,After workout,Yes,73.7,33.3,2,3,Nausea,4,74,Updated weekly progress,2026-05-07 06:56:01
+P0822,U0206,S0764,2026-05-10,missed,Morning,No,74.0,33.4,5,2,Sleep disturbance,20,66,Feeling normal,2026-05-07 06:56:01
+P0823,U0206,S0764,2026-05-16,skipped,After breakfast,No,72.9,32.9,4,2,Headache,42,65,No noticeable change yet,2026-05-07 06:56:01
+P0824,U0206,S0764,2026-05-24,taken,Morning,Yes,73.1,33.0,3,3,None,43,73,Feeling normal,2026-05-07 06:56:01
+P0825,U0207,S1589,2026-05-01,taken,Before workout,Yes,80.1,24.1,4,3,None,5,76,Felt better energy today,2026-05-07 06:56:01
+P0826,U0207,S1589,2026-05-09,taken,Night,Yes,79.9,24.0,5,3,None,20,85,Completed as planned,2026-05-07 06:56:01
+P0827,U0207,S1589,2026-05-17,missed,Before workout,No,81.1,24.4,5,2,None,29,70,Minor side effect reported,2026-05-07 06:56:01
+P0828,U0207,S1589,2026-05-24,taken,Before workout,Yes,80.3,24.2,5,2,Sleep disturbance,59,76,Workout recovery improved,2026-05-07 06:56:01
+P0829,U0208,S0043,2026-05-03,skipped,After dinner,No,45.8,18.1,4,3,Sleep disturbance,8,74,Feeling normal,2026-05-07 06:56:01
+P0830,U0208,S0043,2026-05-09,taken,Night,Yes,46.2,18.3,3,3,Headache,19,89,Updated weekly progress,2026-05-07 06:56:01
+P0831,U0208,S0043,2026-05-16,taken,Before workout,Yes,45.4,18.0,3,3,None,40,90,Workout recovery improved,2026-05-07 06:56:01
+P0832,U0208,S0043,2026-05-22,taken,Morning,Yes,44.5,17.6,3,3,None,50,91,Updated weekly progress,2026-05-07 06:56:01
+P0833,U0209,S2346,2026-05-01,missed,After breakfast,No,72.3,31.6,2,3,Headache,8,66,Updated weekly progress,2026-05-07 06:56:01
+P0834,U0209,S2346,2026-05-09,skipped,After breakfast,No,73.0,31.9,5,3,Nausea,20,66,Need to improve consistency,2026-05-07 06:56:01
+P0835,U0209,S2346,2026-05-15,missed,After workout,No,73.4,32.1,5,2,None,41,60,No noticeable change yet,2026-05-07 06:56:01
+P0836,U0209,S2346,2026-05-24,missed,Morning,No,70.9,31.0,3,3,Nausea,65,65,Felt better energy today,2026-05-07 06:56:01
+P0837,U0210,S0914,2026-05-01,taken,Night,Yes,84.6,28.3,2,3,Sleep disturbance,5,63,Workout recovery improved,2026-05-07 06:56:01
+P0838,U0210,S0914,2026-05-08,taken,Night,Yes,85.2,28.5,2,4,Headache,20,70,Workout recovery improved,2026-05-07 06:56:01
+P0839,U0210,S0914,2026-05-16,missed,Morning,No,84.5,28.3,2,2,Headache,39,56,Updated weekly progress,2026-05-07 06:56:01
+P0840,U0210,S0914,2026-05-23,missed,After breakfast,No,84.9,28.4,2,2,Sleep disturbance,49,56,Need to improve consistency,2026-05-07 06:56:01
+P0841,U0211,S0728,2026-05-02,taken,After dinner,Yes,82.3,25.5,4,5,Nausea,6,97,Need to improve consistency,2026-05-07 06:56:01
+P0842,U0211,S0728,2026-05-09,taken,Night,Yes,82.8,25.6,3,3,None,21,98,Workout recovery improved,2026-05-07 06:56:01
+P0843,U0211,S0728,2026-05-15,missed,Morning,No,81.3,25.2,3,3,None,33,84,No noticeable change yet,2026-05-07 06:56:01
+P0844,U0211,S0728,2026-05-24,taken,After dinner,Yes,80.7,25.0,3,2,None,42,96,Feeling normal,2026-05-07 06:56:01
+P0845,U0212,S2094,2026-05-01,taken,After dinner,Yes,66.4,22.3,4,2,Nausea,5,73,Workout recovery improved,2026-05-07 06:56:01
+P0846,U0212,S2094,2026-05-10,skipped,After breakfast,No,65.5,22.0,5,5,Mild stomach discomfort,19,57,Completed as planned,2026-05-07 06:56:01
+P0847,U0212,S2094,2026-05-17,skipped,Before workout,No,66.9,22.5,3,3,Headache,19,57,Updated weekly progress,2026-05-07 06:56:01
+P0848,U0212,S2094,2026-05-22,missed,Night,No,65.9,22.1,2,4,Sleep disturbance,30,62,Workout recovery improved,2026-05-07 06:56:01
+P0849,U0213,S1107,2026-05-03,taken,Night,Yes,94.1,26.5,3,5,Sleep disturbance,8,83,Workout recovery improved,2026-05-07 06:56:01
+P0850,U0213,S1107,2026-05-10,missed,After workout,No,94.7,26.7,5,3,Sleep disturbance,11,72,Feeling normal,2026-05-07 06:56:01
+P0851,U0213,S1107,2026-05-16,taken,After dinner,Yes,95.4,26.8,5,3,None,31,78,Feeling normal,2026-05-07 06:56:01
+P0852,U0213,S1107,2026-05-23,skipped,After dinner,No,92.7,26.1,5,3,Mild stomach discomfort,43,75,Feeling normal,2026-05-07 06:56:01
+P0853,U0214,S0430,2026-05-02,missed,After breakfast,No,44.8,15.9,3,3,None,3,66,Missed due to busy schedule,2026-05-07 06:56:01
+P0854,U0214,S0430,2026-05-10,missed,Night,No,44.4,15.8,3,4,None,29,73,Feeling normal,2026-05-07 06:56:01
+P0855,U0214,S0430,2026-05-17,missed,Before workout,No,45.9,16.3,2,5,Mild stomach discomfort,29,72,Feeling normal,2026-05-07 06:56:01
+P0856,U0214,S0430,2026-05-23,taken,After breakfast,Yes,45.9,16.3,2,2,Sleep disturbance,50,84,No noticeable change yet,2026-05-07 06:56:01
+P0857,U0215,S1014,2026-05-03,taken,After workout,Yes,46.8,19.2,2,4,Headache,9,65,Need to improve consistency,2026-05-07 06:56:01
+P0858,U0215,S1014,2026-05-10,missed,Night,No,47.2,19.3,5,3,Nausea,23,59,Completed as planned,2026-05-07 06:56:01
+P0859,U0215,S1014,2026-05-17,skipped,Night,No,46.0,18.8,5,5,Sleep disturbance,37,59,Workout recovery improved,2026-05-07 06:56:01
+P0860,U0215,S1014,2026-05-24,taken,After workout,Yes,47.4,19.4,3,4,Headache,32,69,Minor side effect reported,2026-05-07 06:56:01
+P0861,U0216,S2430,2026-05-02,taken,Night,Yes,44.3,17.8,2,5,Nausea,9,80,No noticeable change yet,2026-05-07 06:56:01
+P0862,U0216,S2430,2026-05-08,missed,Night,No,45.4,18.2,5,3,Sleep disturbance,18,64,Need to improve consistency,2026-05-07 06:56:01
+P0863,U0216,S2430,2026-05-16,missed,After dinner,No,46.3,18.6,5,5,None,28,67,Minor side effect reported,2026-05-07 06:56:01
+P0864,U0216,S2430,2026-05-22,missed,Night,No,46.0,18.5,5,4,Headache,52,70,Updated weekly progress,2026-05-07 06:56:01
+P0865,U0217,S2809,2026-05-02,taken,After dinner,Yes,73.8,27.2,4,2,Mild stomach discomfort,6,87,Feeling normal,2026-05-07 06:56:01
+P0866,U0217,S2809,2026-05-08,taken,After workout,Yes,75.0,27.6,2,5,None,24,81,Minor side effect reported,2026-05-07 06:56:01
+P0867,U0217,S2809,2026-05-15,taken,Night,Yes,73.8,27.2,5,2,None,28,80,Workout recovery improved,2026-05-07 06:56:01
+P0868,U0217,S2809,2026-05-22,taken,After workout,Yes,73.2,27.0,5,4,Headache,40,78,Completed as planned,2026-05-07 06:56:01
+P0869,U0218,S0075,2026-05-02,missed,After breakfast,No,66.5,23.7,2,3,Sleep disturbance,11,62,Completed as planned,2026-05-07 06:56:01
+P0870,U0218,S0075,2026-05-09,taken,After dinner,Yes,65.9,23.5,5,4,Sleep disturbance,27,74,Felt better energy today,2026-05-07 06:56:01
+P0871,U0218,S0075,2026-05-17,taken,After workout,Yes,66.1,23.5,4,2,None,25,73,Completed as planned,2026-05-07 06:56:01
+P0872,U0218,S0075,2026-05-22,taken,After dinner,Yes,67.2,23.9,4,3,None,51,72,Updated weekly progress,2026-05-07 06:56:01
+P0873,U0219,S1587,2026-05-01,missed,After dinner,No,96.8,27.7,4,5,Mild stomach discomfort,6,75,Completed as planned,2026-05-07 06:56:01
+P0874,U0219,S1587,2026-05-10,taken,After workout,Yes,97.9,28.0,3,5,Nausea,12,86,Completed as planned,2026-05-07 06:56:01
+P0875,U0219,S1587,2026-05-15,taken,Night,Yes,97.6,27.9,2,2,None,31,83,No noticeable change yet,2026-05-07 06:56:01
+P0876,U0219,S1587,2026-05-23,taken,After dinner,Yes,99.1,28.4,2,5,Mild stomach discomfort,41,87,No noticeable change yet,2026-05-07 06:56:01
+P0877,U0220,S2725,2026-05-02,missed,Before workout,No,54.0,19.5,2,5,None,8,73,Workout recovery improved,2026-05-07 06:56:01
+P0878,U0220,S2725,2026-05-08,taken,After workout,Yes,54.5,19.7,3,4,Mild stomach discomfort,29,87,Workout recovery improved,2026-05-07 06:56:01
+P0879,U0220,S2725,2026-05-15,taken,After breakfast,Yes,52.7,19.1,4,5,Sleep disturbance,24,84,Completed as planned,2026-05-07 06:56:01
+P0880,U0220,S2725,2026-05-23,taken,Before workout,Yes,53.1,19.2,4,4,Headache,49,89,Missed due to busy schedule,2026-05-07 06:56:01
+P0881,U0221,S2461,2026-05-02,taken,Before workout,Yes,94.3,27.3,2,5,Sleep disturbance,11,90,Felt better energy today,2026-05-07 06:56:01
+P0882,U0221,S2461,2026-05-08,taken,After breakfast,Yes,94.5,27.4,2,2,Nausea,19,88,Missed due to busy schedule,2026-05-07 06:56:01
+P0883,U0221,S2461,2026-05-16,taken,After breakfast,Yes,95.4,27.6,3,5,Mild stomach discomfort,22,94,Workout recovery improved,2026-05-07 06:56:01
+P0884,U0221,S2461,2026-05-23,taken,Before workout,Yes,95.1,27.5,4,4,Headache,54,96,Updated weekly progress,2026-05-07 06:56:01
+P0885,U0222,S0701,2026-05-03,skipped,Night,No,56.2,24.8,4,2,Mild stomach discomfort,8,63,Felt better energy today,2026-05-07 06:56:01
+P0886,U0222,S0701,2026-05-10,taken,Morning,Yes,56.5,24.9,2,4,None,21,78,Minor side effect reported,2026-05-07 06:56:01
+P0887,U0222,S0701,2026-05-17,taken,After workout,Yes,56.2,24.8,5,4,None,38,75,Feeling normal,2026-05-07 06:56:01
+P0888,U0222,S0701,2026-05-22,taken,After workout,Yes,57.3,25.3,4,2,Sleep disturbance,44,75,Feeling normal,2026-05-07 06:56:01
+P0889,U0223,S0488,2026-05-03,taken,Before workout,Yes,52.8,18.8,4,3,None,10,85,Updated weekly progress,2026-05-07 06:56:01
+P0890,U0223,S0488,2026-05-08,taken,Morning,Yes,52.7,18.8,3,5,None,14,85,Felt better energy today,2026-05-07 06:56:01
+P0891,U0223,S0488,2026-05-17,taken,After breakfast,Yes,52.0,18.5,5,2,Headache,47,91,Feeling normal,2026-05-07 06:56:01
+P0892,U0223,S0488,2026-05-24,missed,After breakfast,No,54.5,19.4,5,5,None,52,77,Completed as planned,2026-05-07 06:56:01
+P0893,U0224,S1169,2026-05-01,taken,After workout,Yes,69.4,23.3,4,5,None,5,88,Missed due to busy schedule,2026-05-07 06:56:01
+P0894,U0224,S1169,2026-05-09,skipped,After dinner,No,68.8,23.1,2,4,Mild stomach discomfort,19,78,Feeling normal,2026-05-07 06:56:01
+P0895,U0224,S1169,2026-05-15,taken,Night,Yes,68.7,23.0,5,5,Nausea,38,88,Need to improve consistency,2026-05-07 06:56:01
+P0896,U0224,S1169,2026-05-22,missed,After breakfast,No,70.7,23.7,3,5,None,55,81,No noticeable change yet,2026-05-07 06:56:01
+P0897,U0225,S1541,2026-05-02,taken,Morning,Yes,50.4,17.7,2,2,None,12,96,Minor side effect reported,2026-05-07 06:56:01
+P0898,U0225,S1541,2026-05-10,missed,After dinner,No,50.6,17.8,3,4,None,23,77,Felt better energy today,2026-05-07 06:56:01
+P0899,U0225,S1541,2026-05-17,taken,Before workout,Yes,51.1,18.0,3,4,Mild stomach discomfort,39,91,No noticeable change yet,2026-05-07 06:56:01
+P0900,U0225,S1541,2026-05-24,missed,After dinner,No,52.2,18.4,5,4,Mild stomach discomfort,48,87,Workout recovery improved,2026-05-07 06:56:01
+P0901,U0226,S2299,2026-05-02,taken,After breakfast,Yes,89.9,32.5,2,2,None,8,91,Workout recovery improved,2026-05-07 06:56:01
+P0902,U0226,S2299,2026-05-08,taken,Night,Yes,90.4,32.7,2,3,None,26,92,Minor side effect reported,2026-05-07 06:56:01
+P0903,U0226,S2299,2026-05-17,taken,Morning,Yes,90.4,32.7,4,4,None,34,90,Updated weekly progress,2026-05-07 06:56:01
+P0904,U0226,S2299,2026-05-22,taken,After breakfast,Yes,91.3,33.1,5,2,None,42,90,Workout recovery improved,2026-05-07 06:56:01
+P0905,U0227,S2975,2026-05-03,taken,After dinner,Yes,54.2,24.7,2,2,Headache,8,79,Missed due to busy schedule,2026-05-07 06:56:01
+P0906,U0227,S2975,2026-05-10,taken,After dinner,Yes,55.3,25.2,2,2,Nausea,16,78,Workout recovery improved,2026-05-07 06:56:01
+P0907,U0227,S2975,2026-05-15,taken,After breakfast,Yes,54.6,24.9,5,5,Headache,24,78,Missed due to busy schedule,2026-05-07 06:56:01
+P0908,U0227,S2975,2026-05-22,taken,After dinner,Yes,53.2,24.3,2,5,Nausea,62,81,Completed as planned,2026-05-07 06:56:01
+P0909,U0228,S2740,2026-05-01,taken,After dinner,Yes,78.9,30.7,3,2,None,4,81,Missed due to busy schedule,2026-05-07 06:56:01
+P0910,U0228,S2740,2026-05-10,taken,Night,Yes,79.5,31.0,4,4,None,22,82,Missed due to busy schedule,2026-05-07 06:56:01
+P0911,U0228,S2740,2026-05-17,taken,After dinner,Yes,77.5,30.2,2,2,None,27,85,No noticeable change yet,2026-05-07 06:56:01
+P0912,U0228,S2740,2026-05-23,taken,After breakfast,Yes,80.5,31.4,5,2,None,42,87,Minor side effect reported,2026-05-07 06:56:01
+P0913,U0229,S2033,2026-05-02,taken,Night,Yes,102.5,31.1,4,5,Headache,4,76,Missed due to busy schedule,2026-05-07 06:56:01
+P0914,U0229,S2033,2026-05-08,taken,Night,Yes,102.5,31.1,4,4,Sleep disturbance,20,73,Need to improve consistency,2026-05-07 06:56:01
+P0915,U0229,S2033,2026-05-15,taken,After breakfast,Yes,103.5,31.4,2,4,Sleep disturbance,34,83,Need to improve consistency,2026-05-07 06:56:01
+P0916,U0229,S2033,2026-05-23,taken,Before workout,Yes,103.5,31.4,2,2,Mild stomach discomfort,56,78,No noticeable change yet,2026-05-07 06:56:01
+P0917,U0230,S1009,2026-05-03,missed,After workout,No,93.0,27.2,5,3,Mild stomach discomfort,11,78,Completed as planned,2026-05-07 06:56:01
+P0918,U0230,S1009,2026-05-08,missed,Morning,No,93.8,27.4,4,3,None,27,81,Workout recovery improved,2026-05-07 06:56:01
+P0919,U0230,S1009,2026-05-17,taken,Night,Yes,93.3,27.3,5,2,None,31,86,Felt better energy today,2026-05-07 06:56:01
+P0920,U0230,S1009,2026-05-24,skipped,After dinner,No,93.6,27.4,4,5,Sleep disturbance,45,80,No noticeable change yet,2026-05-07 06:56:01
+P0921,U0231,S0176,2026-05-01,taken,After breakfast,Yes,69.7,24.3,5,3,None,11,83,No noticeable change yet,2026-05-07 06:56:01
+P0922,U0231,S0176,2026-05-08,taken,Morning,Yes,69.9,24.4,4,4,Nausea,19,91,No noticeable change yet,2026-05-07 06:56:01
+P0923,U0231,S0176,2026-05-16,taken,Before workout,Yes,70.3,24.5,3,2,Headache,40,92,Need to improve consistency,2026-05-07 06:56:01
+P0924,U0231,S0176,2026-05-24,taken,After dinner,Yes,70.0,24.4,2,3,None,49,93,Minor side effect reported,2026-05-07 06:56:01
+P0925,U0232,S2198,2026-05-03,missed,Morning,No,71.6,31.6,3,4,Headache,8,72,Feeling normal,2026-05-07 06:56:01
+P0926,U0232,S2198,2026-05-08,taken,Night,Yes,70.9,31.3,5,2,Sleep disturbance,18,77,Felt better energy today,2026-05-07 06:56:01
+P0927,U0232,S2198,2026-05-16,taken,After breakfast,Yes,72.6,32.0,2,5,None,22,81,Minor side effect reported,2026-05-07 06:56:01
+P0928,U0232,S2198,2026-05-23,taken,Night,Yes,72.5,32.0,3,3,Mild stomach discomfort,50,80,No noticeable change yet,2026-05-07 06:56:01
+P0929,U0233,S1946,2026-05-01,taken,After dinner,Yes,77.1,29.2,2,4,None,12,88,Minor side effect reported,2026-05-07 06:56:01
+P0930,U0233,S1946,2026-05-10,taken,After workout,Yes,78.5,29.8,3,4,None,21,90,Workout recovery improved,2026-05-07 06:56:01
+P0931,U0233,S1946,2026-05-15,taken,After dinner,Yes,76.4,29.0,2,4,Mild stomach discomfort,26,89,Feeling normal,2026-05-07 06:56:01
+P0932,U0233,S1946,2026-05-22,taken,Morning,Yes,76.9,29.2,5,4,None,40,88,Missed due to busy schedule,2026-05-07 06:56:01
+P0933,U0234,S0654,2026-05-02,taken,After dinner,Yes,70.6,23.8,5,4,None,4,77,Workout recovery improved,2026-05-07 06:56:01
+P0934,U0234,S0654,2026-05-08,taken,Night,Yes,70.5,23.8,5,3,Nausea,18,86,Need to improve consistency,2026-05-07 06:56:01
+P0935,U0234,S0654,2026-05-16,missed,Morning,No,70.2,23.7,5,4,Sleep disturbance,25,72,Workout recovery improved,2026-05-07 06:56:01
+P0936,U0234,S0654,2026-05-22,taken,After workout,Yes,68.7,23.2,2,2,Headache,60,79,Completed as planned,2026-05-07 06:56:01
+P0937,U0235,S0146,2026-05-02,taken,Morning,Yes,59.4,23.3,5,2,None,9,75,Minor side effect reported,2026-05-07 06:56:01
+P0938,U0235,S0146,2026-05-09,taken,Morning,Yes,59.9,23.5,2,4,Sleep disturbance,13,74,Missed due to busy schedule,2026-05-07 06:56:01
+P0939,U0235,S0146,2026-05-16,taken,After breakfast,Yes,60.3,23.6,5,2,None,30,77,Updated weekly progress,2026-05-07 06:56:01
+P0940,U0235,S0146,2026-05-23,taken,After workout,Yes,60.1,23.5,3,3,None,27,73,Completed as planned,2026-05-07 06:56:01
+P0941,U0236,S0107,2026-05-01,missed,After workout,No,62.4,28.9,3,3,None,3,89,Felt better energy today,2026-05-07 06:56:01
+P0942,U0236,S0107,2026-05-08,missed,After workout,No,63.1,29.2,2,5,Mild stomach discomfort,20,87,Workout recovery improved,2026-05-07 06:56:01
+P0943,U0236,S0107,2026-05-15,taken,Night,Yes,61.2,28.4,5,2,Mild stomach discomfort,32,93,Felt better energy today,2026-05-07 06:56:01
+P0944,U0236,S0107,2026-05-24,taken,After workout,Yes,62.9,29.1,4,4,None,37,89,Need to improve consistency,2026-05-07 06:56:01
+P0945,U0237,S0221,2026-05-01,taken,After breakfast,Yes,93.1,26.0,2,5,None,5,74,Workout recovery improved,2026-05-07 06:56:01
+P0946,U0237,S0221,2026-05-09,taken,After breakfast,Yes,92.8,26.0,2,4,None,24,70,Feeling normal,2026-05-07 06:56:01
+P0947,U0237,S0221,2026-05-16,taken,After breakfast,Yes,93.1,26.0,5,4,None,22,79,Felt better energy today,2026-05-07 06:56:01
+P0948,U0237,S0221,2026-05-22,taken,Before workout,Yes,93.5,26.1,2,3,None,37,78,Updated weekly progress,2026-05-07 06:56:01
+P0949,U0238,S2835,2026-05-03,missed,Morning,No,54.9,24.0,2,2,None,3,74,Minor side effect reported,2026-05-07 06:56:01
+P0950,U0238,S2835,2026-05-10,taken,Night,Yes,54.4,23.7,4,5,None,25,88,Feeling normal,2026-05-07 06:56:01
+P0951,U0238,S2835,2026-05-17,taken,After breakfast,Yes,56.1,24.5,5,5,None,41,84,Completed as planned,2026-05-07 06:56:01
+P0952,U0238,S2835,2026-05-24,missed,After dinner,No,54.4,23.7,3,5,Sleep disturbance,52,72,Minor side effect reported,2026-05-07 06:56:01
+P0953,U0239,S0363,2026-05-03,taken,Morning,Yes,70.6,21.8,5,4,None,12,69,Completed as planned,2026-05-07 06:56:01
+P0954,U0239,S0363,2026-05-09,missed,After dinner,No,71.2,22.0,3,3,Sleep disturbance,22,63,Updated weekly progress,2026-05-07 06:56:01
+P0955,U0239,S0363,2026-05-15,taken,After workout,Yes,70.9,21.9,2,3,None,41,71,Missed due to busy schedule,2026-05-07 06:56:01
+P0956,U0239,S0363,2026-05-24,missed,After breakfast,No,70.5,21.8,2,3,None,45,59,Workout recovery improved,2026-05-07 06:56:01
+P0957,U0240,S0817,2026-05-03,skipped,Morning,No,71.8,27.5,3,3,None,8,86,Completed as planned,2026-05-07 06:56:01
+P0958,U0240,S0817,2026-05-08,taken,Night,Yes,72.4,27.7,5,5,None,20,95,Felt better energy today,2026-05-07 06:56:01
+P0959,U0240,S0817,2026-05-17,taken,Morning,Yes,70.9,27.1,2,4,None,44,100,Need to improve consistency,2026-05-07 06:56:01
+P0960,U0240,S0817,2026-05-22,taken,Night,Yes,72.8,27.8,3,3,None,36,100,Feeling normal,2026-05-07 06:56:01
+P0961,U0241,S0826,2026-05-03,missed,Morning,No,57.5,22.7,5,2,Headache,10,88,Updated weekly progress,2026-05-07 06:56:01
+P0962,U0241,S0826,2026-05-09,missed,After workout,No,58.4,23.1,4,5,None,20,85,Completed as planned,2026-05-07 06:56:01
+P0963,U0241,S0826,2026-05-15,taken,Night,Yes,58.8,23.2,3,3,Mild stomach discomfort,45,93,Felt better energy today,2026-05-07 06:56:01
+P0964,U0241,S0826,2026-05-22,skipped,After dinner,No,58.9,23.3,2,4,None,49,80,Minor side effect reported,2026-05-07 06:56:01
+P0965,U0242,S2646,2026-05-03,taken,After breakfast,Yes,101.4,35.0,2,3,Nausea,12,87,No noticeable change yet,2026-05-07 06:56:01
+P0966,U0242,S2646,2026-05-10,taken,Before workout,Yes,100.8,34.8,5,5,None,19,86,Feeling normal,2026-05-07 06:56:01
+P0967,U0242,S2646,2026-05-16,taken,Before workout,Yes,103.1,35.5,4,5,Mild stomach discomfort,46,87,Feeling normal,2026-05-07 06:56:01
+P0968,U0242,S2646,2026-05-22,skipped,Before workout,No,100.1,34.5,2,3,Nausea,35,75,Minor side effect reported,2026-05-07 06:56:01
+P0969,U0243,S0376,2026-05-01,taken,Before workout,Yes,57.6,19.4,2,3,Mild stomach discomfort,10,100,Workout recovery improved,2026-05-07 06:56:01
+P0970,U0243,S0376,2026-05-08,missed,Night,No,57.2,19.2,4,3,Mild stomach discomfort,19,86,Missed due to busy schedule,2026-05-07 06:56:01
+P0971,U0243,S0376,2026-05-16,skipped,After breakfast,No,59.0,19.8,4,5,None,35,84,Completed as planned,2026-05-07 06:56:01
+P0972,U0243,S0376,2026-05-23,taken,After dinner,Yes,56.3,18.9,4,2,Headache,38,94,Felt better energy today,2026-05-07 06:56:01
+P0973,U0244,S2813,2026-05-01,skipped,After dinner,No,50.0,15.9,2,4,Nausea,8,81,Need to improve consistency,2026-05-07 06:56:01
+P0974,U0244,S2813,2026-05-08,taken,Morning,Yes,49.5,15.8,4,5,Mild stomach discomfort,22,89,Completed as planned,2026-05-07 06:56:01
+P0975,U0244,S2813,2026-05-15,taken,After workout,Yes,49.4,15.8,2,2,None,33,88,Workout recovery improved,2026-05-07 06:56:01
+P0976,U0244,S2813,2026-05-22,taken,Before workout,Yes,50.9,16.2,2,3,None,63,87,No noticeable change yet,2026-05-07 06:56:01
+P0977,U0245,S2181,2026-05-01,taken,Night,Yes,68.3,23.7,4,4,Mild stomach discomfort,8,86,Completed as planned,2026-05-07 06:56:01
+P0978,U0245,S2181,2026-05-09,skipped,After breakfast,No,67.6,23.5,4,5,Sleep disturbance,20,79,Completed as planned,2026-05-07 06:56:01
+P0979,U0245,S2181,2026-05-15,missed,After workout,No,67.1,23.3,3,4,Mild stomach discomfort,25,78,Workout recovery improved,2026-05-07 06:56:01
+P0980,U0245,S2181,2026-05-23,taken,After workout,Yes,67.8,23.5,3,3,None,46,90,Felt better energy today,2026-05-07 06:56:01
+P0981,U0246,S2783,2026-05-02,skipped,After dinner,No,100.7,28.1,5,5,Nausea,10,58,Need to improve consistency,2026-05-07 06:56:01
+P0982,U0246,S2783,2026-05-09,skipped,Morning,No,100.9,28.2,5,5,Sleep disturbance,15,62,Minor side effect reported,2026-05-07 06:56:01
+P0983,U0246,S2783,2026-05-16,missed,After workout,No,101.5,28.3,5,2,Nausea,36,62,Workout recovery improved,2026-05-07 06:56:01
+P0984,U0246,S2783,2026-05-24,taken,After workout,Yes,101.1,28.2,2,4,Headache,42,68,Feeling normal,2026-05-07 06:56:01
+P0985,U0247,S1235,2026-05-01,taken,Morning,Yes,46.6,16.0,4,5,Nausea,6,73,Need to improve consistency,2026-05-07 06:56:01
+P0986,U0247,S1235,2026-05-10,taken,Night,Yes,47.8,16.4,5,4,Headache,14,74,Updated weekly progress,2026-05-07 06:56:01
+P0987,U0247,S1235,2026-05-15,taken,Night,Yes,46.3,15.9,4,4,Nausea,23,75,Felt better energy today,2026-05-07 06:56:01
+P0988,U0247,S1235,2026-05-22,taken,After dinner,Yes,47.8,16.4,2,3,Mild stomach discomfort,61,72,Missed due to busy schedule,2026-05-07 06:56:01
+P0989,U0248,S0011,2026-05-01,taken,After dinner,Yes,84.5,26.9,3,2,Headache,12,91,Minor side effect reported,2026-05-07 06:56:01
+P0990,U0248,S0011,2026-05-09,missed,After workout,No,85.5,27.2,4,2,None,19,83,Felt better energy today,2026-05-07 06:56:01
+P0991,U0248,S0011,2026-05-15,taken,After breakfast,Yes,84.0,26.7,4,2,Sleep disturbance,28,91,Workout recovery improved,2026-05-07 06:56:01
+P0992,U0248,S0011,2026-05-22,taken,After dinner,Yes,83.6,26.6,5,2,Sleep disturbance,45,91,Missed due to busy schedule,2026-05-07 06:56:01
+P0993,U0249,S2035,2026-05-01,skipped,Morning,No,77.4,21.7,3,3,None,9,59,Missed due to busy schedule,2026-05-07 06:56:01
+P0994,U0249,S2035,2026-05-08,missed,Morning,No,77.2,21.7,2,2,Sleep disturbance,29,68,No noticeable change yet,2026-05-07 06:56:01
+P0995,U0249,S2035,2026-05-15,taken,Morning,Yes,76.5,21.5,5,2,Headache,34,72,Feeling normal,2026-05-07 06:56:01
+P0996,U0249,S2035,2026-05-24,missed,Before workout,No,77.2,21.7,2,4,None,36,61,No noticeable change yet,2026-05-07 06:56:01
+P0997,U0250,S2606,2026-05-03,taken,After breakfast,Yes,49.6,21.1,5,4,None,4,90,Updated weekly progress,2026-05-07 06:56:01
+P0998,U0250,S2606,2026-05-10,taken,After dinner,Yes,49.7,21.2,5,2,Mild stomach discomfort,18,91,Workout recovery improved,2026-05-07 06:56:01
+P0999,U0250,S2606,2026-05-16,missed,After workout,No,50.2,21.4,2,5,None,32,80,Minor side effect reported,2026-05-07 06:56:01
+P1000,U0250,S2606,2026-05-24,missed,After breakfast,No,47.9,20.4,3,5,None,61,81,Feeling normal,2026-05-07 06:56:01
